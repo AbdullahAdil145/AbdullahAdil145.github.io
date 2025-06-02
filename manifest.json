@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Portfolio",
+  "name": "Muhammad Abdullah Adil's Portfolio",
+  "description": "This is the personal portfolio of Muhammad Abdullah Adil, showcasing projects, skills, and contact information.",
   "icons": [
     {
       "src": "favicon.ico",
