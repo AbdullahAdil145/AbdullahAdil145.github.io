@@ -1,38 +1,192 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f6f6f9;
+  color: #1f1f1f;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Hero Section */
+.hero {
+  padding: 80px 20px 60px;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #222;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hero .highlight {
+  color: #4a90e2;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+.hero-img {
+  width: 280px;
+  margin: 30px auto;
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero-img:hover {
+  transform: scale(1.05);
+}
+
+.hero-buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.button {
+  background-color: #4a90e2;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #3a78c2;
+  transform: translateY(-2px);
+}
+
+/* Projects */
+.projects-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.projects-section h2 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.project-card {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Tech Stack */
+.stack-section {
+  padding: 60px 20px;
+  background-color: #f0f4f8;
+}
+
+.stack-section h2 {
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icon {
+  width: 50px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+/* GitHub Stats */
+.stats-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.stats-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.stats-container img {
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Contact Form */
+.contact-section {
+  padding: 60px 20px;
+  background-color: #f9f9fb;
+}
+
+.contact-section h2 {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+form .button {
+  align-self: center;
+  width: fit-content;
+}
+
+/* Footer */
+.footer {
+  padding: 30px 20px;
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+}
+
+.footer a {
+  color: #4a90e2;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
