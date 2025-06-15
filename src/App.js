@@ -23,6 +23,21 @@ function App() {
         </div>
       </header>
 
+      {/* Exp Section */}
+      <section className="experience-section">
+        <h2>💼 Experience</h2>
+        <div className="project-card">
+          <h3>TBD</h3>
+          <h2>Junior Software Developer, Founding Team</h2>
+          <p>●	Developed a full stack prototype for a job application automation service.
+              ●	Collaborated on making chrome extensions to help autofill job applications across hundreds of websites.
+              ●	Used web scraping to find job postings across different job boards.
+              ●	Managed the architecture, ensuring that data was saved and fetched from the database server.
+</p>
+          <p><strong>May 2025 - Present</strong></p>
+        </div>
+      </section>
+  
       {/* Projects Section */}
       <section className="projects-section">
         <h2>🚀 Projects</h2>
