@@ -8,6 +8,7 @@
   --card: #fff;
   --accent: #4a90e2;
   --highlight: #3366cc;
+  --hover-bg: rgba(0, 0, 0, 0.05);
 }
 
 [data-theme='dark'] {
@@ -16,6 +17,7 @@
   --card: #1e1e1e;
   --accent: #4a90e2;
   --highlight: #80dfff;
+  --hover-bg: rgba(255, 255, 255, 0.05);
 }
 
 body {
@@ -69,6 +71,7 @@ body {
 
 .nav-links button:hover {
   color: var(--accent);
+  background-color: var(--hover-bg);
 }
 
 .switch {
@@ -134,10 +137,10 @@ input:checked + .slider:before {
 
 .hero-img:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  background-color: var(--hover-bg);
 }
 
-/* Buttons block */
 .hero-buttons {
   margin-top: 20px;
   display: flex;
@@ -156,7 +159,6 @@ input:checked + .slider:before {
   box-sizing: border-box;
 }
 
-/* Buttons and dropdown toggle */
 .button,
 .dropdown-toggle {
   background: var(--accent);
@@ -166,7 +168,6 @@ input:checked + .slider:before {
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  text-decoration: none;
   font-size: 0.95rem;
   white-space: nowrap;
   width: 100%;
@@ -179,14 +180,13 @@ input:checked + .slider:before {
 
 .button:hover,
 .dropdown-toggle:hover {
-  opacity: 0.9;
+  background-color: #3b7ed0;
 }
 
 .dropdown {
   position: relative;
 }
 
-/* Dropdown menu */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -210,7 +210,7 @@ input:checked + .slider:before {
 }
 
 .dropdown-menu a:hover {
-  background-color: #f1f1f1;
+  background-color: var(--hover-bg);
 }
 
 .dropdown:hover .dropdown-menu {
@@ -242,7 +242,8 @@ section {
 
 .exp-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  background-color: var(--hover-bg);
 }
 
 .exp-card ul {
@@ -272,7 +273,8 @@ section {
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  background-color: var(--hover-bg);
 }
 
 .project-card ul {
@@ -309,7 +311,8 @@ section {
 
 .icon:hover {
   transform: scale(1.15);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  background-color: var(--hover-bg);
 }
 
 .stats-section {
@@ -334,7 +337,8 @@ section {
 
 .stats-image:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  background-color: var(--hover-bg);
 }
 
 .contact-section form {
@@ -382,7 +386,8 @@ form .button {
 
 .blog-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  background-color: var(--hover-bg);
 }
 
 .blog-card a {
