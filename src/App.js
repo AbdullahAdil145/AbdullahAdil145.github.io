@@ -5,18 +5,18 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [blogs, setBlogs] = useState([]);
 
-useEffect(() => {
-  document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
-}, [darkMode]);
-  
   useEffect(() => {
-  fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@abdullahadil145')
-    .then(res => res.json())
-    .then(data => {
-      setBlogs(data.items.slice(0, 3)); // no filter
-    })
-    .catch(err => console.error('Blog fetch error:', err));
-}, []);
+    document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+  }, [darkMode]);
+
+  useEffect(() => {
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@abdullahadil145')
+      .then(res => res.json())
+      .then(data => {
+        setBlogs(data.items.slice(0, 3));
+      })
+      .catch(err => console.error('Blog fetch error:', err));
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,31 +36,43 @@ useEffect(() => {
   const sections = ['experience', 'projects', 'stack', 'Github Stats', 'blog', 'contact'];
 
   const projects = [
-   {
-  title: 'Hotel Management System',
-  summary: 'Multi-user hotel managment system with role based access priveliges.',
-  bullets: ['Spearheaded a team to build a full-stack hotel management platform with user authentication and role-based access', 'Implemented CRUD and dynamic customer, booking, and account modules using scalable, modular code structures'],
-  tech: 'Java, MySQL',
-  link: 'https://github.com/AbdullahAdil145/Hotel-Managment-System'
-},
+    {
+      title: 'Hotel Management System',
+      summary: 'Multi-user hotel managment system with role based access priveliges.',
+      bullets: [
+        'Spearheaded a team to build a full-stack hotel management platform with user authentication and role-based access',
+        'Implemented CRUD and dynamic customer, booking, and account modules using scalable, modular code structures'
+      ],
+      tech: 'Java, MySQL',
+      link: 'https://github.com/AbdullahAdil145/Hotel-Managment-System'
+    },
     {
       title: 'Job Application Tracker',
       summary: 'A chrome extension that captures and stores job applications.',
-      bullets: ['Built a full-stack MERN application to help users track and manage job applications with seamless CRUD functionality', 'Designed a modular architecture with reusable components and services to support scalability and maintainability'],
+      bullets: [
+        'Built a full-stack MERN application to help users track and manage job applications with seamless CRUD functionality',
+        'Designed a modular architecture with reusable components and services to support scalability and maintainability'
+      ],
       tech: 'React, Node.js, Chrome API',
       link: 'https://github.com/AbdullahAdil145/Job-Application-Tracker'
     },
     {
       title: 'Alcoms.ca',
       summary: 'Official website for Algoma University Computer Science Society',
-      bullets: ['Co-developed a responsive website for a university club to showcase events, member profiles, and events', 'Boosted engagement by ~25% through performance optimization and a clean, modern UI design'],
+      bullets: [
+        'Co-developed a responsive website for a university club to showcase events, member profiles, and events',
+        'Boosted engagement by ~25% through performance optimization and a clean, modern UI design'
+      ],
       tech: 'HTML, CSS, JavaScript',
       link: 'https://alcoms.ca/'
     },
     {
       title: 'Task Manager',
       summary: 'A lightweight and simple responsive Task Managing app.',
-      bullets: ['Built a lightweight responsive task management app using vanilla HTML, CSS, and JavaScript', 'Used local Storage for persistent task saving and dynamic DOM manipulation for real-time UI updates'],
+      bullets: [
+        'Built a lightweight responsive task management app using vanilla HTML, CSS, and JavaScript',
+        'Used local Storage for persistent task saving and dynamic DOM manipulation for real-time UI updates'
+      ],
       tech: 'HTML, CSS, JavaScript',
       link: 'https://github.com/AbdullahAdil145/TaskManager'
     }
@@ -86,6 +98,21 @@ useEffect(() => {
         <h1>Hi, I’m <span className="highlight">Muhammad Abdullah Adil</span></h1>
         <p>Full Stack Developer | Web Developer</p>
         <img className="hero-img" src="https://media.licdn.com/dms/image/v2/D5603AQH7RJddeYN8aw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720547752909?e=1755734400&v=beta&t=VEJ9G2kkUB-LWfHxycEzBHGqvdJ0TQ1XrIEcok-bSfg" alt="profile" />
+
+        <div className="hero-buttons">
+          <a href="https://linktr.ee/abdullahadil145" target="_blank" rel="noreferrer" className="button">Profiles</a>
+          <a href="/resume.pdf" download className="button">Resume</a>
+        </div>
+
+        <p className="intro-text">
+          I am a versatile and motivated Full Stack Developer with a strong academic foundation in Computer Science and practical experience developing scalable, web-based applications. My work spans front-end design with modern frameworks like React to back-end development using Node.js and database management with MySQL and MongoDB.
+          <br /><br />
+          I've contributed to impactful projects, including Chrome extensions that streamline job applications and a full-stack hotel management system with authentication and role-based access. I thrive in collaborative environments, bringing a balance of technical skill, creative problem-solving, and attention to user experience.
+          <br /><br />
+          My technical stack includes JavaScript, Java, Python, C++, and PHP, alongside tools like Git, Postman, Jira, and Oracle VirtualBox. I'm passionate about continuous learning and applying a user-centered approach to real-world development challenges.
+          <br /><br />
+          Currently seeking opportunities to contribute to dynamic development teams, where I can build, learn, and deliver value through technology.
+        </p>
       </header>
 
       <section id="experience" className="experience-section">
@@ -136,34 +163,32 @@ useEffect(() => {
         </div>
       </section>
 
-    <section id="blog" className="blog-section">
-  <h2>📝 Blog</h2>
-  <div className="blog-wrapper">
-    {blogs.length > 0 ? blogs.map((post, i) => {
-      const imgMatch = post.description.match(/<img.*?src="(.*?)"/);
-      const imageUrl = imgMatch ? imgMatch[1] : '';
-
-      return (
-        <div className="blog-card" key={i}>
-          <a href={post.link} target="_blank" rel="noreferrer">
-            {imageUrl && <img src={imageUrl} alt="thumbnail" className="blog-thumb" />}
-            <div className="blog-content">
-              <h3>{post.title}</h3>
-              <p className="blog-date">{new Date(post.pubDate).toLocaleDateString()}</p>
-              <p
-                className="blog-desc"
-                dangerouslySetInnerHTML={{
-                  __html: post.description.replace(/<img[^>]*>/g, '').slice(0, 140) + '...'
-                }}
-              />
-            </div>
-          </a>
+      <section id="blog" className="blog-section">
+        <h2>📝 Blog</h2>
+        <div className="blog-wrapper">
+          {blogs.length > 0 ? blogs.map((post, i) => {
+            const imgMatch = post.description.match(/<img.*?src="(.*?)"/);
+            const imageUrl = imgMatch ? imgMatch[1] : '';
+            return (
+              <div className="blog-card" key={i}>
+                <a href={post.link} target="_blank" rel="noreferrer">
+                  {imageUrl && <img src={imageUrl} alt="thumbnail" className="blog-thumb" />}
+                  <div className="blog-content">
+                    <h3>{post.title}</h3>
+                    <p className="blog-date">{new Date(post.pubDate).toLocaleDateString()}</p>
+                    <p
+                      className="blog-desc"
+                      dangerouslySetInnerHTML={{
+                        __html: post.description.replace(/<img[^>]*>/g, '').slice(0, 140) + '...'
+                      }}
+                    />
+                  </div>
+                </a>
+              </div>
+            );
+          }) : <p>No posts found.</p>}
         </div>
-      );
-    }) : <p>No posts found.</p>}
-  </div>
-</section>
-
+      </section>
 
       <section id="contact" className="contact-section">
         <h2>📬 Contact Me</h2>
