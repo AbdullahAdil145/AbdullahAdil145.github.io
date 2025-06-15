@@ -1,15 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --bg: #f6f6f9;
   --text: #1f1f1f;
   --card: #fff;
   --accent: #4a90e2;
+  --highlight: #3366cc;
 }
 
 [data-theme='dark'] {
   --bg: #121212;
   --text: #eee;
-  --card: #1f1f1f;
+  --card: #1e1e1e;
   --accent: #4a90e2;
+  --highlight: #80dfff;
 }
 
 body {
@@ -36,9 +42,9 @@ body {
 .navbar {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
   background: var(--card);
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   position: sticky;
@@ -46,17 +52,67 @@ body {
   z-index: 10;
 }
 
-.navbar a {
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 500;
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.mode-toggle {
+.nav-links button {
   background: none;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
+  color: var(--text);
+}
+
+.nav-links button:hover {
+  color: var(--accent);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  border-radius: 24px;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px; width: 18px;
+  left: 3px; bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--accent);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.highlight {
+  color: var(--highlight);
 }
 
 .hero {
@@ -90,9 +146,10 @@ section {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
   padding: 0 1rem;
+  margin-top: 20px;
 }
 
 .project-card {
@@ -102,7 +159,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  min-height: 380px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.1);
 }
 
