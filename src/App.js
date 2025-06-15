@@ -7,15 +7,15 @@ function App() {
       {/* Hero Section */}
       <header className="hero">
         <h1>Hi, I'm <span className="highlight">Muhammad Abdullah Adil</span></h1>
-        <p>Full Stack Developer | Automation Enthusiast | Chrome Extension Builder</p>
+        <p>Full Stack Developer | Web Developer</p>
         <img
           src="https://github.com/Adam-pw/Adam-pw/raw/main/animation_500_kxa883sd.gif"
           alt="developer animation"
           className="hero-img"
         />
         <div className="hero-buttons">
-          <a href="https://www.linkedin.com/in/abdullahadil145/" target="_blank" rel="noreferrer" className="button">
-            📇 LinkedIn
+          <a href="https://linktr.ee/abdullahadil145?utm_source=linktree_admin_share" target="_blank" rel="noreferrer" className="button">
+            📇 Get My Profiles
           </a>
           <a href="/ResumeInProgress.docx" download className="button">
             📄 Download Resume
@@ -28,13 +28,13 @@ function App() {
         <h2>🚀 Projects</h2>
         <div className="project-card">
           <h3>Hotel Management System</h3>
-          <p>Led a full-stack hotel app for managing bookings, customers, and accounts with role-based access control.</p>
-          <p><strong>Tech:</strong> React, Node.js, MySQL</p>
+          <p>Led a full-stack hotel app for managing bookings, customers, and accounts with role-based access control and CRUD functionality.</p>
+          <p><strong>Tech:</strong> Java, MySQL</p>
         </div>
         <div className="project-card">
           <h3>Job Application Autofiller</h3>
           <p>Built a Chrome Extension to autofill job applications across hundreds of websites.</p>
-          <p><strong>Tech:</strong> JavaScript, Chrome APIs</p>
+          <p><strong>Tech:</strong> React, Node.js, Chrome APIs</p>
         </div>
         <div className="project-card">
           <h3>Alcoms.ca</h3>
@@ -66,17 +66,13 @@ function App() {
             src="https://github-readme-stats.vercel.app/api?username=AbdullahAdil145&show_icons=true&theme=tokyonight"
             alt="GitHub Stats"
           />
-          <img
-            src="https://github-readme-stats.vercel.app/api/top-langs/?username=AbdullahAdil145&layout=compact&theme=tokyonight"
-            alt="Top Languages"
-          />
         </div>
       </section>
 
       {/* Contact Form Section */}
       <section className="contact-section">
         <h2>📬 Contact Me</h2>
-        <form action="https://formspree.io/f/mgegonpv" method="POST">
+        <form action="https://formspree.io/f/xqabbqbw" method="POST">
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
           <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
@@ -87,10 +83,6 @@ function App() {
       {/* Footer */}
       <footer className="footer">
         <p>📧 abdullahadil143@gmail.com</p>
-        <div className="footer-links">
-          <a href="https://github.com/AbdullahAdil145" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/abdullahadil145/" target="_blank" rel="noreferrer">LinkedIn</a>
-        </div>
       </footer>
     </div>
   );
