@@ -40,26 +40,48 @@ function App() {
     <p><strong>May 2025 - Present</strong></p>
   </div>
 </section>
-  
-      {/* Projects Section */}
-      <section className="projects-section">
-        <h2>🚀 Projects</h2>
-        <div className="project-card">
-          <h3>Hotel Management System</h3>
-          <p>Led a full-stack hotel app for managing bookings, customers, and accounts with role-based access control and CRUD functionality.</p>
-          <p><strong>Tech:</strong> Java, MySQL</p>
-        </div>
-        <div className="project-card">
-          <h3>Job Application Autofiller</h3>
-          <p>Built a Chrome Extension to autofill job applications across hundreds of websites.</p>
-          <p><strong>Tech:</strong> React, Node.js, Chrome APIs</p>
-        </div>
-        <div className="project-card">
-          <h3>Alcoms.ca</h3>
-          <p>Developed a responsive website for club events and initiatives, improving user engagement by 25%.</p>
-          <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
-        </div>
-      </section>
+
+  {/* Proj Section */}
+     <section className="projects-section">
+  <h2>🚀 Projects</h2>
+  <div className="projects-grid">
+    <div className="project-card">
+      <h3>Hotel Management System</h3>
+      <ul>
+        <li>Spearheaded a team to build a full-stack hotel management platform with user authentication and role-based access.</li>
+        <li>Implemented CRUD and dynamic customer, booking, and account modules using scalable, modular code structures.</li>
+      </ul>
+      <p><strong>Tech:</strong> Java, MySQL</p>
+    </div>
+
+    <div className="project-card">
+      <h3>Job Application Autofiller</h3>
+      <ul>
+        <li>Built a full-stack MERN application to help users track and manage job applications with seamless CRUD functionality.</li>
+        <li>Designed a modular architecture with reusable components and services to support scalability and maintainability.</li>
+      </ul>
+      <p><strong>Tech:</strong> React, Node.js, Chrome APIs</p>
+    </div>
+
+    <div className="project-card">
+      <h3>Alcoms.ca</h3>
+      <ul>
+        <li>Co-developed a responsive website for a university club to showcase events, member profiles, and events.</li>
+        <li>Boosted engagement by ~25% through performance optimization and a clean, modern UI design.</li>
+      </ul>
+      <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+    </div>
+
+    <div className="project-card">
+      <h3>Task Manager</h3>
+      <ul>
+        <li>Built a lightweight responsive task management app using vanilla HTML, CSS, and JavaScript.</li>
+        <li>Used local Storage for persistent task saving and dynamic DOM manipulation for real-time UI updates.</li>
+      </ul>
+      <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+    </div>
+  </div>
+</section>
 
       {/* Tech Stack Section */}
       <section className="stack-section">
