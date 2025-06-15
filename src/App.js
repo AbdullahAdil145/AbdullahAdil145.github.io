@@ -10,7 +10,7 @@ function App() {
   }, [darkMode]);
 
   useEffect(() => {
-    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@abdullahadil145')
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/abdullahadil145')
       .then(res => res.json())
       .then(data => {
         const posts = data.items.filter(item => item.categories.length > 0);
@@ -34,13 +34,13 @@ function App() {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const sections = ['experience', 'projects', 'stack', 'githubstats', 'blog', 'contact'];
+  const sections = ['experience', 'projects', 'stack', 'Github Stats', 'blog', 'contact'];
 
   const projects = [
     {
       title: 'Hotel Management System',
       summary: 'Multi-user hotel platform with secure role access.',
-      bullets: ['Built CRUD modules for bookings.', 'Team led project with clear structure.'],
+      bullets: [textAlign:'left','Built CRUD modules for bookings.', 'Team led project with clear structure.'],
       tech: 'Java, MySQL',
       link: 'https://www.google.com'
     },
@@ -130,7 +130,7 @@ function App() {
         </div>
       </section>
 
-      <section id="githubstats" className="stats-section">
+      <section id="Github Stats" className="stats-section">
         <h2>📊 GitHub Stats</h2>
         <div className="stats-container">
           <img src="https://github-readme-stats.vercel.app/api?username=AbdullahAdil145&show_icons=true&theme=tokyonight" alt="GitHub Stats" />
