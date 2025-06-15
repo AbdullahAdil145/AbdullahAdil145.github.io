@@ -163,6 +163,12 @@ section {
   box-shadow: 0 6px 18px rgba(0,0,0,0.1);
 }
 
+.project-card ul {
+  text-align: left;
+  padding-left: 20px; /* ensures bullet points are indented properly */
+  margin: 10px 0;
+}
+
 .project-card h3 {
   text-align: center;
 }
