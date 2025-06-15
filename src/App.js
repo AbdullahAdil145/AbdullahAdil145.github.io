@@ -27,10 +27,10 @@ function App() {
 <section className="experience-section">
   <h2>💼 Experience</h2>
   <div className="project-card">
-    <h3>TBD</h3>
-    <h2>Junior Software Developer, Founding Team</h2>
+    <h2>TBD</h2>
+    <h3>Junior Software Developer, Founding Team</h3>
     <section style={{ maxWidth: '800px', margin: '0 auto', textalign:'left'}}>
-      <ul style={{ listStyleType: 'disc', paddingLeft: '1.5rem', textalign:'left' }}>
+      <ul style={{ textalign:'left' }}>
         <li>Developed a full stack prototype for a job application automation service.</li>
         <li>Collaborated on making Chrome extensions to help autofill job applications across hundreds of websites.</li>
         <li>Used web scraping to find job postings across different job boards.</li>
