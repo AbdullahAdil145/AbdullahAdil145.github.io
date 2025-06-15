@@ -143,23 +143,18 @@ input:checked + .slider:before {
   gap: 15px;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: center;
 }
 
 .hero-buttons .button,
 .hero-buttons .dropdown {
   width: 130px;
+  display: flex;
+  justify-content: center;
   box-sizing: border-box;
 }
 
-.dropdown {
-  position: relative;
-  width: 130px; /* same as button */
-}
-
+.button,
 .dropdown-toggle {
-  width: 100%;
-  height: 100%;
   background: var(--accent);
   color: #fff;
   padding: 8px 16px;
@@ -169,11 +164,11 @@ input:checked + .slider:before {
   cursor: pointer;
   text-decoration: none;
   font-size: 0.95rem;
-  text-align: center;
   white-space: nowrap;
   box-sizing: border-box;
+  width: 100%;
+  text-align: center;
 }
-
 
 .button:hover,
 .dropdown-toggle:hover {
@@ -182,8 +177,6 @@ input:checked + .slider:before {
 
 .dropdown {
   position: relative;
-  display: flex;
-  justify-content: center;
 }
 
 .dropdown-menu {
@@ -473,4 +466,3 @@ form .button {
     margin-top: 10px;
   }
 }
-
