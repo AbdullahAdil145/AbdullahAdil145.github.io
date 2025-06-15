@@ -15,20 +15,24 @@ function App() {
       .then(data => {
         const posts = data.items.filter(item => item.categories.length > 0);
         setBlogs(posts.slice(0, 3));
-      });
+      })
+      .catch(err => console.error('Blog fetch error:', err));
   }, []);
 
-  const handleScroll = () => {
-    const winScroll = document.documentElement.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (winScroll / height) * 100;
-    document.getElementById("scroll-bar").style.width = scrolled + "%";
-  };
-
   useEffect(() => {
+    const handleScroll = () => {
+      const winScroll = document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById("scroll-bar").style.width = scrolled + "%";
+    };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   const sections = ['experience', 'projects', 'stack', 'githubstats', 'blog', 'contact'];
 
@@ -68,12 +72,15 @@ function App() {
       <div id="scroll-bar"></div>
 
       <nav className="navbar">
-        {sections.map(id => (
-          <a key={id} href={`#${id}`}>{id.replace(/^\w/, c => c.toUpperCase())}</a>
-        ))}
-        <button className="mode-toggle" onClick={() => setDarkMode(!darkMode)}>
-          {darkMode ? '🌞' : '🌙'}
-        </button>
+        <div className="nav-links">
+          {sections.map(id => (
+            <button key={id} onClick={() => scrollToSection(id)}>{id.replace(/^\w/, c => c.toUpperCase())}</button>
+          ))}
+        </div>
+        <label className="switch">
+          <input type="checkbox" onChange={() => setDarkMode(!darkMode)} checked={darkMode} />
+          <span className="slider round"></span>
+        </label>
       </nav>
 
       <header className="hero">
@@ -133,7 +140,7 @@ function App() {
       <section id="blog" className="blog-section">
         <h2>📝 Blog</h2>
         <div className="blog-grid">
-          {blogs.map((post, i) => (
+          {blogs.length > 0 ? blogs.map((post, i) => (
             <div className="blog-card" key={i}>
               <a href={post.link} target="_blank" rel="noreferrer">
                 <h3>{post.title}</h3>
@@ -141,7 +148,7 @@ function App() {
                 <p dangerouslySetInnerHTML={{ __html: post.description.slice(0, 100) + '...' }}></p>
               </a>
             </div>
-          ))}
+          )) : <p>No posts found.</p>}
         </div>
       </section>
 
