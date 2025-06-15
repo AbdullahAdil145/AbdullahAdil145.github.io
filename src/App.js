@@ -156,13 +156,22 @@ function App() {
         </div>
       </section>
 
-      <section id="Github Stats" className="stats-section">
-        <h2>📊 GitHub Stats</h2>
-        <div className="stats-container">
-          <img src="https://github-readme-stats.vercel.app/api?username=AbdullahAdil145&show_icons=true&theme=tokyonight&cache_seconds=1800" alt="GitHub Stats" />
-          <img src="https://github-readme-streak-stats.herokuapp.com/?user=AbdullahAdil145&theme=tokyonight" alt="Github Streak"/>
-        </div>
-      </section>
+<section id="Github Stats" className="stats-section">
+  <h2>📊 GitHub Stats</h2>
+  <div className="stats-container">
+    <img
+      src="https://github-readme-stats.vercel.app/api?username=AbdullahAdil145&show_icons=true&theme=tokyonight&cache_seconds=1800"
+      alt="GitHub Stats"
+      className="stats-image"
+    />
+    <img
+      src="https://github-readme-streak-stats.herokuapp.com/?user=AbdullahAdil145&theme=tokyonight"
+      alt="GitHub Streak"
+      className="stats-image"
+    />
+  </div>
+</section>
+
 
       <section id="blog" className="blog-section">
         <h2>📝 Blog</h2>
