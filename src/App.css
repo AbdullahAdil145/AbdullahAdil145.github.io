@@ -137,6 +137,7 @@ input:checked + .slider:before {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Buttons block */
 .hero-buttons {
   margin-top: 20px;
   display: flex;
@@ -148,11 +149,14 @@ input:checked + .slider:before {
 .hero-buttons .button,
 .hero-buttons .dropdown {
   width: 130px;
+  height: 40px;
   display: flex;
   justify-content: center;
+  align-items: center;
   box-sizing: border-box;
 }
 
+/* Buttons and dropdown toggle */
 .button,
 .dropdown-toggle {
   background: var(--accent);
@@ -165,9 +169,12 @@ input:checked + .slider:before {
   text-decoration: none;
   font-size: 0.95rem;
   white-space: nowrap;
-  box-sizing: border-box;
   width: 100%;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
 }
 
 .button:hover,
@@ -179,17 +186,18 @@ input:checked + .slider:before {
   position: relative;
 }
 
+/* Dropdown menu */
 .dropdown-menu {
   display: none;
   position: absolute;
+  top: 100%;
+  left: 0;
   background-color: var(--card);
   min-width: 100%;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 8px;
   overflow: hidden;
-  margin-top: 6px;
-  left: 0;
 }
 
 .dropdown-menu a {
