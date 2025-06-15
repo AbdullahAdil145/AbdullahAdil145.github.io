@@ -5,6 +5,10 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [blogs, setBlogs] = useState([]);
 
+useEffect(() => {
+  document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+}, [darkMode]);
+  
   useEffect(() => {
   fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@abdullahadil145')
     .then(res => res.json())
