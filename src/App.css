@@ -60,11 +60,59 @@ body {
   text-decoration: none;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
 }
 
 .button:hover {
   background-color: #3a78c2;
   transform: translateY(-2px);
+}
+
+/* Experience Section */
+.experience-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.exp-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease-in-out;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.exp-card:hover {
+  transform: scale(1.02);
+}
+
+.exp-card h2 {
+  margin-top: 0;
+  color: #222;
+}
+
+.exp-card h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.exp-card ul {
+  padding-left: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.exp-card li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.exp-card p {
+  margin-top: 0.5rem;
+  font-weight: 500;
 }
 
 /* Projects Section */
@@ -118,6 +166,16 @@ body {
 .project-card p {
   margin: 0.5rem 0 0;
   font-weight: 500;
+}
+
+.project-buttons {
+  margin-top: 10px;
+}
+
+.github-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 /* Tech Stack Section */
