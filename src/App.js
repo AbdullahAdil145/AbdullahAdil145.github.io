@@ -1,79 +1,82 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+  const [blogs, setBlogs] = useState([]);
+
   useEffect(() => {
-    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', e => {
-        e.preventDefault();
-        document.querySelector(anchor.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
+    document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+  }, [darkMode]);
+
+  useEffect(() => {
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@abdullahadil145')
+      .then(res => res.json())
+      .then(data => {
+        const posts = data.items.filter(item => item.categories.length > 0);
+        setBlogs(posts.slice(0, 3));
       });
-    });
   }, []);
+
+  const handleScroll = () => {
+    const winScroll = document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("scroll-bar").style.width = scrolled + "%";
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const sections = ['experience', 'projects', 'stack', 'githubstats', 'blog', 'contact'];
 
   const projects = [
     {
       title: 'Hotel Management System',
-      summary: 'A multi-user platform to manage bookings and accounts.',
-      bullets: [
-        'Auth with roles (admin, staff, guest).',
-        'CRUD modules for bookings, rooms, customers.'
-      ],
+      summary: 'Multi-user hotel platform with secure role access.',
+      bullets: ['Built CRUD modules for bookings.', 'Team led project with clear structure.'],
       tech: 'Java, MySQL',
       link: 'https://www.google.com'
     },
     {
       title: 'Job Application Autofiller',
-      summary: 'Browser tool that auto-fills jobs and tracks submissions.',
-      bullets: [
-        'MERN stack architecture.',
-        'Reusable Chrome extensions.'
-      ],
+      summary: 'Auto-fill job forms & track applications.',
+      bullets: ['MERN-based full stack solution.', 'Reusable Chrome extension.'],
       tech: 'React, Node.js, Chrome API',
       link: 'https://www.google.com'
     },
     {
       title: 'Alcoms.ca',
-      summary: 'Responsive club site to showcase events and members.',
-      bullets: [
-        'Modern UI boosting engagement by 25%.',
-        'Optimized for speed and accessibility.'
-      ],
-      tech: 'HTML, CSS, JS',
+      summary: 'Official website for university club.',
+      bullets: ['Boosted traffic 25% via UI updates.', 'Showcased events and members.'],
+      tech: 'HTML, CSS, JavaScript',
       link: 'https://www.google.com'
     },
     {
       title: 'Task Manager',
-      summary: 'Lightweight to-do app with local storage.',
-      bullets: [
-        'Real-time task updates.',
-        'Clean and minimal UI.'
-      ],
-      tech: 'HTML, CSS, JS',
+      summary: 'Simple responsive to-do app.',
+      bullets: ['Persistent local storage.', 'Dynamic DOM interaction.'],
+      tech: 'HTML, CSS, JavaScript',
       link: 'https://www.google.com'
     }
   ];
 
-  const mediumPosts = [
-    {
-      title: 'In 2025, Computer Science Is Undergoing a …',
-      url: 'https://abdullahadil145.medium.com/in-2025-computer-science-is-undergoing-a',
-      date: 'June 6, 2025'
-    }
-    // Add more manually if needed
-  ];
-
   return (
     <div className="App">
+      <div id="scroll-bar"></div>
+
       <nav className="navbar">
-        {['hero', 'experience', 'projects', 'stack', 'stats', 'contact', 'blog'].map(id => (
-          <a key={id} href={`#${id}`}>{id.charAt(0).toUpperCase() + id.slice(1)}</a>
+        {sections.map(id => (
+          <a key={id} href={`#${id}`}>{id.replace(/^\w/, c => c.toUpperCase())}</a>
         ))}
+        <button className="mode-toggle" onClick={() => setDarkMode(!darkMode)}>
+          {darkMode ? '🌞' : '🌙'}
+        </button>
       </nav>
 
-      <header id="hero" className="hero">
+      <header className="hero">
         <h1>Hi, I’m <span className="highlight">Muhammad Abdullah Adil</span></h1>
         <p>Full Stack Developer | Web Developer</p>
         <img className="hero-img" src="https://media.licdn.com/dms/image/v2/D5603AQH7RJddeYN8aw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720547752909?e=1755734400&v=beta&t=VEJ9G2kkUB-LWfHxycEzBHGqvdJ0TQ1XrIEcok-bSfg" alt="profile" />
@@ -85,12 +88,12 @@ function App() {
           <h2>TBD</h2>
           <h3>Junior Software Developer</h3>
           <ul>
-            <li>Built full‑stack solution for job‑application automation.</li>
-            <li>Chrome extensions to autofill applications at scale.</li>
-            <li>Web‑scraping job postings across multiple platforms.</li>
-            <li>Oversaw data storage & backend architecture.</li>
+            <li>Developed full-stack prototype for job automation service.</li>
+            <li>Created Chrome extension to autofill application forms.</li>
+            <li>Used web scraping to gather job postings.</li>
+            <li>Handled backend data storage architecture.</li>
           </ul>
-          <p><strong>May 2025 – Present</strong></p>
+          <p><strong>May 2025 – Present</strong></p>
         </div>
       </section>
 
@@ -101,17 +104,10 @@ function App() {
             <div className="project-card" key={i}>
               <h3>{p.title}</h3>
               <p className="summary">{p.summary}</p>
-              <ul>
-                {p.bullets.map((b, j) => (<li key={j}>{b}</li>))}
-              </ul>
+              <ul>{p.bullets.map((b, j) => <li key={j}>{b}</li>)}</ul>
               <p><strong>Tech:</strong> {p.tech}</p>
               <div className="project-buttons">
-                <a href={p.link} target="_blank" rel="noreferrer" className="button github-button">
-                  <svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor">
-                    <path d="M8 ..." />
-                  </svg>
-                  GitHub
-                </a>
+                <a href={p.link} target="_blank" rel="noreferrer" className="button github-button">GitHub</a>
               </div>
             </div>
           ))}
@@ -120,12 +116,14 @@ function App() {
 
       <section id="stack" className="stack-section">
         <h2>💻 Tech Stack</h2>
-        <div className="icons">{['java','python','cplusplus','javascript','html5','css3','php','mysql','mongodb','nodejs','react','git','linux','vscode','eclipse'].map(icon => (
-          <img key={icon} src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`} alt={icon} className="icon" />
-        ))}</div>
+        <div className="icons">
+          {['java','python','cplusplus','javascript','html5','css3','php','mysql','mongodb','nodejs','react','git','linux','vscode','eclipse'].map(icon => (
+            <img key={icon} src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`} alt={icon} className="icon" />
+          ))}
+        </div>
       </section>
 
-      <section id="stats" className="stats-section">
+      <section id="githubstats" className="stats-section">
         <h2>📊 GitHub Stats</h2>
         <div className="stats-container">
           <img src="https://github-readme-stats.vercel.app/api?username=AbdullahAdil145&show_icons=true&theme=tokyonight" alt="GitHub Stats" />
@@ -134,23 +132,25 @@ function App() {
 
       <section id="blog" className="blog-section">
         <h2>📝 Blog</h2>
-        <ul>
-          {mediumPosts.map((post, i) => (
-            <li key={i}>
-              <a href={post.url} target="_blank" rel="noreferrer">
-                {post.title}
-              </a> <span className="date">{post.date}</span>
-            </li>
+        <div className="blog-grid">
+          {blogs.map((post, i) => (
+            <div className="blog-card" key={i}>
+              <a href={post.link} target="_blank" rel="noreferrer">
+                <h3>{post.title}</h3>
+                <p>{post.pubDate.slice(0, 10)}</p>
+                <p dangerouslySetInnerHTML={{ __html: post.description.slice(0, 100) + '...' }}></p>
+              </a>
+            </div>
           ))}
-        </ul>
+        </div>
       </section>
 
       <section id="contact" className="contact-section">
         <h2>📬 Contact Me</h2>
         <form action="https://formspree.io/f/xqabbqbw" method="POST">
-          <input type="text" name="name" placeholder="Name" required />
-          <input type="email" name="email" placeholder="Email" required />
-          <textarea name="message" rows="5" placeholder="Message" required></textarea>
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
           <button type="submit" className="button">Send Message</button>
         </form>
       </section>
@@ -161,4 +161,5 @@ function App() {
     </div>
   );
 }
+
 export default App;
