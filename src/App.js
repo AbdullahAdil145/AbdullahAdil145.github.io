@@ -9,9 +9,9 @@ function App() {
         <h1>Hi, I'm <span className="highlight">Muhammad Abdullah Adil</span></h1>
         <p>Full Stack Developer | Web Developer</p>
         <img
-          src="https://github.com/Adam-pw/Adam-pw/raw/main/animation_500_kxa883sd.gif"
-          alt="developer animation"
-          className="hero-img"
+          src="https://media.licdn.com/dms/image/v2/D5603AQH7RJddeYN8aw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720547752909?e=1755734400&v=beta&t=VEJ9G2kkUB-LWfHxycEzBHGqvdJ0TQ1XrIEcok-bSfg"
+          alt="personal"
+          className="img"
         />
         <div className="hero-buttons">
           <a href="https://linktr.ee/abdullahadil145?utm_source=linktree_admin_share" target="_blank" rel="noreferrer" className="button">
