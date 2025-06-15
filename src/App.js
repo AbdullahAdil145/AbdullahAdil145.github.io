@@ -15,10 +15,10 @@ function App() {
         />
         <div className="hero-buttons">
           <a href="https://linktr.ee/abdullahadil145?utm_source=linktree_admin_share" target="_blank" rel="noreferrer" className="button">
-            📇 My Profiles
+            🔗 Profiles
           </a>
           <a href="/ResumeInProgress.docx" download className="button">
-            📄 Download Resume
+            📄 Resume
           </a>
         </div>
       </header>
