@@ -37,8 +37,10 @@ function App() {
         <li>Managed the architecture, ensuring that data was saved and fetched from the database server.</li>
       </ul>
     </section>
+    <p><strong>May 2025 - Present</strong></p>
   </div>
 </section>
+
 
 
           <p><strong>May 2025 - Present</strong></p>
