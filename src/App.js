@@ -133,19 +133,27 @@ function App() {
       </section>
 
       <section id="blog" className="blog-section">
-        <h2>📝 Blog</h2>
-        <div className="blog-grid">
-          {blogs.length > 0 ? blogs.map((post, i) => (
-            <div className="blog-card" key={i}>
-              <a href={post.link} target="_blank" rel="noreferrer">
-                <h3>{post.title}</h3>
-                <p>{post.pubDate.slice(0, 10)}</p>
-                <p dangerouslySetInnerHTML={{ __html: post.description.slice(0, 100) + '...' }}></p>
-              </a>
-            </div>
-          )) : <p>No posts found.</p>}
-        </div>
-      </section>
+  <h2>📝 Blog</h2>
+  <div className="blog-grid">
+    {blogs.length > 0 ? blogs.map((post, i) => (
+      <div className="blog-card" key={i}>
+        <a href={post.link} target="_blank" rel="noreferrer">
+          {post.thumbnail && (
+            <img src={post.thumbnail} alt="thumbnail" className="blog-thumb" />
+          )}
+          <div className="blog-content">
+            <h3>{post.title}</h3>
+            <p className="blog-date">{new Date(post.pubDate).toLocaleDateString()}</p>
+            <p
+              className="blog-desc"
+              dangerouslySetInnerHTML={{ __html: post.description.slice(0, 120) + '...' }}
+            />
+          </div>
+        </a>
+      </div>
+    )) : <p>No posts found.</p>}
+  </div>
+</section>
 
       <section id="contact" className="contact-section">
         <h2>📬 Contact Me</h2>
