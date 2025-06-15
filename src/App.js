@@ -103,7 +103,7 @@ function App() {
   <a href="https://linktr.ee/abdullahadil145" target="_blank" rel="noreferrer" className="button">Profiles</a>
   
   <div className="dropdown">
-    <button className="button dropdown-toggle">Resume ▼</button>
+    <button className="button dropdown-toggle">Resume</button>
     <div className="dropdown-menu">
       <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">View</a>
       <a href="/Resume.pdf" download>Download</a>
