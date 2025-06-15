@@ -150,10 +150,13 @@ input:checked + .slider:before {
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  min-width: 110px;
+  width: 130px;               /* fixed width for both buttons */
   text-align: center;
   font-size: 0.95rem;
+  white-space: nowrap;        /* prevent wrapping */
+  box-sizing: border-box;
 }
+
 
 .button:hover, .dropdown-toggle:hover {
   opacity: 0.9;
