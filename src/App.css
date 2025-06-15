@@ -271,7 +271,7 @@ form .button {
 
 .footer {
   padding: 30px 20px;
-  background: var(--card);
-  color: #aaa;
+  background: #e0e0e0;
+  color: #555;
   font-size: 0.9em;
 }
