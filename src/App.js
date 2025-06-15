@@ -82,8 +82,10 @@ function App() {
 
       {/* Footer */}
       <footer className="footer">
-        <p>📧 abdullahadil143@gmail.com</p>
-      </footer>
+  <p>
+    📧 <a href="mailto:abdullahadil143@gmail.com">abdullahadil143@gmail.com</a>
+  </p>
+</footer>
     </div>
   );
 }
