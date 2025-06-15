@@ -37,13 +37,14 @@ function App() {
   const sections = ['experience', 'projects', 'stack', 'Github Stats', 'blog', 'contact'];
 
   const projects = [
-    {
-      title: 'Hotel Management System',
-      summary: 'Multi-user hotel platform with secure role access.',
-      bullets: [textAlign:'left','Built CRUD modules for bookings.', 'Team led project with clear structure.'],
-      tech: 'Java, MySQL',
-      link: 'https://www.google.com'
-    },
+   {
+  title: 'Hotel Management System',
+  summary: 'Multi-user hotel platform with secure role access.',
+  bullets: ['Built CRUD modules for bookings.', 'Team led project with clear structure.'],
+  bulletStyle: { textAlign: 'left' },
+  tech: 'Java, MySQL',
+  link: 'https://www.google.com'
+},
     {
       title: 'Job Application Autofiller',
       summary: 'Auto-fill job forms & track applications.',
