@@ -275,3 +275,8 @@ form .button {
   color: #555;
   font-size: 0.9em;
 }
+
+[data-theme='dark'] .footer {
+  background: var(--card);
+  color: #aaa;
+}
