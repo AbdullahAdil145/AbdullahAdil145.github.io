@@ -10,7 +10,7 @@ function App() {
   }, [darkMode]);
 
   useEffect(() => {
-    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/abdullahadil145')
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://abdullahadil145.medium.com/')
       .then(res => res.json())
       .then(data => {
         const posts = data.items.filter(item => item.categories.length > 0);
@@ -41,7 +41,6 @@ function App() {
   title: 'Hotel Management System',
   summary: 'Multi-user hotel platform with secure role access.',
   bullets: ['Built CRUD modules for bookings.', 'Team led project with clear structure.'],
-  bulletStyle: { textAlign: 'left' },
   tech: 'Java, MySQL',
   link: 'https://www.google.com'
 },
