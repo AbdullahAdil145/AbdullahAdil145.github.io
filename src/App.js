@@ -6,18 +6,13 @@ function App() {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
-  }, [darkMode]);
-
-  useEffect(() => {
-    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://abdullahadil145.medium.com/')
-      .then(res => res.json())
-      .then(data => {
-        const posts = data.items.filter(item => item.categories.length > 0);
-        setBlogs(posts.slice(0, 3));
-      })
-      .catch(err => console.error('Blog fetch error:', err));
-  }, []);
+  fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@abdullahadil145')
+    .then(res => res.json())
+    .then(data => {
+      setBlogs(data.items.slice(0, 3)); // no filter
+    })
+    .catch(err => console.error('Blog fetch error:', err));
+}, []);
 
   useEffect(() => {
     const handleScroll = () => {
