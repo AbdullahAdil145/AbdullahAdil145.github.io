@@ -177,6 +177,8 @@ input:checked + .slider:before {
 
 .dropdown {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .dropdown-menu {
