@@ -39,31 +39,31 @@ function App() {
   const projects = [
    {
   title: 'Hotel Management System',
-  summary: 'Multi-user hotel platform with secure role access.',
-  bullets: ['Built CRUD modules for bookings.', 'Team led project with clear structure.'],
+  summary: 'Multi-user hotel managment system with role based access priveliges.',
+  bullets: ['Spearheaded a team to build a full-stack hotel management platform with user authentication and role-based access', 'Implemented CRUD and dynamic customer, booking, and account modules using scalable, modular code structures'],
   tech: 'Java, MySQL',
-  link: 'https://www.google.com'
+  link: 'https://github.com/AbdullahAdil145/Hotel-Managment-System'
 },
     {
-      title: 'Job Application Autofiller',
-      summary: 'Auto-fill job forms & track applications.',
-      bullets: ['MERN-based full stack solution.', 'Reusable Chrome extension.'],
+      title: 'Job Application Tracker',
+      summary: 'A chrome extension that captures and stores job applications.',
+      bullets: ['Built a full-stack MERN application to help users track and manage job applications with seamless CRUD functionality', 'Designed a modular architecture with reusable components and services to support scalability and maintainability'],
       tech: 'React, Node.js, Chrome API',
-      link: 'https://www.google.com'
+      link: 'https://github.com/AbdullahAdil145/Job-Application-Tracker'
     },
     {
       title: 'Alcoms.ca',
-      summary: 'Official website for university club.',
-      bullets: ['Boosted traffic 25% via UI updates.', 'Showcased events and members.'],
+      summary: 'Official website for Algoma University Computer Science Society',
+      bullets: ['Co-developed a responsive website for a university club to showcase events, member profiles, and events', 'Boosted engagement by ~25% through performance optimization and a clean, modern UI design'],
       tech: 'HTML, CSS, JavaScript',
-      link: 'https://www.google.com'
+      link: 'https://alcoms.ca/'
     },
     {
       title: 'Task Manager',
-      summary: 'Simple responsive to-do app.',
-      bullets: ['Persistent local storage.', 'Dynamic DOM interaction.'],
+      summary: 'A lightweight and simple responsive Task Managing app.',
+      bullets: ['Built a lightweight responsive task management app using vanilla HTML, CSS, and JavaScript', 'Used local Storage for persistent task saving and dynamic DOM manipulation for real-time UI updates'],
       tech: 'HTML, CSS, JavaScript',
-      link: 'https://www.google.com'
+      link: 'https://github.com/AbdullahAdil145/TaskManager'
     }
   ];
 
@@ -96,8 +96,8 @@ function App() {
           <h3>Junior Software Developer</h3>
           <ul>
             <li>Developed full-stack prototype for job automation service.</li>
-            <li>Created Chrome extension to autofill application forms.</li>
-            <li>Used web scraping to gather job postings.</li>
+            <li>●	Collaborated on making chrome extensions to help autofill job applications across hundreds of websites.</li>
+            <li>Used web scraping to gather job postings across different job boards.</li>
             <li>Handled backend data storage architecture.</li>
           </ul>
           <p><strong>May 2025 – Present</strong></p>
