@@ -100,9 +100,16 @@ function App() {
         <img className="hero-img" src="https://media.licdn.com/dms/image/v2/D5603AQH7RJddeYN8aw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720547752909?e=1755734400&v=beta&t=VEJ9G2kkUB-LWfHxycEzBHGqvdJ0TQ1XrIEcok-bSfg" alt="profile" />
 
         <div className="hero-buttons">
-          <a href="https://linktr.ee/abdullahadil145" target="_blank" rel="noreferrer" className="button">Profiles</a>
-          <a href="/resume.pdf" download className="button">Resume</a>
-        </div>
+  <a href="https://linktr.ee/abdullahadil145" target="_blank" rel="noreferrer" className="button">Profiles</a>
+  
+  <div className="dropdown">
+    <button className="button dropdown-toggle">Resume ▼</button>
+    <div className="dropdown-menu">
+      <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">View</a>
+      <a href="/Resume.pdf" download>Download</a>
+    </div>
+  </div>
+</div>
 
         <p className="intro-text">
           I am a versatile and motivated Full Stack Developer with a strong academic foundation in Computer Science and practical experience developing scalable, web-based applications. My work spans front-end design with modern frameworks like React to back-end development using Node.js and database management with MySQL and MongoDB.
