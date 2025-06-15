@@ -150,10 +150,10 @@ input:checked + .slider:before {
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  width: 130px;               /* fixed width for both buttons */
+  width: 130px;
   text-align: center;
   font-size: 0.95rem;
-  white-space: nowrap;        /* prevent wrapping */
+  white-space: nowrap;
   box-sizing: border-box;
 }
 
