@@ -30,7 +30,7 @@ function App() {
     <h2>TBD</h2>
     <h3>Junior Software Developer</h3>
     <section style={{ maxWidth: '800px', margin: '0 auto', textAlign:'left'}}>
-      <ul style={{ textAlign:'left' }}>
+       <ul style={{ textAlign: 'left', paddingLeft: '1.5rem' }}>
         <li>Developed a full stack prototype for a job application automation service.</li>
         <li>Collaborated on making Chrome extensions to help autofill job applications across hundreds of websites.</li>
         <li>Used web scraping to find job postings across different job boards.</li>
