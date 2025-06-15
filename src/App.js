@@ -132,20 +132,17 @@ function App() {
         </div>
       </section>
 
-      <section id="blog" className="blog-section">
+    <section id="blog" className="blog-section">
   <h2>📝 Blog</h2>
-  <div className="blog-grid">
+  <div className="blog-wrapper">
     {blogs.length > 0 ? blogs.map((post, i) => {
-      // Extract thumbnail from description HTML
       const imgMatch = post.description.match(/<img.*?src="(.*?)"/);
       const imageUrl = imgMatch ? imgMatch[1] : '';
 
       return (
         <div className="blog-card" key={i}>
           <a href={post.link} target="_blank" rel="noreferrer">
-            {imageUrl && (
-              <img src={imageUrl} alt="thumbnail" className="blog-thumb" />
-            )}
+            {imageUrl && <img src={imageUrl} alt="thumbnail" className="blog-thumb" />}
             <div className="blog-content">
               <h3>{post.title}</h3>
               <p className="blog-date">{new Date(post.pubDate).toLocaleDateString()}</p>
@@ -162,6 +159,7 @@ function App() {
     }) : <p>No posts found.</p>}
   </div>
 </section>
+
 
       <section id="contact" className="contact-section">
         <h2>📬 Contact Me</h2>
