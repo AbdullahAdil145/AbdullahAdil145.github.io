@@ -516,3 +516,22 @@ form .button {
   transform: scale(1.15);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
+
+.stats-section {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.stats-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
