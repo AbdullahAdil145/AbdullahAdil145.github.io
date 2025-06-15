@@ -40,12 +40,6 @@ function App() {
     <p><strong>May 2025 - Present</strong></p>
   </div>
 </section>
-
-
-
-          <p><strong>May 2025 - Present</strong></p>
-        </div>
-      </section>
   
       {/* Projects Section */}
       <section className="projects-section">
