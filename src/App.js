@@ -23,20 +23,23 @@ function App() {
         </div>
       </header>
 
-      {/* Exp Section */}
-      <section className="experience-section">
-        <h2>💼 Experience</h2>
-        <div className="project-card">
-          <h3>TBD</h3>
-          <h2>Junior Software Developer, Founding Team</h2>
-          <section style="max-width: 800px; margin: 0 auto;">
-  <ul style="list-style-type: disc; padding-left: 1.5rem;">
-    <li>Developed a full stack prototype for a job application automation service.</li>
-    <li>Collaborated on making Chrome extensions to help autofill job applications across hundreds of websites.</li>
-    <li>Used web scraping to find job postings across different job boards.</li>
-    <li>Managed the architecture, ensuring that data was saved and fetched from the database server.</li>
-  </ul>
+   {/* Exp Section */}
+<section className="experience-section">
+  <h2>💼 Experience</h2>
+  <div className="project-card">
+    <h3>TBD</h3>
+    <h2>Junior Software Developer, Founding Team</h2>
+    <section style={{ maxWidth: '800px', margin: '0 auto' }}>
+      <ul style={{ listStyleType: 'disc', paddingLeft: '1.5rem' }}>
+        <li>Developed a full stack prototype for a job application automation service.</li>
+        <li>Collaborated on making Chrome extensions to help autofill job applications across hundreds of websites.</li>
+        <li>Used web scraping to find job postings across different job boards.</li>
+        <li>Managed the architecture, ensuring that data was saved and fetched from the database server.</li>
+      </ul>
+    </section>
+  </div>
 </section>
+
 
           <p><strong>May 2025 - Present</strong></p>
         </div>
