@@ -101,7 +101,7 @@ function App() {
       {/* Footer */}
       <footer className="footer">
   <p>
-    📧 <a href="mailto:abdullahadil143@gmail.com">abdullahadil143@gmail.com</a>
+    &copy; {new Date().getFullYear()} Muhammad Abdullah Adil. All rights reserved.
   </p>
 </footer>
     </div>
