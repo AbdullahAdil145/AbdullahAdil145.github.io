@@ -154,32 +154,41 @@ function App() {
         </div>
       </section>
 
-      <section id="stack" className="stack-section">
+    <section id="stack" className="stack-section">
   <h2>💻 Tech Stack</h2>
 
-  <h3>🧠 Programming</h3>
-  <div className="icons">
-    {[
-      'java', 'python', 'cplusplus', 'javascript', 'html5', 'css3', 'php',
-      'mongodb', 'mysql', 'nodejs', 'react', 'express', 'assembly'
-    ].map(icon => (
-      icon !== 'assembly' ? (
-        <img key={icon} src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`} alt={icon} className="icon" />
-      ) : (
-        <div key={icon} className="icon-text">Assembly</div>
-      )
-    ))}
+  <div style={{ marginTop: '20px' }}>
+    <h3>🧠 Programming</h3>
+    <div className="icons">
+      {[
+        'java', 'python', 'cplusplus', 'javascript', 'html5', 'css3', 'php',
+        'mongodb', 'mysql', 'nodejs', 'react', 'express'
+      ].map(icon => (
+        <img
+          key={icon}
+          src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`}
+          alt={icon}
+          className="icon"
+        />
+      ))}
+    </div>
   </div>
 
-  <h3>🛠️ Tools</h3>
-  <div className="icons">
-    {[
-      'intellij', 'vscode', 'eclipse', 'jupyter', 'git', 'mongodb', 'postman',
-      'virtualbox', 'jira'
-    ].map(icon => (
-      <img key={icon} src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`} alt={icon} className="icon" />
-    ))}
-    <div className="icon-text">Visual Paradigm</div>
+  <div style={{ marginTop: '40px' }}>
+    <h3>🛠️ Tools</h3>
+    <div className="icons">
+      {[
+        'intellij', 'vscode', 'eclipse', 'jupyter', 'git',
+        'mongodb', 'postman', 'jira'
+      ].map(icon => (
+        <img
+          key={icon}
+          src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`}
+          alt={icon}
+          className="icon"
+        />
+      ))}
+    </div>
   </div>
 </section>
 
