@@ -158,7 +158,6 @@ function App() {
   <h2>💻 Tech Stack</h2>
 
   <div style={{ marginTop: '20px' }}>
-    <h3>🧠 Programming</h3>
     <div className="icons">
       {[
         'java', 'python', 'cplusplus', 'javascript', 'html5', 'css3', 'php',
@@ -175,7 +174,6 @@ function App() {
   </div>
 
   <div style={{ marginTop: '40px' }}>
-    <h3>🛠️ Tools</h3>
     <div className="icons">
       {[
         'intellij', 'vscode', 'eclipse', 'jupyter', 'git',
