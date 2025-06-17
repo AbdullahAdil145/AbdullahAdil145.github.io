@@ -125,7 +125,7 @@ function App() {
       <section id="experience" className="experience-section">
         <h2>💼 Experience</h2>
         <div className="exp-card">
-          <h2>TBD</h2>
+          <h2>ZAPPLY</h2>
           <h3>Junior Software Developer</h3>
           <ul>
             <li>Developed full-stack prototype for job automation service.</li>
@@ -155,13 +155,33 @@ function App() {
       </section>
 
       <section id="stack" className="stack-section">
-        <h2>💻 Tech Stack</h2>
-        <div className="icons">
-          {['java','python','cplusplus','javascript','html5','css3','php','mysql','mongodb','nodejs','react','git','linux','vscode','eclipse'].map(icon => (
-            <img key={icon} src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`} alt={icon} className="icon" />
-          ))}
-        </div>
-      </section>
+  <h2>💻 Tech Stack</h2>
+
+  <h3>🧠 Programming</h3>
+  <div className="icons">
+    {[
+      'java', 'python', 'cplusplus', 'javascript', 'html5', 'css3', 'php',
+      'mongodb', 'mysql', 'nodejs', 'react', 'express', 'assembly'
+    ].map(icon => (
+      icon !== 'assembly' ? (
+        <img key={icon} src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`} alt={icon} className="icon" />
+      ) : (
+        <div key={icon} className="icon-text">Assembly</div>
+      )
+    ))}
+  </div>
+
+  <h3>🛠️ Tools</h3>
+  <div className="icons">
+    {[
+      'intellij', 'vscode', 'eclipse', 'jupyter', 'git', 'mongodb', 'postman',
+      'virtualbox', 'jira'
+    ].map(icon => (
+      <img key={icon} src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`} alt={icon} className="icon" />
+    ))}
+    <div className="icon-text">Visual Paradigm</div>
+  </div>
+</section>
 
 <section id="Github Stats" className="stats-section">
   <h2>📊 GitHub Stats</h2>
