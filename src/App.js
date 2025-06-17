@@ -127,13 +127,13 @@ function App() {
         <div className="exp-card">
           <h2>ZAPPLY</h2>
           <h3>Junior Software Developer</h3>
+          <p><strong>May 2025 – Present</strong></p>
           <ul>
             <li>Developed full-stack prototype for job automation service.</li>
             <li>Collaborated on making chrome extensions to help autofill job applications across hundreds of websites.</li>
             <li>Used web scraping to gather job postings across different job boards.</li>
             <li>Handled backend data storage architecture.</li>
           </ul>
-          <p><strong>May 2025 – Present</strong></p>
         </div>
       </section>
 
