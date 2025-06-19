@@ -51,6 +51,25 @@ body {
   z-index: 10;
 }
 
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-menu-icon {
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: block;
+}
+
+@media (min-width: 769px) {
+  .mobile-menu-icon {
+    display: none;
+  }
+}
+
+
 .nav-links {
   display: flex;
   flex-wrap: wrap;
