@@ -1,4 +1,3 @@
-// ✅ Full App.js with all requested fixes
 import React, { useEffect, useState } from 'react';
 import './App.css';
 
@@ -185,7 +184,7 @@ function App() {
         <h2>📝 Blog</h2>
         <div className="blog-wrapper">
           {blogs.length > 0 ? blogs.map((post, i) => {
-            const imgMatch = post.description.match(/<img.*?src=\"(.*?)\"/);
+            const imgMatch = post.description.match(/<img.*?src="(.*?)"/);
             const imageUrl = imgMatch ? imgMatch[1] : '';
             return (
               <div className="blog-card" key={i}>
