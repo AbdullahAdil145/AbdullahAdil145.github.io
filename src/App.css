@@ -1,3 +1,4 @@
+/* ✅ Full App.css with fixes */
 * {
   box-sizing: border-box;
 }
@@ -223,6 +224,7 @@ section {
   margin: 0 auto;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
 }
 
 .exp-card:hover {
@@ -231,7 +233,6 @@ section {
 }
 
 .exp-card ul {
-  text-align: left;
   padding-left: 1.5rem;
 }
 
@@ -258,12 +259,6 @@ section {
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-.project-card ul {
-  text-align: left;
-  padding-left: 20px;
-  margin: 10px 0;
 }
 
 .project-card h3 {
@@ -347,12 +342,27 @@ textarea {
 
 form .button {
   align-self: center;
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  height: 40px;
+  width: 130px;
+  text-align: center;
 }
 
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+form .button:hover {
+  opacity: 0.9;
+}
+
+.blog-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
   padding: 0 1rem;
 }
 
@@ -363,6 +373,8 @@ form .button {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-align: left;
+  max-width: 600px;
+  width: 100%;
 }
 
 .blog-card:hover {
@@ -410,14 +422,6 @@ form .button {
   color: var(--text);
 }
 
-.blog-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 0 1rem;
-}
-
 .footer {
   padding: 30px 20px;
   background: #e0e0e0;
@@ -462,4 +466,3 @@ form .button {
     margin-top: 10px;
   }
 }
-
