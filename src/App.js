@@ -41,14 +41,14 @@ function App() {
 
   const sections = [
   'Home',
-  'experience',
-  'projects',
+  'Experience',
+  'Projects',
   'Tech Stack',
   'Github Stats',
   'Leetcode Stats',
-  'publications',
-  'blog',
-  'contact'
+  'Publications',
+  'Blog',
+  'Contact'
 ];
 
   const projects = [
@@ -114,10 +114,12 @@ function App() {
     ))}
   </div>
 
-  <label className="switch">
-    <input type="checkbox" onChange={() => setDarkMode(!darkMode)} checked={darkMode} />
-    <span className="slider round"></span>
-  </label>
+  <div className="nav-switch">
+    <label className="switch">
+      <input type="checkbox" onChange={() => setDarkMode(!darkMode)} checked={darkMode} />
+      <span className="slider round"></span>
+    </label>
+  </div>
 
   {/* Sidebar overlay for mobile */}
   <div className={`mobile-sidebar ${sidebarOpen ? 'open' : ''}`}>
@@ -129,7 +131,6 @@ function App() {
     </div>
   </div>
 
-  {/* Blur background */}
   {sidebarOpen && <div className="overlay-blur" onClick={() => setSidebarOpen(false)}></div>}
 </nav>
 
@@ -172,7 +173,7 @@ function App() {
         </p>
       </header>
 
-      <section id="experience" className="experience-section">
+      <section id="Experience" className="experience-section">
         <h1>💼 Experience</h1>
         <div className="exp-card">
           <h2>ZAPPLY</h2>
@@ -187,7 +188,7 @@ function App() {
         </div>
       </section>
 
-      <section id="projects" className="projects-section">
+      <section id="Projects" className="projects-section">
         <h1>🚀 Projects</h1>
         <div className="projects-grid">
           {projects.map((p, i) => (
@@ -267,7 +268,7 @@ function App() {
   </div>
 </section>
 
-        <section id="publications" className="blog-section">
+        <section id="Publications" className="blog-section">
   <h1>🏛️ Publications</h1>
   <div className="blog-wrapper">
     <div className="blog-card">
@@ -284,7 +285,7 @@ function App() {
   </div>
 </section>
 
-      <section id="blog" className="blog-section">
+      <section id="Blog" className="blog-section">
         <h1>📰 Blog</h1>
         <div className="blog-wrapper">
           {blogs.length > 0 ? blogs.map((post, i) => {
@@ -311,7 +312,7 @@ function App() {
         </div>
       </section>
 
-      <section id="contact" className="contact-section">
+      <section id="Contact" className="contact-section">
         <h1>📬 Contact Me</h1>
         <form action="https://formspree.io/f/xqabbqbw" method="POST">
           <input type="text" name="name" placeholder="Your Name" required />
