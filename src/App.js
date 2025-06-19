@@ -1,3 +1,4 @@
+// ✅ Full App.js with all requested fixes
 import React, { useEffect, useState } from 'react';
 import './App.css';
 
@@ -12,9 +13,7 @@ function App() {
   useEffect(() => {
     fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@abdullahadil145')
       .then(res => res.json())
-      .then(data => {
-        setBlogs(data.items.slice(0, 3));
-      })
+      .then(data => setBlogs(data.items.slice(0, 3)))
       .catch(err => console.error('Blog fetch error:', err));
   }, []);
 
@@ -34,14 +33,7 @@ function App() {
   };
 
   const sections = [
-    'experience',
-    'projects',
-    'stack',
-    'Github Stats',
-    'leetcode',
-    'publications',
-    'blog',
-    'contact'
+    'experience', 'projects', 'stack', 'Github Stats', 'leetcode', 'publications', 'blog', 'contact'
   ];
 
   const projects = [
@@ -90,11 +82,10 @@ function App() {
   return (
     <div className="App">
       <div id="scroll-bar"></div>
-
       <nav className="navbar">
         <div className="nav-links">
           {sections.map(id => (
-            <button key={id} onClick={() => scrollToSection(id)}>{id.replace(/^\w/, c => c.toUpperCase())}</button>
+            <button key={id} onClick={() => scrollToSection(id)}>{id.replace(/\b\w/g, l => l.toUpperCase())}</button>
           ))}
         </div>
         <label className="switch">
@@ -109,16 +100,13 @@ function App() {
         <img className="hero-img" src="https://media.licdn.com/dms/image/v2/D5603AQH7RJddeYN8aw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720547752909?e=1755734400&v=beta&t=VEJ9G2kkUB-LWfHxycEzBHGqvdJ0TQ1XrIEcok-bSfg" alt="profile" />
 
         <div className="hero-buttons">
-          {[
-            { label: "LinkedIn", href: "https://www.linkedin.com/in/abdullahadil145/" },
+          {[{ label: "LinkedIn", href: "https://www.linkedin.com/in/abdullahadil145/" },
             { label: "GitHub", href: "https://github.com/AbdullahAdil145" },
             { label: "LeetCode", href: "https://leetcode.com/u/abdullahadil145/" },
             { label: "Publications", href: "https://www.techrxiv.org/users/932208-muhammad-abdullah-adil" },
-            { label: "Blog", href: "https://abdullahadil145.medium.com/" },
+            { label: "Blog", href: "https://abdullahadil145.medium.com/" }
           ].map((btn, i) => (
-            <a key={i} href={btn.href} target="_blank" rel="noreferrer" className="button" style={{ width: '130px' }}>
-              {btn.label}
-            </a>
+            <a key={i} href={btn.href} target="_blank" rel="noreferrer" className="button" style={{ width: '130px' }}>{btn.label}</a>
           ))}
 
           <div className="dropdown">
@@ -129,10 +117,6 @@ function App() {
             </div>
           </div>
         </div>
-
-        <p className="intro-text">
-          I am a versatile and motivated Full Stack Developer with a strong academic foundation in Computer Science and practical experience developing scalable, web-based applications...
-        </p>
       </header>
 
       <section id="experience" className="experience-section">
@@ -156,75 +140,29 @@ function App() {
           {projects.map((p, i) => (
             <div className="project-card" key={i}>
               <h3>{p.title}</h3>
-              <p className="summary">{p.summary}</p>
+              <p>{p.summary}</p>
               <ul>{p.bullets.map((b, j) => <li key={j}>{b}</li>)}</ul>
               <p><strong>Tech:</strong> {p.tech}</p>
               <div className="project-buttons">
-                <a href={p.link} target="_blank" rel="noreferrer" className="button github-button">GitHub</a>
+                <a href={p.link} target="_blank" rel="noreferrer" className="button">GitHub</a>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section id="stack" className="stack-section">
-        <h2>💻 Tech Stack</h2>
-        <div style={{ marginTop: '20px' }}>
-          <div className="icons">
-            {[
-              'java', 'python', 'cplusplus', 'javascript', 'html5', 'css3', 'php',
-              'mongodb', 'mysql', 'nodejs', 'react', 'express'
-            ].map(icon => (
-              <img
-                key={icon}
-                src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`}
-                alt={icon}
-                className="icon"
-              />
-            ))}
-          </div>
-        </div>
-        <div style={{ marginTop: '40px' }}>
-          <div className="icons">
-            {[
-              'intellij', 'vscode', 'eclipse', 'jupyter', 'git',
-              'mongodb', 'postman', 'jira'
-            ].map(icon => (
-              <img
-                key={icon}
-                src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`}
-                alt={icon}
-                className="icon"
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section id="Github Stats" className="stats-section">
         <h2>📊 GitHub Stats</h2>
         <div className="stats-container">
-          <img
-            src="https://github-readme-stats.vercel.app/api?username=AbdullahAdil145&show_icons=true&theme=tokyonight&cache_seconds=1800"
-            alt="GitHub Stats"
-            className="stats-image"
-          />
-          <img
-            src="https://github-readme-streak-stats.herokuapp.com/?user=AbdullahAdil145&theme=tokyonight"
-            alt="GitHub Streak"
-            className="stats-image"
-          />
+          <img src="https://github-readme-stats.vercel.app/api?username=AbdullahAdil145&show_icons=true&theme=tokyonight&cache_seconds=1800" alt="GitHub Stats" className="stats-image" />
+          <img src="https://github-readme-streak-stats.herokuapp.com/?user=AbdullahAdil145&theme=tokyonight" alt="GitHub Streak" className="stats-image" />
         </div>
       </section>
 
       <section id="leetcode" className="stats-section">
         <h2>🧠 LeetCode Stats</h2>
         <div className="stats-container">
-          <img
-            src="https://leetcard.jacoblin.cool/abdullahadil145"
-            alt="LeetCode Stats"
-            className="stats-image"
-          />
+          <img src="https://leetcard.jacoblin.cool/abdullahadil145" alt="LeetCode Stats" className="stats-image" />
         </div>
       </section>
 
@@ -232,13 +170,11 @@ function App() {
         <h2>📚 Publications</h2>
         <div className="blog-wrapper">
           <div className="blog-card">
-            <a href="https://www.techrxiv.org/articles/preprint/10.36227/techrxiv.12345678.v1" target="_blank" rel="noreferrer">
+            <a href="https://www.techrxiv.org/articles/1305382" target="_blank" rel="noreferrer">
               <div className="blog-content">
-                <h3>Sample Publication Title</h3>
-                <p className="blog-date">March 2024</p>
-                <p className="blog-desc">
-                  This is a sample abstract or short description of a publication from TechRxiv...
-                </p>
+                <h3>Simulation of a Basic Cloud Data Centre Using CloudSim</h3>
+                <p className="blog-date">TechRxiv • 2024</p>
+                <p className="blog-desc">This paper simulates a basic cloud data centre setup using CloudSim to study performance and scalability of distributed cloud architectures...</p>
               </div>
             </a>
           </div>
@@ -249,7 +185,7 @@ function App() {
         <h2>📝 Blog</h2>
         <div className="blog-wrapper">
           {blogs.length > 0 ? blogs.map((post, i) => {
-            const imgMatch = post.description.match(/<img.*?src="(.*?)"/);
+            const imgMatch = post.description.match(/<img.*?src=\"(.*?)\"/);
             const imageUrl = imgMatch ? imgMatch[1] : '';
             return (
               <div className="blog-card" key={i}>
@@ -258,12 +194,9 @@ function App() {
                   <div className="blog-content">
                     <h3>{post.title}</h3>
                     <p className="blog-date">{new Date(post.pubDate).toLocaleDateString()}</p>
-                    <p
-                      className="blog-desc"
-                      dangerouslySetInnerHTML={{
-                        __html: post.description.replace(/<img[^>]*>/g, '').slice(0, 140) + '...'
-                      }}
-                    />
+                    <p className="blog-desc" dangerouslySetInnerHTML={{
+                      __html: post.description.replace(/<img[^>]*>/g, '').slice(0, 140) + '...'
+                    }} />
                   </div>
                 </a>
               </div>
