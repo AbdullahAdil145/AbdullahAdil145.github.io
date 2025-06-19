@@ -41,9 +41,9 @@ function App() {
   'Home',
   'experience',
   'projects',
-  'stack',
+  'tech stack',
   'Github Stats',
-  'leetcode Stats',
+  'Leetcode Stats',
   'publications',
   'blog',
   'contact'
@@ -98,10 +98,16 @@ function App() {
 
       <nav className="navbar">
         <div className="nav-links">
-          {sections.map(id => (
-            <button key={id} onClick={() => scrollToSection(id)}>{id.replace(/^\w/, c => c.toUpperCase())}</button>
-          ))}
-        </div>
+  {sections.map((id, index) => (
+    <React.Fragment key={id}>
+      <button onClick={() => scrollToSection(id)}>
+        {id.replace(/^\w/, c => c.toUpperCase())}
+      </button>
+      {index < sections.length - 1 && <span className="nav-divider">|</span>}
+    </React.Fragment>
+  ))}
+</div>
+
         <label className="switch">
           <input type="checkbox" onChange={() => setDarkMode(!darkMode)} checked={darkMode} />
           <span className="slider round"></span>
@@ -179,7 +185,7 @@ function App() {
         </div>
       </section>
 
-    <section id="stack" className="stack-section">
+    <section id="tech stack" className="stack-section">
   <h1>🛠️ Tech Stack</h1>
 
  <div style={{ marginTop: '20px' }}>
