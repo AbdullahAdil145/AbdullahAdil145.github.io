@@ -170,7 +170,7 @@ function App() {
           <br /><br />
           I've contributed to impactful projects, including Chrome extensions that streamline job applications and a full-stack hotel management system with authentication and role-based access. I thrive in collaborative environments, bringing a balance of technical skill, creative problem-solving, and attention to user experience.
           <br /><br />
-          My technical stack includes JavaScript, Java, Python, C++, and PHP, alongside tools like Git, Postman, Jira, and Oracle VirtualBox. I'm passionate about continuous learning and applying a user-centered approach to real-world development challenges.
+          My technical stack includes JavaScript, Java, Python, C++, and many more, alongside tools like Git, Postman, Jira, and others. I'm passionate about continuous learning and applying a user-centered approach to real-world development challenges.
           <br /><br />
           Currently seeking opportunities to contribute to dynamic development teams, where I can build, learn, and deliver value through technology.
         </p>
