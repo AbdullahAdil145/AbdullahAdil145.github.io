@@ -1,4 +1,3 @@
-/* ✅ Full App.css with fixes */
 * {
   box-sizing: border-box;
 }
@@ -138,6 +137,7 @@ input:checked + .slider:before {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Buttons block */
 .hero-buttons {
   margin-top: 20px;
   display: flex;
@@ -147,25 +147,38 @@ input:checked + .slider:before {
 }
 
 .hero-buttons .button,
-.hero-buttons .dropdown-toggle {
+.hero-buttons .dropdown {
   width: 130px;
   height: 40px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Buttons and dropdown toggle */
+.button,
+.dropdown-toggle {
   background: var(--accent);
-  color: white;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  transition: opacity 0.3s ease;
+  height: 40px;
 }
 
-.hero-buttons .button:hover,
-.hero-buttons .dropdown-toggle:hover {
+.button:hover,
+.dropdown-toggle:hover {
   opacity: 0.9;
 }
 
@@ -173,6 +186,7 @@ input:checked + .slider:before {
   position: relative;
 }
 
+/* Dropdown menu */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -224,7 +238,6 @@ section {
   margin: 0 auto;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: left;
 }
 
 .exp-card:hover {
@@ -233,6 +246,7 @@ section {
 }
 
 .exp-card ul {
+  text-align: left;
   padding-left: 1.5rem;
 }
 
@@ -259,6 +273,12 @@ section {
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.project-card ul {
+  text-align: left;
+  padding-left: 20px;
+  margin: 10px 0;
 }
 
 .project-card h3 {
@@ -342,27 +362,12 @@ textarea {
 
 form .button {
   align-self: center;
-  background: var(--accent);
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  height: 40px;
-  width: 130px;
-  text-align: center;
 }
 
-form .button:hover {
-  opacity: 0.9;
-}
-
-.blog-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
   padding: 0 1rem;
 }
 
@@ -373,8 +378,6 @@ form .button:hover {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-align: left;
-  max-width: 600px;
-  width: 100%;
 }
 
 .blog-card:hover {
@@ -420,6 +423,17 @@ form .button:hover {
   font-size: 0.95rem;
   line-height: 1.4;
   color: var(--text);
+}
+
+.blog-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.blog-card {
+  max-width: 600px;
+  width: 50%;
 }
 
 .footer {
