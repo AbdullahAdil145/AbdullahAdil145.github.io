@@ -253,7 +253,7 @@ function App() {
   <h1>📚 Publications</h1>
   <div className="blog-wrapper">
     <div className="blog-card">
-      <a href="https://www.techrxiv.org/articles/1305382" target="_blank" rel="noreferrer">
+      <a href="https://www.techrxiv.org/users/932208/articles/1305382-simulation-of-a-basic-cloud-data-centre-using-cloudsim" target="_blank" rel="noreferrer">
         <div className="blog-content">
           <h3>Simulation of a Basic Cloud Data Centre Using CloudSim</h3>
           <p className="blog-date">18 June 2025</p>
