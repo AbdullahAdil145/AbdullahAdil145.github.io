@@ -99,31 +99,31 @@ function App() {
       <div id="scroll-bar"></div>
 
      <nav className="navbar">
-  <div className="navbar-left">
+  <div className="nav-left">
     <div className="mobile-menu-icon" onClick={() => setSidebarOpen(true)}>
       &#9776;
     </div>
+
+    <div className="nav-links desktop-only">
+      {sections.map((id, index) => (
+        <React.Fragment key={id}>
+          <button onClick={() => scrollToSection(id)}>
+            {id.replace(/^\w/, c => c.toUpperCase())}
+          </button>
+          {index < sections.length - 1 && <span className="nav-divider">|</span>}
+        </React.Fragment>
+      ))}
+    </div>
   </div>
 
-  <div className="nav-links desktop-only">
-    {sections.map((id, index) => (
-      <React.Fragment key={id}>
-        <button onClick={() => scrollToSection(id)}>
-          {id.replace(/^\w/, c => c.toUpperCase())}
-        </button>
-        {index < sections.length - 1 && <span className="nav-divider">|</span>}
-      </React.Fragment>
-    ))}
-  </div>
-
-  <div className="navbar-right">
+  <div className="nav-right">
     <label className="switch">
       <input type="checkbox" onChange={() => setDarkMode(!darkMode)} checked={darkMode} />
       <span className="slider round"></span>
     </label>
   </div>
 
-  {/* Sidebar overlay */}
+  {/* Sidebar overlay for mobile */}
   <div className={`mobile-sidebar ${sidebarOpen ? 'open' : ''}`}>
     <div className="sidebar-content">
       <button className="close-btn" onClick={() => setSidebarOpen(false)}>×</button>
