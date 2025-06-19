@@ -30,10 +30,15 @@ function App() {
   }, []);
 
   const scrollToSection = (id) => {
+  if (id === 'Home') {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  };
+  }
+};
 
   const sections = [
+  'Home',
   'experience',
   'projects',
   'stack',
