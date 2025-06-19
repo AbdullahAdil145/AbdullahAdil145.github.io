@@ -12,7 +12,9 @@ function App() {
   useEffect(() => {
     fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@abdullahadil145')
       .then(res => res.json())
-      .then(data => setBlogs(data.items.slice(0, 3)))
+      .then(data => {
+        setBlogs(data.items.slice(0, 3));
+      })
       .catch(err => console.error('Blog fetch error:', err));
   }, []);
 
@@ -32,8 +34,15 @@ function App() {
   };
 
   const sections = [
-    'experience', 'projects', 'stack', 'Github Stats', 'leetcode', 'publications', 'blog', 'contact'
-  ];
+  'experience',
+  'projects',
+  'stack',
+  'Github Stats',
+  'leetcode',
+  'publications',
+  'blog',
+  'contact'
+];
 
   const projects = [
     {
@@ -81,10 +90,11 @@ function App() {
   return (
     <div className="App">
       <div id="scroll-bar"></div>
+
       <nav className="navbar">
         <div className="nav-links">
           {sections.map(id => (
-            <button key={id} onClick={() => scrollToSection(id)}>{id.replace(/\b\w/g, l => l.toUpperCase())}</button>
+            <button key={id} onClick={() => scrollToSection(id)}>{id.replace(/^\w/, c => c.toUpperCase())}</button>
           ))}
         </div>
         <label className="switch">
@@ -99,23 +109,37 @@ function App() {
         <img className="hero-img" src="https://media.licdn.com/dms/image/v2/D5603AQH7RJddeYN8aw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720547752909?e=1755734400&v=beta&t=VEJ9G2kkUB-LWfHxycEzBHGqvdJ0TQ1XrIEcok-bSfg" alt="profile" />
 
         <div className="hero-buttons">
-          {[{ label: "LinkedIn", href: "https://www.linkedin.com/in/abdullahadil145/" },
-            { label: "GitHub", href: "https://github.com/AbdullahAdil145" },
-            { label: "LeetCode", href: "https://leetcode.com/u/abdullahadil145/" },
-            { label: "Publications", href: "https://www.techrxiv.org/users/932208-muhammad-abdullah-adil" },
-            { label: "Blog", href: "https://abdullahadil145.medium.com/" }
-          ].map((btn, i) => (
-            <a key={i} href={btn.href} target="_blank" rel="noreferrer" className="button" style={{ width: '130px' }}>{btn.label}</a>
-          ))}
+  {[
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/abdullahadil145/" },
+    { label: "GitHub", href: "https://github.com/AbdullahAdil145" },
+    { label: "LeetCode", href: "https://leetcode.com/u/abdullahadil145/" },
+    { label: "Publications", href: "https://www.techrxiv.org/users/932208-muhammad-abdullah-adil" },
+    { label: "Blog", href: "https://abdullahadil145.medium.com/" },
+  ].map((btn, i) => (
+    <a key={i} href={btn.href} target="_blank" rel="noreferrer" className="button" style={{ width: '130px' }}>
+      {btn.label}
+    </a>
+  ))}
 
-          <div className="dropdown">
-            <button className="button dropdown-toggle" style={{ width: '130px' }}>Resume</button>
-            <div className="dropdown-menu">
-              <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">View</a>
-              <a href="/Resume.pdf" download>Download</a>
-            </div>
-          </div>
-        </div>
+  <div className="dropdown">
+    <button className="button dropdown-toggle" style={{ width: '130px' }}>Resume</button>
+    <div className="dropdown-menu">
+      <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">View</a>
+      <a href="/Resume.pdf" download>Download</a>
+    </div>
+  </div>
+</div>
+
+
+        <p className="intro-text">
+          I am a versatile and motivated Full Stack Developer with a strong academic foundation in Computer Science and practical experience developing scalable, web-based applications. My work spans front-end design with modern frameworks like React to back-end development using Node.js and database management with MySQL and MongoDB.
+          <br /><br />
+          I've contributed to impactful projects, including Chrome extensions that streamline job applications and a full-stack hotel management system with authentication and role-based access. I thrive in collaborative environments, bringing a balance of technical skill, creative problem-solving, and attention to user experience.
+          <br /><br />
+          My technical stack includes JavaScript, Java, Python, C++, and PHP, alongside tools like Git, Postman, Jira, and Oracle VirtualBox. I'm passionate about continuous learning and applying a user-centered approach to real-world development challenges.
+          <br /><br />
+          Currently seeking opportunities to contribute to dynamic development teams, where I can build, learn, and deliver value through technology.
+        </p>
       </header>
 
       <section id="experience" className="experience-section">
@@ -139,46 +163,96 @@ function App() {
           {projects.map((p, i) => (
             <div className="project-card" key={i}>
               <h3>{p.title}</h3>
-              <p>{p.summary}</p>
+              <p className="summary">{p.summary}</p>
               <ul>{p.bullets.map((b, j) => <li key={j}>{b}</li>)}</ul>
               <p><strong>Tech:</strong> {p.tech}</p>
               <div className="project-buttons">
-                <a href={p.link} target="_blank" rel="noreferrer" className="button">GitHub</a>
+                <a href={p.link} target="_blank" rel="noreferrer" className="button github-button">GitHub</a>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section id="Github Stats" className="stats-section">
-        <h2>📊 GitHub Stats</h2>
-        <div className="stats-container">
-          <img src="https://github-readme-stats.vercel.app/api?username=AbdullahAdil145&show_icons=true&theme=tokyonight&cache_seconds=1800" alt="GitHub Stats" className="stats-image" />
-          <img src="https://github-readme-streak-stats.herokuapp.com/?user=AbdullahAdil145&theme=tokyonight" alt="GitHub Streak" className="stats-image" />
-        </div>
-      </section>
+    <section id="stack" className="stack-section">
+  <h2>💻 Tech Stack</h2>
 
-      <section id="leetcode" className="stats-section">
-        <h2>🧠 LeetCode Stats</h2>
-        <div className="stats-container">
-          <img src="https://leetcard.jacoblin.cool/abdullahadil145" alt="LeetCode Stats" className="stats-image" />
-        </div>
-      </section>
+  <div style={{ marginTop: '20px' }}>
+    <div className="icons">
+      {[
+        'java', 'python', 'cplusplus', 'javascript', 'html5', 'css3', 'php',
+        'mongodb', 'mysql', 'nodejs', 'react', 'express'
+      ].map(icon => (
+        <img
+          key={icon}
+          src={https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg}
+          alt={icon}
+          className="icon"
+        />
+      ))}
+    </div>
+  </div>
 
-      <section id="publications" className="blog-section">
-        <h2>📚 Publications</h2>
-        <div className="blog-wrapper">
-          <div className="blog-card">
-            <a href="https://www.techrxiv.org/articles/1305382" target="_blank" rel="noreferrer">
-              <div className="blog-content">
-                <h3>Simulation of a Basic Cloud Data Centre Using CloudSim</h3>
-                <p className="blog-date">TechRxiv • 2024</p>
-                <p className="blog-desc">This paper simulates a basic cloud data centre setup using CloudSim to study performance and scalability of distributed cloud architectures...</p>
-              </div>
-            </a>
-          </div>
+  <div style={{ marginTop: '40px' }}>
+    <div className="icons">
+      {[
+        'intellij', 'vscode', 'eclipse', 'jupyter', 'git',
+        'mongodb', 'postman', 'jira'
+      ].map(icon => (
+        <img
+          key={icon}
+          src={https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg}
+          alt={icon}
+          className="icon"
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
+<section id="Github Stats" className="stats-section">
+  <h2>📊 GitHub Stats</h2>
+  <div className="stats-container">
+    <img
+      src="https://github-readme-stats.vercel.app/api?username=AbdullahAdil145&show_icons=true&theme=tokyonight&cache_seconds=1800"
+      alt="GitHub Stats"
+      className="stats-image"
+    />
+    <img
+      src="https://github-readme-streak-stats.herokuapp.com/?user=AbdullahAdil145&theme=tokyonight"
+      alt="GitHub Streak"
+      className="stats-image"
+    />
+  </div>
+</section>
+
+        <section id="leetcode" className="stats-section">
+  <h2>🧠 LeetCode Stats</h2>
+  <div className="stats-container">
+    <img
+      src="https://leetcard.jacoblin.cool/abdullahadil145"
+      alt="LeetCode Stats"
+      className="stats-image"
+    />
+  </div>
+</section>
+
+        <section id="publications" className="blog-section">
+  <h2>📚 Publications</h2>
+  <div className="blog-wrapper">
+    <div className="blog-card">
+      <a href="https://www.techrxiv.org/articles/1305382" target="_blank" rel="noreferrer">
+        <div className="blog-content">
+          <h3>Simulation of a Basic Cloud Data Centre Using CloudSim</h3>
+          <p className="blog-date">18 June 2025</p>
+          <p className="blog-desc">
+            This paper presents a foundational simulation of a cloud data center using CloudSim, exploring resource provisioning and VM scheduling to help understand core cloud computing behavior.
+          </p>
         </div>
-      </section>
+      </a>
+    </div>
+  </div>
+</section>
 
       <section id="blog" className="blog-section">
         <h2>📝 Blog</h2>
@@ -193,9 +267,12 @@ function App() {
                   <div className="blog-content">
                     <h3>{post.title}</h3>
                     <p className="blog-date">{new Date(post.pubDate).toLocaleDateString()}</p>
-                    <p className="blog-desc" dangerouslySetInnerHTML={{
-                      __html: post.description.replace(/<img[^>]*>/g, '').slice(0, 140) + '...'
-                    }} />
+                    <p
+                      className="blog-desc"
+                      dangerouslySetInnerHTML={{
+                        __html: post.description.replace(/<img[^>]*>/g, '').slice(0, 140) + '...'
+                      }}
+                    />
                   </div>
                 </a>
               </div>
