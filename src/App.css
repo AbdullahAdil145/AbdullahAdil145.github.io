@@ -495,3 +495,82 @@ section h1 {
   color: var(--text-color);
   opacity: 0.5;
 }
+
+.mobile-menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: -60%;
+  height: 100vh;
+  width: 60%;
+  background: var(--card);
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  transition: left 0.3s ease-in-out;
+  padding: 2rem 1rem;
+}
+
+.mobile-sidebar.open {
+  left: 0;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.sidebar-content button {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  color: var(--text);
+  cursor: pointer;
+  text-align: left;
+}
+
+.sidebar-content button:hover {
+  color: var(--accent);
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.overlay-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 90;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .switch {
+    margin-left: auto;
+  }
+}
