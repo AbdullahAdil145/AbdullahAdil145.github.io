@@ -104,7 +104,7 @@ function App() {
       </nav>
 
       <header className="hero">
-        <h1>Hi, I’m <span className="highlight">Muhammad Abdullah Adil</span></h1>
+        <h1 className="name-heading">Hi, I’m <span className="highlight">Muhammad Abdullah Adil</span></h1>
         <p>Full Stack Developer | Web Developer</p>
         <img className="hero-img" src="https://media.licdn.com/dms/image/v2/D5603AQH7RJddeYN8aw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720547752909?e=1755734400&v=beta&t=VEJ9G2kkUB-LWfHxycEzBHGqvdJ0TQ1XrIEcok-bSfg" alt="profile" />
 
