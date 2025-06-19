@@ -99,8 +99,10 @@ function App() {
       <div id="scroll-bar"></div>
 
      <nav className="navbar">
-  <div className="mobile-menu-icon" onClick={() => setSidebarOpen(true)}>
-    &#9776;
+  <div className="navbar-left">
+    <div className="mobile-menu-icon" onClick={() => setSidebarOpen(true)}>
+      &#9776;
+    </div>
   </div>
 
   <div className="nav-links desktop-only">
@@ -114,14 +116,14 @@ function App() {
     ))}
   </div>
 
-  <div className="nav-switch">
+  <div className="navbar-right">
     <label className="switch">
       <input type="checkbox" onChange={() => setDarkMode(!darkMode)} checked={darkMode} />
       <span className="slider round"></span>
     </label>
   </div>
 
-  {/* Sidebar overlay for mobile */}
+  {/* Sidebar overlay */}
   <div className={`mobile-sidebar ${sidebarOpen ? 'open' : ''}`}>
     <div className="sidebar-content">
       <button className="close-btn" onClick={() => setSidebarOpen(false)}>×</button>
@@ -133,6 +135,7 @@ function App() {
 
   {sidebarOpen && <div className="overlay-blur" onClick={() => setSidebarOpen(false)}></div>}
 </nav>
+
 
       <header className="hero">
         <h1 className="name-heading">Hi, I’m <span className="highlight">Muhammad Abdullah Adil</span></h1>
