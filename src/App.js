@@ -33,7 +33,16 @@ function App() {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const sections = ['experience', 'projects', 'stack', 'Github Stats', 'blog', 'contact'];
+  const sections = [
+    'experience',
+    'projects',
+    'stack',
+    'Github Stats',
+    'leetcode',
+    'publications',
+    'blog',
+    'contact'
+  ];
 
   const projects = [
     {
@@ -100,25 +109,29 @@ function App() {
         <img className="hero-img" src="https://media.licdn.com/dms/image/v2/D5603AQH7RJddeYN8aw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720547752909?e=1755734400&v=beta&t=VEJ9G2kkUB-LWfHxycEzBHGqvdJ0TQ1XrIEcok-bSfg" alt="profile" />
 
         <div className="hero-buttons">
-  <a href="https://linktr.ee/abdullahadil145" target="_blank" rel="noreferrer" className="button">Profiles</a>
-  
-  <div className="dropdown">
-    <button className="button dropdown-toggle">Resume</button>
-    <div className="dropdown-menu">
-      <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">View</a>
-      <a href="/Resume.pdf" download>Download</a>
-    </div>
-  </div>
-</div>
+          {[
+            { label: "LinkedIn", href: "https://www.linkedin.com/in/abdullahadil145/" },
+            { label: "GitHub", href: "https://github.com/AbdullahAdil145" },
+            { label: "LeetCode", href: "https://leetcode.com/u/abdullahadil145/" },
+            { label: "Publications", href: "https://www.techrxiv.org/users/932208-muhammad-abdullah-adil" },
+            { label: "Blog", href: "https://abdullahadil145.medium.com/" },
+          ].map((btn, i) => (
+            <a key={i} href={btn.href} target="_blank" rel="noreferrer" className="button" style={{ width: '130px' }}>
+              {btn.label}
+            </a>
+          ))}
+
+          <div className="dropdown">
+            <button className="button dropdown-toggle" style={{ width: '130px' }}>Resume</button>
+            <div className="dropdown-menu">
+              <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">View</a>
+              <a href="/Resume.pdf" download>Download</a>
+            </div>
+          </div>
+        </div>
 
         <p className="intro-text">
-          I am a versatile and motivated Full Stack Developer with a strong academic foundation in Computer Science and practical experience developing scalable, web-based applications. My work spans front-end design with modern frameworks like React to back-end development using Node.js and database management with MySQL and MongoDB.
-          <br /><br />
-          I've contributed to impactful projects, including Chrome extensions that streamline job applications and a full-stack hotel management system with authentication and role-based access. I thrive in collaborative environments, bringing a balance of technical skill, creative problem-solving, and attention to user experience.
-          <br /><br />
-          My technical stack includes JavaScript, Java, Python, C++, and PHP, alongside tools like Git, Postman, Jira, and Oracle VirtualBox. I'm passionate about continuous learning and applying a user-centered approach to real-world development challenges.
-          <br /><br />
-          Currently seeking opportunities to contribute to dynamic development teams, where I can build, learn, and deliver value through technology.
+          I am a versatile and motivated Full Stack Developer with a strong academic foundation in Computer Science and practical experience developing scalable, web-based applications...
         </p>
       </header>
 
@@ -154,58 +167,83 @@ function App() {
         </div>
       </section>
 
-    <section id="stack" className="stack-section">
-  <h2>💻 Tech Stack</h2>
+      <section id="stack" className="stack-section">
+        <h2>💻 Tech Stack</h2>
+        <div style={{ marginTop: '20px' }}>
+          <div className="icons">
+            {[
+              'java', 'python', 'cplusplus', 'javascript', 'html5', 'css3', 'php',
+              'mongodb', 'mysql', 'nodejs', 'react', 'express'
+            ].map(icon => (
+              <img
+                key={icon}
+                src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`}
+                alt={icon}
+                className="icon"
+              />
+            ))}
+          </div>
+        </div>
+        <div style={{ marginTop: '40px' }}>
+          <div className="icons">
+            {[
+              'intellij', 'vscode', 'eclipse', 'jupyter', 'git',
+              'mongodb', 'postman', 'jira'
+            ].map(icon => (
+              <img
+                key={icon}
+                src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`}
+                alt={icon}
+                className="icon"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
 
-  <div style={{ marginTop: '20px' }}>
-    <div className="icons">
-      {[
-        'java', 'python', 'cplusplus', 'javascript', 'html5', 'css3', 'php',
-        'mongodb', 'mysql', 'nodejs', 'react', 'express'
-      ].map(icon => (
-        <img
-          key={icon}
-          src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`}
-          alt={icon}
-          className="icon"
-        />
-      ))}
-    </div>
-  </div>
+      <section id="Github Stats" className="stats-section">
+        <h2>📊 GitHub Stats</h2>
+        <div className="stats-container">
+          <img
+            src="https://github-readme-stats.vercel.app/api?username=AbdullahAdil145&show_icons=true&theme=tokyonight&cache_seconds=1800"
+            alt="GitHub Stats"
+            className="stats-image"
+          />
+          <img
+            src="https://github-readme-streak-stats.herokuapp.com/?user=AbdullahAdil145&theme=tokyonight"
+            alt="GitHub Streak"
+            className="stats-image"
+          />
+        </div>
+      </section>
 
-  <div style={{ marginTop: '40px' }}>
-    <div className="icons">
-      {[
-        'intellij', 'vscode', 'eclipse', 'jupyter', 'git',
-        'mongodb', 'postman', 'jira'
-      ].map(icon => (
-        <img
-          key={icon}
-          src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`}
-          alt={icon}
-          className="icon"
-        />
-      ))}
-    </div>
-  </div>
-</section>
+      <section id="leetcode" className="stats-section">
+        <h2>🧠 LeetCode Stats</h2>
+        <div className="stats-container">
+          <img
+            src="https://leetcard.jacoblin.cool/abdullahadil145"
+            alt="LeetCode Stats"
+            className="stats-image"
+          />
+        </div>
+      </section>
 
-<section id="Github Stats" className="stats-section">
-  <h2>📊 GitHub Stats</h2>
-  <div className="stats-container">
-    <img
-      src="https://github-readme-stats.vercel.app/api?username=AbdullahAdil145&show_icons=true&theme=tokyonight&cache_seconds=1800"
-      alt="GitHub Stats"
-      className="stats-image"
-    />
-    <img
-      src="https://github-readme-streak-stats.herokuapp.com/?user=AbdullahAdil145&theme=tokyonight"
-      alt="GitHub Streak"
-      className="stats-image"
-    />
-  </div>
-</section>
-
+      <section id="publications" className="blog-section">
+        <h2>📚 Publications</h2>
+        <div className="blog-wrapper">
+          <div className="blog-card">
+            <a href="https://www.techrxiv.org/articles/preprint/10.36227/techrxiv.12345678.v1" target="_blank" rel="noreferrer">
+              <div className="blog-content">
+                <h3>Sample Publication Title</h3>
+                <p className="blog-date">March 2024</p>
+                <p className="blog-desc">
+                  This is a sample abstract or short description of a publication from TechRxiv...
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
 
       <section id="blog" className="blog-section">
         <h2>📝 Blog</h2>
