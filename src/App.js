@@ -43,7 +43,7 @@ function App() {
   'projects',
   'stack',
   'Github Stats',
-  'leetcode',
+  'leetcode Stats',
   'publications',
   'blog',
   'contact'
