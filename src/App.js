@@ -214,11 +214,11 @@ function App() {
       'mongodb', 'mysql', 'nodejs', 'react', 'express'
     ].map(icon => (
       <img
-        key={icon}
-        src={https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg}
-        alt={icon}
-        className="icon"
-      />
+  key={icon}
+  src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`}
+  alt={icon}
+  className="icon"
+/>
     ))}
   </div>
 </div>
