@@ -232,7 +232,7 @@ function App() {
   </div>
 </section>
 
-        <section id="leetcode" className="stats-section">
+        <section id="Leetcode Stats" className="stats-section">
   <h1>🧠 LeetCode Stats</h1>
   <div className="stats-container">
     <img
