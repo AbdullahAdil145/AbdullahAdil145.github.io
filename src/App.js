@@ -177,37 +177,38 @@ function App() {
     <section id="stack" className="stack-section">
   <h2>💻 Tech Stack</h2>
 
-  <div style={{ marginTop: '20px' }}>
-    <div className="icons">
-      {[
-        'java', 'python', 'cplusplus', 'javascript', 'html5', 'css3', 'php',
-        'mongodb', 'mysql', 'nodejs', 'react', 'express'
-      ].map(icon => (
-        <img
-          key={icon}
-          src={https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg}
-          alt={icon}
-          className="icon"
-        />
-      ))}
-    </div>
+ <div style={{ marginTop: '20px' }}>
+  <div className="icons">
+    {[
+      'java', 'python', 'cplusplus', 'javascript', 'html5', 'css3', 'php',
+      'mongodb', 'mysql', 'nodejs', 'react', 'express'
+    ].map(icon => (
+      <img
+        key={icon}
+        src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`}
+        alt={icon}
+        className="icon"
+      />
+    ))}
   </div>
+</div>
 
-  <div style={{ marginTop: '40px' }}>
-    <div className="icons">
-      {[
-        'intellij', 'vscode', 'eclipse', 'jupyter', 'git',
-        'mongodb', 'postman', 'jira'
-      ].map(icon => (
-        <img
-          key={icon}
-          src={https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg}
-          alt={icon}
-          className="icon"
-        />
-      ))}
-    </div>
+<div style={{ marginTop: '40px' }}>
+  <div className="icons">
+    {[
+      'intellij', 'vscode', 'eclipse', 'jupyter', 'git',
+      'mongodb', 'postman', 'jira'
+    ].map(icon => (
+      <img
+        key={icon}
+        src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`}
+        alt={icon}
+        className="icon"
+      />
+    ))}
   </div>
+</div>
+
 </section>
 
 <section id="Github Stats" className="stats-section">
