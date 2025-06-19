@@ -137,7 +137,6 @@ input:checked + .slider:before {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Buttons block */
 .hero-buttons {
   margin-top: 20px;
   display: flex;
@@ -147,38 +146,25 @@ input:checked + .slider:before {
 }
 
 .hero-buttons .button,
-.hero-buttons .dropdown {
+.hero-buttons .dropdown-toggle {
   width: 130px;
   height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-}
-
-/* Buttons and dropdown toggle */
-.button,
-.dropdown-toggle {
-  background: var(--accent);
-  color: #fff;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 8px;
+  font-size: 0.95rem;
   font-weight: 600;
+  border-radius: 8px;
+  background: var(--accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
   cursor: pointer;
   text-decoration: none;
-  font-size: 0.95rem;
-  white-space: nowrap;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
+  transition: opacity 0.3s ease;
 }
 
-.button:hover,
-.dropdown-toggle:hover {
+.hero-buttons .button:hover,
+.hero-buttons .dropdown-toggle:hover {
   opacity: 0.9;
 }
 
@@ -186,7 +172,6 @@ input:checked + .slider:before {
   position: relative;
 }
 
-/* Dropdown menu */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -428,12 +413,9 @@ form .button {
 .blog-wrapper {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
   padding: 0 1rem;
-}
-
-.blog-card {
-  max-width: 600px;
-  width: 50%;
 }
 
 .footer {
@@ -480,3 +462,4 @@ form .button {
     margin-top: 10px;
   }
 }
+
