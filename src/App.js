@@ -105,7 +105,7 @@ function App() {
 
       <header className="hero">
         <h1 className="name-heading">Hi, I’m <span className="highlight">Muhammad Abdullah Adil</span></h1>
-        <p>Full Stack Developer | Web Developer</p>
+        <h2>Full Stack Developer | Web Developer</h2>
         <img className="hero-img" src="https://media.licdn.com/dms/image/v2/D5603AQH7RJddeYN8aw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720547752909?e=1755734400&v=beta&t=VEJ9G2kkUB-LWfHxycEzBHGqvdJ0TQ1XrIEcok-bSfg" alt="profile" />
 
         <div className="hero-buttons">
@@ -143,7 +143,7 @@ function App() {
       </header>
 
       <section id="experience" className="experience-section">
-        <h1>Experience</h1>
+        <h1>💼 Experience</h1>
         <div className="exp-card">
           <h2>ZAPPLY</h2>
           <h3>Junior Software Developer</h3>
@@ -158,7 +158,7 @@ function App() {
       </section>
 
       <section id="projects" className="projects-section">
-        <h1>Projects</h1>
+        <h1>🚀 Projects</h1>
         <div className="projects-grid">
           {projects.map((p, i) => (
             <div className="project-card" key={i}>
@@ -175,7 +175,7 @@ function App() {
       </section>
 
     <section id="stack" className="stack-section">
-  <h1>Tech Stack</h1>
+  <h1>🛠️ Tech Stack</h1>
 
  <div style={{ marginTop: '20px' }}>
   <div className="icons">
@@ -212,7 +212,7 @@ function App() {
 </section>
 
 <section id="Github Stats" className="stats-section">
-  <h1>GitHub Stats</h1>
+  <h1>📊 GitHub Stats</h1>
   <div className="stats-container">
     <img
       src="https://github-readme-stats.vercel.app/api?username=AbdullahAdil145&show_icons=true&theme=tokyonight&cache_seconds=1800"
@@ -228,7 +228,7 @@ function App() {
 </section>
 
         <section id="leetcode" className="stats-section">
-  <h1>LeetCode Stats</h1>
+  <h1>🧠 LeetCode Stats</h1>
   <div className="stats-container">
     <img
       src="https://leetcard.jacoblin.cool/abdullahadil145"
@@ -239,7 +239,7 @@ function App() {
 </section>
 
         <section id="publications" className="blog-section">
-  <h1>Publications</h1>
+  <h1>📚 Publications</h1>
   <div className="blog-wrapper">
     <div className="blog-card">
       <a href="https://www.techrxiv.org/articles/1305382" target="_blank" rel="noreferrer">
@@ -256,7 +256,7 @@ function App() {
 </section>
 
       <section id="blog" className="blog-section">
-        <h1>Blog</h1>
+        <h1>📰 Blog</h1>
         <div className="blog-wrapper">
           {blogs.length > 0 ? blogs.map((post, i) => {
             const imgMatch = post.description.match(/<img.*?src="(.*?)"/);
@@ -283,7 +283,7 @@ function App() {
       </section>
 
       <section id="contact" className="contact-section">
-        <h1>Contact Me</h1>
+        <h1>📬 Contact Me</h1>
         <form action="https://formspree.io/f/xqabbqbw" method="POST">
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
