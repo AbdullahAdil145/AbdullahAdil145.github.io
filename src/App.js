@@ -207,8 +207,7 @@ function App() {
 <div style={{ marginTop: '40px' }}>
   <div className="icons">
     {[
-      'intellij', 'vscode', 'eclipse', 'jupyter', 'git',
-      'mongodb', 'postman', 'jira'
+      'intellij', 'vscode', 'eclipse', 'jupyter', 'git', 'postman', 'jira'
     ].map(icon => (
       <img
         key={icon}
@@ -250,7 +249,7 @@ function App() {
 </section>
 
         <section id="publications" className="blog-section">
-  <h1>📚 Publications</h1>
+  <h1>🏛️ Publications</h1>
   <div className="blog-wrapper">
     <div className="blog-card">
       <a href="https://www.techrxiv.org/users/932208/articles/1305382-simulation-of-a-basic-cloud-data-centre-using-cloudsim" target="_blank" rel="noreferrer">
