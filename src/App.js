@@ -41,7 +41,7 @@ function App() {
   'Home',
   'experience',
   'projects',
-  'tech stack',
+  'Tech Stack',
   'Github Stats',
   'Leetcode Stats',
   'publications',
@@ -185,7 +185,7 @@ function App() {
         </div>
       </section>
 
-    <section id="tech stack" className="stack-section">
+    <section id="Tech Stack" className="stack-section">
   <h1>🛠️ Tech Stack</h1>
 
  <div style={{ marginTop: '20px' }}>
