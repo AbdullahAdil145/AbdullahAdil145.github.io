@@ -32,21 +32,12 @@ function App() {
 
   const scrollToSection = (id) => {
   setSidebarOpen(false);
-
   if (id === 'Home') {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    return;
-  }
-
-  const element = document.getElementById(id);
-  if (element) {
-    const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 100;
-    const y = element.getBoundingClientRect().top + window.pageYOffset - navbarHeight - 10; // 10px padding
-
-    window.scrollTo({ top: y, behavior: 'smooth' });
+  } else {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   }
 };
-
 
   const sections = [
   'Home',
@@ -133,7 +124,7 @@ function App() {
   </div>
 
   {/* Sidebar overlay for mobile */}
-  <div className={`mobile-sidebar ${sidebarOpen ? 'open' : ''}`}>
+  <div className={mobile-sidebar ${sidebarOpen ? 'open' : ''}}>
     <div className="sidebar-content">
       <button className="close-btn" onClick={() => setSidebarOpen(false)}>×</button>
       {sections.map((id) => (
@@ -228,7 +219,7 @@ function App() {
     ].map(icon => (
       <img
   key={icon}
-  src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`}
+  src={https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg}
   alt={icon}
   className="icon"
 />
@@ -243,7 +234,7 @@ function App() {
     ].map(icon => (
       <img
   key={icon}
-  src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`}
+  src={https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg}
   alt={icon}
   className="icon"
 />
@@ -304,7 +295,7 @@ function App() {
       const imgMatch = post.description.match(/<img.*?src="(.*?)"/);
       const imageUrl = imgMatch ? imgMatch[1] : '';
       return (
-        <div className="project-card" key={i}>
+        <div className="blog-card" key={i}>
           <a href={post.link} target="_blank" rel="noreferrer">
             {imageUrl && <img src={imageUrl} alt="thumbnail" className="blog-thumb" />}
             <div className="blog-content">
@@ -335,5 +326,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
