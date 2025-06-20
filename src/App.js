@@ -76,8 +76,8 @@ function App() {
       title: 'Web Scraper',
       summary: 'Developed a web scraper that uses crawlers to scrape information from a website.',
       bullets: [
-        'Used Python, FastAPI and mongoDB to scrape website for information and store it.',
-        'Built a simple React + MUI frotnend that displays the information in cards.'
+        'Used Python, Fast API and MongoDB to scrape website for information and store it.',
+        'Built a simple React + MUI frontend that displays the information in cards.'
       ],
       tech: 'React, MUI, MongoDB, Rest APIs, Python',
       link: 'https://github.com/AbdullahAdil145/Web-Scraper'
@@ -214,7 +214,7 @@ function App() {
   <div className="icons">
     {[
       'java', 'python', 'cplusplus', 'javascript', 'html5', 'css3', 'php',
-      'mongodb', 'mysql', 'nodejs', 'react', 'express', 'fastapi','mui'
+      'mongodb', 'mysql', 'nodejs', 'react', 'express', 'fastapi'
     ].map(icon => (
       <img
   key={icon}
