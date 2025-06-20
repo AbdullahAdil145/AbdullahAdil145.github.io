@@ -218,7 +218,7 @@ function App() {
     ].map(icon => (
       <img
   key={icon}
-  src={https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg}
+  src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`}
   alt={icon}
   className="icon"
 />
@@ -233,7 +233,7 @@ function App() {
     ].map(icon => (
       <img
   key={icon}
-  src={https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg}
+  src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`}
   alt={icon}
   className="icon"
 />
