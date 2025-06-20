@@ -581,3 +581,21 @@ section h1 {
     margin: 0;
   }
 }
+
+@media (max-width: 768px) {
+  /* Stack blog cards vertically and center */
+  .blog-wrapper {
+    flex-direction: column;
+    align-items: center;
+    overflow-x: unset;
+    gap: 1.5rem;
+  }
+
+  /* Fix weird vertical stretching on blog and publication cards */
+  .blog-card,
+  .publication-card {
+    width: 90%;
+    max-width: 500px;
+    min-height: auto;
+    height: auto;
+  }
