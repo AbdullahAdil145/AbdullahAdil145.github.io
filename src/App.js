@@ -32,12 +32,17 @@ function App() {
 
   const scrollToSection = (id) => {
   setSidebarOpen(false);
-  if (id === 'Home') {
+  const element = document.getElementById(id);
+
+  if (element) {
+    const yOffset = -100;
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  } else if (id === 'Home') {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  } else {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   }
 };
+
 
   const sections = [
   'Home',
