@@ -56,8 +56,8 @@ function App() {
       title: 'Hotel Management System',
       summary: 'Multi-user hotel managment system with role based access priveliges.',
       bullets: [
-        'Spearheaded a team to build a full-stack hotel management platform with user authentication and role-based access',
-        'Implemented CRUD and dynamic customer, booking, and account modules using scalable, modular code structures'
+        'Spearheaded a team to build a full-stack hotel management platform with user authentication and role-based access.',
+        'Implemented CRUD and dynamic customer, booking, and account modules using scalable, modular code structures.'
       ],
       tech: 'Java, MySQL',
       link: 'https://github.com/AbdullahAdil145/Hotel-Managment-System'
@@ -66,8 +66,8 @@ function App() {
       title: 'Job Application Tracker',
       summary: 'A chrome extension that captures and stores job applications.',
       bullets: [
-        'Built a full-stack MERN application to help users track and manage job applications with seamless CRUD functionality',
-        'Designed a modular architecture with reusable components and services to support scalability and maintainability'
+        'Built a full-stack MERN application to help users track and manage job applications with seamless CRUD functionality.',
+        'Designed a modular architecture with reusable components and services to support scalability and maintainability.'
       ],
       tech: 'React, MUI, Node.js, Chrome API',
       link: 'https://github.com/AbdullahAdil145/Job-Application-Tracker'
@@ -79,15 +79,15 @@ function App() {
         'Used Python, Fast API and MongoDB to scrape website for information and store it.',
         'Built a simple React + MUI frontend that displays the information in cards.'
       ],
-      tech: 'React, MUI, MongoDB, Rest APIs, Python',
+      tech: 'React, MUI, MongoDB, FastAPI, Python',
       link: 'https://github.com/AbdullahAdil145/Web-Scraper'
     },
     {
       title: 'Task Manager',
       summary: 'A lightweight and simple responsive Task Managing app.',
       bullets: [
-        'Built a lightweight responsive task management app using vanilla HTML, CSS, and JavaScript',
-        'Used local Storage for persistent task saving and dynamic DOM manipulation for real-time UI updates'
+        'Built a lightweight responsive task management app using vanilla HTML, CSS, and JavaScript.',
+        'Used local Storage for persistent task saving and dynamic DOM manipulation for real-time UI updates.'
       ],
       tech: 'HTML, CSS, JavaScript',
       link: 'https://github.com/AbdullahAdil145/TaskManager'
