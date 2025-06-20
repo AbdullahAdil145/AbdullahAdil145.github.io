@@ -32,14 +32,18 @@ function App() {
 
   const scrollToSection = (id) => {
   setSidebarOpen(false);
-  const element = document.getElementById(id);
 
-  if (element) {
-    const yOffset = -100;
-    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-    window.scrollTo({ top: y, behavior: 'smooth' });
-  } else if (id === 'Home') {
+  if (id === 'Home') {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    return;
+  }
+
+  const element = document.getElementById(id);
+  if (element) {
+    const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 100;
+    const y = element.getBoundingClientRect().top + window.pageYOffset - navbarHeight - 10; // 10px padding
+
+    window.scrollTo({ top: y, behavior: 'smooth' });
   }
 };
 
