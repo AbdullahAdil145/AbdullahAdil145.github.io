@@ -301,12 +301,6 @@ function App() {
             <div className="blog-content">
               <h3>{post.title}</h3>
               <p className="blog-date">{new Date(post.pubDate).toLocaleDateString()}</p>
-              <p
-                className="blog-desc"
-                dangerouslySetInnerHTML={{
-                  __html: post.description.replace(/<img[^>]*>/g, '').slice(0, 140) + '...'
-                }}
-              />
             </div>
           </a>
         </div>
