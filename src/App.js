@@ -305,7 +305,7 @@ function App() {
           </a>
         </div>
       );
-    }) : <p>No posts available.</p>}
+    }) : <p>No posts found.</p>}
   </div>
 </section>
 
@@ -326,3 +326,5 @@ function App() {
     </div>
   );
 }
+
+export default App;
