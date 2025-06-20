@@ -123,7 +123,8 @@ function App() {
     </label>
   </div>
 
-  <div className={`mobile-sidebar ${sidebarOpen ? 'open' : ''}`}>
+  {/* Sidebar overlay for mobile */}
+  <div className={mobile-sidebar ${sidebarOpen ? 'open' : ''}}>
     <div className="sidebar-content">
       <button className="close-btn" onClick={() => setSidebarOpen(false)}>×</button>
       {sections.map((id) => (
