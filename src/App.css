@@ -18,6 +18,10 @@
   --highlight: #80dfff;
 }
 
+html {
+  scroll-padding-top: 100px;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
