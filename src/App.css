@@ -391,6 +391,8 @@ form .button {
 .blog-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+   z-index: 2;
+  position: relative;
 }
 
 .blog-card a {
@@ -438,7 +440,8 @@ form .button {
   flex-wrap: nowrap; 
   justify-content: center;
   gap: 1.5rem;             
-  overflow-x: auto;       
+  overflow-x: auto;
+  overflow-y: visible;
   padding: 0 1rem;
 }
 
