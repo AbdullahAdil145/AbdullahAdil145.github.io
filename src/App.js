@@ -311,7 +311,7 @@ function App() {
                 </a>
               </div>
             );
-          }) : <p>No posts found.</p>}
+          }) : <p>No posts found.</p>}}
         </div>
       </section>
 
