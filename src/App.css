@@ -435,7 +435,9 @@ form .button {
 
 .blog-wrapper {
   display: flex;
-  justify-content: center;
+  flex-wrap: nowrap;      /* Prevents wrapping */
+  gap: 1.5rem;             /* Adds horizontal spacing */
+  overflow-x: auto;        /* Optional: lets user scroll if cards overflow */
   padding: 0 1rem;
 }
 
