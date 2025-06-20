@@ -69,18 +69,18 @@ function App() {
         'Built a full-stack MERN application to help users track and manage job applications with seamless CRUD functionality',
         'Designed a modular architecture with reusable components and services to support scalability and maintainability'
       ],
-      tech: 'React, Node.js, Chrome API',
+      tech: 'React, MUI, Node.js, Chrome API',
       link: 'https://github.com/AbdullahAdil145/Job-Application-Tracker'
     },
     {
-      title: 'Alcoms.ca',
-      summary: 'Official website for Algoma University Computer Science Society',
+      title: 'Web Scraper',
+      summary: 'Developed a web scraper that uses crawlers to scrape information from a website.',
       bullets: [
-        'Co-developed a responsive website for a university club to showcase events, member profiles, and events',
-        'Boosted engagement by ~25% through performance optimization and a clean, modern UI design'
+        'Used Python, FastAPI and mongoDB to scrape website for information and store it.',
+        'Built a simple React + MUI frotnend that displays the information in cards.'
       ],
-      tech: 'HTML, CSS, JavaScript',
-      link: 'https://alcoms.ca/'
+      tech: 'React, MUI, MongoDB, Rest APIs, Python',
+      link: 'https://github.com/AbdullahAdil145/Web-Scraper'
     },
     {
       title: 'Task Manager',
@@ -214,7 +214,7 @@ function App() {
   <div className="icons">
     {[
       'java', 'python', 'cplusplus', 'javascript', 'html5', 'css3', 'php',
-      'mongodb', 'mysql', 'nodejs', 'react', 'express'
+      'mongodb', 'mysql', 'nodejs', 'react', 'express', 'fastapi','mui'
     ].map(icon => (
       <img
   key={icon}
