@@ -304,7 +304,7 @@ function App() {
       const imgMatch = post.description.match(/<img.*?src="(.*?)"/);
       const imageUrl = imgMatch ? imgMatch[1] : '';
       return (
-        <div className="blog-card" key={i}>
+        <div className="project-card" key={i}>
           <a href={post.link} target="_blank" rel="noreferrer">
             {imageUrl && <img src={imageUrl} alt="thumbnail" className="blog-thumb" />}
             <div className="blog-content">
