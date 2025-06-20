@@ -289,31 +289,32 @@ function App() {
 </section>
 
       <section id="Blog" className="blog-section">
-        <h1>📰 Blog</h1>
-        <div className="blog-wrapper">
-         {blogs.slice(0, 2).map((post, i) => {
-            const imgMatch = post.description.match(/<img.*?src="(.*?)"/);
-            const imageUrl = imgMatch ? imgMatch[1] : '';
-            return (
-              <div className="blog-card" key={i}>
-                <a href={post.link} target="_blank" rel="noreferrer">
-                  {imageUrl && <img src={imageUrl} alt="thumbnail" className="blog-thumb" />}
-                  <div className="blog-content">
-                    <h3>{post.title}</h3>
-                    <p className="blog-date">{new Date(post.pubDate).toLocaleDateString()}</p>
-                    <p
-                      className="blog-desc"
-                      dangerouslySetInnerHTML={{
-                        __html: post.description.replace(/<img[^>]*>/g, '').slice(0, 140) + '...'
-                      }}
-                    />
-                  </div>
-                </a>
-              </div>
-            );
-          }) : <p>No posts found.</p>}}
+  <h1>📰 Blog</h1>
+  <div className="blog-wrapper">
+    {blogs.length > 0 ? blogs.slice(0, 2).map((post, i) => {
+      const imgMatch = post.description.match(/<img.*?src="(.*?)"/);
+      const imageUrl = imgMatch ? imgMatch[1] : '';
+      return (
+        <div className="blog-card" key={i}>
+          <a href={post.link} target="_blank" rel="noreferrer">
+            {imageUrl && <img src={imageUrl} alt="thumbnail" className="blog-thumb" />}
+            <div className="blog-content">
+              <h3>{post.title}</h3>
+              <p className="blog-date">{new Date(post.pubDate).toLocaleDateString()}</p>
+              <p
+                className="blog-desc"
+                dangerouslySetInnerHTML={{
+                  __html: post.description.replace(/<img[^>]*>/g, '').slice(0, 140) + '...'
+                }}
+              />
+            </div>
+          </a>
         </div>
-      </section>
+      );
+    }) : <p>No posts found.</p>}
+  </div>
+</section>
+
 
       <section id="Contact" className="contact-section">
         <h1>📬 Contact Me</h1>
