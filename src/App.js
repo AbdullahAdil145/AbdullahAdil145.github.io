@@ -291,7 +291,7 @@ function App() {
       <section id="Blog" className="blog-section">
         <h1>📰 Blog</h1>
         <div className="blog-wrapper">
-          {blogs.length > 0 ? blogs.map((post, i) => {
+         {blogs.slice(0, 2).map((post, i) => {
             const imgMatch = post.description.match(/<img.*?src="(.*?)"/);
             const imageUrl = imgMatch ? imgMatch[1] : '';
             return (
