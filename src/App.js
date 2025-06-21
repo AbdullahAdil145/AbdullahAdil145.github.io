@@ -284,8 +284,21 @@ function App() {
         </div>
       </a>
     </div>
+
+    <div className="blog-card">
+      <a href="<!-- Add paper URL here -->" target="_blank" rel="noreferrer">
+        <div className="blog-content">
+          <h3>Analysis of Phishing Attacks and Effective Countermeasures</h3>
+          <p className="blog-date">22 June 2025</p>
+          <p className="blog-desc">
+            This report analyzes phishing threats—including email, spear phishing, and smishing—by exploring attack tactics, real-world cases, and key indicators. It also evaluates countermeasures like MFA, email filters, employee training, and AI-based detection to strengthen cybersecurity resilience.
+          </p>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
+
 
       <section id="Blog" className="blog-section">
   <h1>📰 Blog</h1>
