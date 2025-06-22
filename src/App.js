@@ -137,12 +137,13 @@ const projects = [
   </div>
 
   <div className="nav-right">
-    <label className="switch">
+<label className="switch">
   <input
     type="checkbox"
-    onChange={() => setDarkMode(!darkMode)}
     checked={darkMode}
-    onFocus={(e) => e.target.blur()}
+    onChange={() => setDarkMode(!darkMode)}
+    tabIndex={-1}
+    onMouseDown={(e) => e.preventDefault()}
   />
   <span className="slider round"></span>
 </label>
