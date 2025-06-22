@@ -650,8 +650,8 @@ section h1 {
 [data-theme='dark'] .social-icon {
   width: 40px;
   height: 40px;
-  filter: invert(1) brightness(1) contrast(0.9);
-  opacity: 1;
+  filter: invert(1) brightness(0.5) contrast(0.3);
+  opacity: 0.5;
   transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
 }
 
