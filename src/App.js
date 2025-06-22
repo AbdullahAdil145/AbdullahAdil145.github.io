@@ -192,8 +192,8 @@ const projects = [
           Junior Software Developer<br />
           May 2025 – Present</h3>
           <ul>
-            <li>Designed and developed a full-stack job automation platform to streamline job application workflows across multiple websites, reducing manual effort by 80%</li>
-            <li>Collaborated on a Chrome extension that auto-fills job applications, leveraging the APIs and intelligent DOM parsing to support multiple job boards</li>
+            <li>Designed and developed a full-stack job automation platform to streamline job application workflows across multiple websites, reducing manual effort by 80%.</li>
+            <li>Collaborated on a Chrome extension that auto-fills job applications, leveraging the APIs and intelligent DOM parsing to support multiple job boards.</li>
             <li>Built scalable backend services using FastAPI and MongoDB, enabling asynchronous scraping and real-time data processing from platforms.</li>
             <li>Participated in agile sprints and weekly code reviews, contributing to continuous delivery pipelines and improving overall development velocity.</li>
             <li>Integrated logging, error tracking, and user analytics to monitor performance and improve user experience.</li>
