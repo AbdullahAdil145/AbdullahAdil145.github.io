@@ -337,22 +337,23 @@ const projects = [
   <h1>📬 Contact Me</h1>
 
   <div className="social-icons">
-    <a href="https://facebook.com/abdullahadil143" target="_blank" rel="noreferrer">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook" className="social-icon" />
-    </a>
-    <a href="https://instagram.com/abdullahadil145" target="_blank" rel="noreferrer">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/instagram/instagram-original.svg" alt="Instagram" className="social-icon" />
-    </a>
-    <a href="https://www.snapchat.com/add/abdullahadil145" target="_blank" rel="noreferrer">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/snapchat/snapchat-original.svg" alt="Snapchat" className="social-icon" />
-    </a>
-    <a href="https://discord.com/users/AbdullahAdil145" target="_blank" rel="noreferrer">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg" alt="Discord" className="social-icon" />
-    </a>
-    <a href="https://t.me/abdullahadil145" target="_blank" rel="noreferrer">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/telegram/telegram-original.svg" alt="Telegram" className="social-icon" />
-    </a>
-  </div>
+  <a href="https://facebook.com/abdullahadil143" target="_blank" rel="noreferrer">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook" className="social-icon" />
+  </a>
+  <a href="https://instagram.com/abdullahadil145" target="_blank" rel="noreferrer">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" className="social-icon" />
+  </a>
+  <a href="https://www.snapchat.com/add/abdullahadil145" target="_blank" rel="noreferrer">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/snapchat.svg" alt="Snapchat" className="social-icon" />
+  </a>
+  <a href="https://discord.com/users/AbdullahAdil145" target="_blank" rel="noreferrer">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/discord.svg" alt="Discord" className="social-icon" />
+  </a>
+  <a href="https://t.me/abdullahadil145" target="_blank" rel="noreferrer">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/telegram.svg" alt="Telegram" className="social-icon" />
+  </a>
+</div>
+
 
   <form action="https://formspree.io/f/xqabbqbw" method="POST">
     <input type="text" name="name" placeholder="Your Name" required />
