@@ -256,14 +256,9 @@ section {
   margin: 0 auto;
 }
 
-.exp-card h1,
-.exp-card h2,
-.exp-card h3,
-.exp-card p {
-  margin: 0 !important;
-  padding: 0 !important;
-  line-height: 1.1 !important;
-}
+.exp-card h3 {
+  text-align:center;
+  margin-bottom: 0.25rem;
 
 .exp-card:hover {
   transform: translateY(-5px);
