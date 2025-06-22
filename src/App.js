@@ -6,17 +6,16 @@ function App() {
   const [blogs, setBlogs] = useState([]);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-// On first load, read from localStorage
 useEffect(() => {
   const savedTheme = localStorage.getItem('darkMode');
   if (savedTheme !== null) setDarkMode(savedTheme === 'true');
 }, []);
 
-// On theme toggle, update DOM and save preference
 useEffect(() => {
   const scrollY = window.scrollY;
-  document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
-  window.scrollTo({ top: scrollY });
+  requestAnimationFrame(() => { document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+    window.scrollTo({ top: scrollY });
+  });
   localStorage.setItem('darkMode', darkMode);
 }, [darkMode]);
 
