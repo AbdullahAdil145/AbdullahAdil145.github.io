@@ -246,13 +246,16 @@ section {
   background: var(--card);
   padding: 20px;
   border-radius: 12px;
-  display: center;
   max-width: 600px;
-  justify-content: space-between;
   min-height: 380px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
 }
+
 
 .exp-card:hover {
   transform: translateY(-5px);
