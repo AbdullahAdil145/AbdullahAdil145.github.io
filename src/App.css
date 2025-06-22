@@ -247,7 +247,7 @@ section {
   padding: 20px;
   border-radius: 12px;
   max-width: 600px;
-  min-height: 380px;
+  max-height: 200px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
