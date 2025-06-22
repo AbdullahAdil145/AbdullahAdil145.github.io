@@ -646,3 +646,20 @@ section h1 {
   filter: grayscale(0%) brightness(1);
   opacity: 1;
 }
+
+[data-theme='dark'] .social-icon {
+  filter: none;
+  opacity: 1;
+  background-color: var(--card);
+  padding: 6px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+[data-theme='dark'] .social-icon:hover {
+  transform: scale(1.1);
+  background-color: var(--card);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
