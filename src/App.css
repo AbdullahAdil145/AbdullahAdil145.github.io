@@ -246,15 +246,17 @@ section {
   background: var(--card);
   padding: 20px;
   border-radius: 12px;
-  max-width: 600px;
-  max-height: 300px;
+  width: 90%;                
+  max-width: 700px;          
+  height: auto;              
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 10px;                 
   margin: 0 auto;
 }
+
 
 .exp-card h3 {
   text-align:center;
