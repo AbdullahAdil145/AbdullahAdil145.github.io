@@ -138,9 +138,14 @@ const projects = [
 
   <div className="nav-right">
     <label className="switch">
-      <input type="checkbox" onChange={() => setDarkMode(!darkMode)} checked={darkMode} />
-      <span className="slider round"></span>
-    </label>
+  <input
+    type="checkbox"
+    onChange={() => setDarkMode(!darkMode)}
+    checked={darkMode}
+    onFocus={(e) => e.target.blur()}
+  />
+  <span className="slider round"></span>
+</label>
   </div>
 
   <div className={`mobile-sidebar ${sidebarOpen ? 'open' : ''}`}>
