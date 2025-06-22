@@ -230,11 +230,11 @@ input:checked + .slider:before {
 }
 
 .intro-text {
-  max-width: 800px;
+  max-width: 900px;
   margin: 30px auto 0;
   text-align: left;
   padding: 0 20px;
-  font-size: 1.05rem;
+  font-size: 20px;
   line-height: 1.6;
 }
 
@@ -259,7 +259,8 @@ section {
 
 .exp-card ul {
   text-align: left;
-  padding-left: 1.5rem;
+  padding-left: 20px;
+  margin: 10px 0;
 }
 
 .projects-grid {
@@ -376,7 +377,6 @@ form .button {
   align-self: center;
 }
 
-/* === ✅ BLOG STYLES START HERE === */
 .blog-section {
   overflow: visible !important;
   position: relative;
@@ -453,7 +453,6 @@ form .button {
   line-height: 1.4;
   color: var(--text);
 }
-/* === ✅ BLOG STYLES END HERE === */
 
 .footer {
   padding: 30px 20px;
