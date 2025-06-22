@@ -188,9 +188,9 @@ const projects = [
       <section id="Experience" className="experience-section">
         <h1>💼 Experience</h1>
         <div className="exp-card">
-          <h2>ZAPPLY</h2>
-          <h3>Junior Software Developer</h3>
-          <p><strong>May 2025 – Present</strong></p>
+          <h2>ZAPPLY<br />
+          Junior Software Developer<br />
+          May 2025 – Present</h2>
           <ul>
             <li>Developed full-stack prototype for job automation service.</li>
             <li>Collaborated on making chrome extensions to help autofill job applications across hundreds of websites.</li>
