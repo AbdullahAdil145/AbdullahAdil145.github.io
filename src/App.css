@@ -281,7 +281,11 @@ section {
   gap: 1.5rem;
   padding: 0 1rem;
   margin-top: 20px;
-  justify-items: center;
+}
+
+.projects-grid > .project-card:nth-last-child(1):nth-child(odd) {
+  grid-column: 1 / -1;
+  justify-self: center;
 }
 
 .project-card {
