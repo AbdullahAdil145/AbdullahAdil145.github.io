@@ -260,8 +260,9 @@ section {
 .exp-card h2,
 .exp-card h3,
 .exp-card p {
-  margin: 0;
-  line-height: 1.2;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.1 !important;
 }
 
 .exp-card:hover {
