@@ -176,11 +176,8 @@ const projects = [
 
         <p className="intro-text">
           I am a versatile and motivated Full Stack Developer with a strong academic foundation in Computer Science and practical experience developing scalable, web-based applications. My work spans front-end design with modern frameworks like React to back-end development using Node.js and database management with MySQL and MongoDB.
-          <br /><br />
           I've contributed to impactful projects, including Chrome extensions that streamline job applications and a full-stack hotel management system with authentication and role-based access. I thrive in collaborative environments, bringing a balance of technical skill, creative problem-solving, and attention to user experience.
-          <br /><br />
           My technical stack includes JavaScript, Java, Python, C++, and many more, alongside tools like Git, Postman, Jira, and others. I'm passionate about continuous learning and applying a user-centered approach to real-world development challenges.
-          <br /><br />
           Currently seeking opportunities to contribute to dynamic development teams, where I can build, learn, and deliver value through technology.
         </p>
       </header>
