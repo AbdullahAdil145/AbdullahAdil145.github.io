@@ -246,8 +246,7 @@ section {
   background: var(--card);
   padding: 20px;
   border-radius: 12px;
-  display: flex;
-  flex-direction: column;
+  display: center;
   max-width: 600px;
   justify-content: space-between;
   min-height: 380px;
