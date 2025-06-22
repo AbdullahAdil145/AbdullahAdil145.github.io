@@ -189,8 +189,8 @@ const projects = [
         <h1>💼 Experience</h1>
         <div className="exp-card">
           <h2>ZAPPLY<br />
-          Junior Software Developer</h2><br /><br />
-          <p>May 2025 – Present</p>
+          Junior Software Developer<br />
+          May 2025 – Present</h2>
           <ul>
             <li>Developed full-stack prototype for job automation service.</li>
             <li>Collaborated on making chrome extensions to help autofill job applications across hundreds of websites.</li>
