@@ -284,6 +284,10 @@ section {
   justify-items: center;
 }
 
+.projects-grid > .project-card:last-child:nth-child(odd) {
+  justify-self: center;
+}
+
 .project-card {
   background: var(--card);
   padding: 20px;
