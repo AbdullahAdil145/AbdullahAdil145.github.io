@@ -651,7 +651,7 @@ section h1 {
   width: 40px;
   height: 40px;
   filter: grayscale(100%) brightness(2);
-  opacity: 0.2;
+  opacity: 2;
   transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
 }
 
