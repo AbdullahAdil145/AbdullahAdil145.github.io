@@ -256,6 +256,13 @@ section {
   margin: 0 auto;
 }
 
+.exp-card h1,
+.exp-card h2,
+.exp-card h3,
+.exp-card p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
 
 .exp-card:hover {
   transform: translateY(-5px);
