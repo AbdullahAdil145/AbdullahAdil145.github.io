@@ -648,12 +648,11 @@ section h1 {
 }
 
 [data-theme='dark'] .social-icon {
-filter: none;
-  opacity: 1;
-  background-color: var(--card);
-  padding: 6px;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 40px;
+  height: 40px;
+  filter: grayscale(100%) brightness(2);
+  opacity: 0.2;
+  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
 }
 
 
