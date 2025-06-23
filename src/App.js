@@ -10,7 +10,6 @@ function App() {
   const [blogs, setBlogs] = useState([]);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  // Apply theme before paint to avoid scroll jump
   useLayoutEffect(() => {
     document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
     localStorage.setItem('darkMode', darkMode);
