@@ -12,26 +12,32 @@ useEffect(() => {
 }, []);
 
 useEffect(() => {
-  const html = document.documentElement;
   const scrollTop = window.scrollY;
   const scrollLeft = window.scrollX;
 
-  // Disable scroll behavior (in case browser adds smooth scroll)
-  const prevScrollBehavior = html.style.scrollBehavior;
-  html.style.scrollBehavior = 'auto';
+  // Lock scroll position manually
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${scrollTop}px`;
+  document.body.style.left = `0`;
+  document.body.style.right = `0`;
+  document.body.style.overflow = 'hidden';
 
-  // Apply theme
-  html.setAttribute('data-theme', darkMode ? 'dark' : 'light');
-
-  // Restore scroll instantly
-  window.scrollTo(scrollLeft, scrollTop);
-
-  // Restore previous scroll behavior
-  html.style.scrollBehavior = prevScrollBehavior;
-
-  // Save preference
+  // Change theme
+  document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
   localStorage.setItem('darkMode', darkMode);
+
+  // Restore scroll after layout stabilizes
+  setTimeout(() => {
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.overflow = '';
+
+    window.scrollTo(scrollLeft, scrollTop);
+  }, 50);
 }, [darkMode]);
+
 
   useEffect(() => {
     fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@abdullahadil145')
