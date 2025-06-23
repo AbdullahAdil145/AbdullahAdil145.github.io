@@ -391,7 +391,8 @@ const projects = [
 
 
       <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} Muhammad Abdullah Adil</p>
+        <p>&copy; {new Date().getFullYear()} Muhammad Abdullah Adil</p><br />
+        <p>All Rights Reserved</p>
       </footer>
     </div>
   );
