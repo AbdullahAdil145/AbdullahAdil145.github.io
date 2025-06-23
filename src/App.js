@@ -1,24 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useLayoutEffect, useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    const saved = localStorage.getItem('darkMode');
+    return saved === null ? false : saved === 'true';
+  });
+
   const [blogs, setBlogs] = useState([]);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-useEffect(() => {
-  const savedTheme = localStorage.getItem('darkMode');
-  if (savedTheme !== null) {
-    const isDark = savedTheme === 'true';
-    setDarkMode(isDark);
-    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-  }
-}, []);
-
-useEffect(() => {
-  document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
-  localStorage.setItem('darkMode', darkMode);
-}, [darkMode]);
+  // Apply theme before paint to avoid scroll jump
+  useLayoutEffect(() => {
+    document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+    localStorage.setItem('darkMode', darkMode);
+  }, [darkMode]);
 
   useEffect(() => {
     fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@abdullahadil145')
@@ -34,20 +30,21 @@ useEffect(() => {
       const winScroll = document.documentElement.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = (winScroll / height) * 100;
-      document.getElementById("scroll-bar").style.width = scrolled + "%";
+      const bar = document.getElementById("scroll-bar");
+      if (bar) bar.style.width = scrolled + "%";
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (id) => {
-  setSidebarOpen(false);
-  if (id === 'Home') {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  } else {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  }
-};
+    setSidebarOpen(false);
+    if (id === 'Home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const sections = [
   'Home',
