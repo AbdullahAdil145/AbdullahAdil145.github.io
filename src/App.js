@@ -12,7 +12,24 @@ useEffect(() => {
 }, []);
 
 useEffect(() => {
-  document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+  const html = document.documentElement;
+  const scrollTop = window.scrollY;
+  const scrollLeft = window.scrollX;
+
+  // Disable scroll behavior (in case browser adds smooth scroll)
+  const prevScrollBehavior = html.style.scrollBehavior;
+  html.style.scrollBehavior = 'auto';
+
+  // Apply theme
+  html.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+
+  // Restore scroll instantly
+  window.scrollTo(scrollLeft, scrollTop);
+
+  // Restore previous scroll behavior
+  html.style.scrollBehavior = prevScrollBehavior;
+
+  // Save preference
   localStorage.setItem('darkMode', darkMode);
 }, [darkMode]);
 
