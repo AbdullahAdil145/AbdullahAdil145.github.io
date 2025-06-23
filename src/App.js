@@ -202,6 +202,22 @@ const projects = [
       </header>
 
       <section id="Experience" className="experience-section">
+        <h1>🎓 Education</h1>
+        <div className="exp-card">
+          <h3>Algoma University<br />
+          Bachelors of Computer Science<br />
+          August 2025</h3>
+          <ul>
+            <li><strong>Concentrations:<strong> Full Stack Development, Web Development, Database Programming, Computer Networks.</li>
+            <li>Collaborated on a Chrome extension that auto-fills job applications, leveraging the APIs and intelligent DOM parsing to support multiple job boards.</li>
+            <li>Built scalable backend services using FastAPI and MongoDB, enabling asynchronous scraping and real-time data processing from platforms.</li>
+            <li>Participated in agile sprints and weekly code reviews, contributing to continuous delivery pipelines and improving overall development velocity.</li>
+            <li>Integrated logging, error tracking, and user analytics to monitor performance and improve user experience.</li>
+          </ul>
+        </div>
+      </section>
+    
+      <section id="Experience" className="experience-section">
         <h1>💼 Experience</h1>
         <div className="exp-card">
           <h3>ZAPPLY<br />
