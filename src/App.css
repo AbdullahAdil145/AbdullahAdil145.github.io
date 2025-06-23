@@ -229,9 +229,14 @@ input:checked + .slider:before {
   display: block;
 }
 
-.dropdown-menu a:hover {
-  background-color: var(--highlight);  
-  color: var(--bg);  
+[data-theme='dark'] .dropdown-menu a:hover {
+  background-color: #333;
+  color: var(--highlight);
+}
+
+[data-theme='dark'] .dropdown-menu {
+  background-color: var(--card);
+  border: 1px solid #444;
 }
 
 .intro-text {
