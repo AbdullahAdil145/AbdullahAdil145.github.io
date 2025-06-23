@@ -38,7 +38,7 @@ function App() {
 
   const scrollToSection = (id) => {
     setSidebarOpen(false);
-    if (id === 'Home') {
+    if (id === '🏠  Home') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
