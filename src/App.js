@@ -7,30 +7,17 @@ function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
 useEffect(() => {
-  const savedTheme = localStorage.getItem('darkMode');
-  if (savedTheme !== null) setDarkMode(savedTheme === 'true');
+  const savedTheme = localStorage.getItem('darkMode');
+  if (savedTheme !== null) {
+    const isDark = savedTheme === 'true';
+    setDarkMode(isDark);
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+  }
 }, []);
 
 useEffect(() => {
-  const scrollY = window.scrollY;
-
-  // Lock scroll without layout shift
-  document.body.style.position = 'fixed';
-  document.body.style.top = `-${scrollY}px`;
-  document.body.style.width = '100%'; // Prevent content width shift
-
-  // Change theme
   document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
   localStorage.setItem('darkMode', darkMode);
-
-  // Restore scroll in next frame
-  requestAnimationFrame(() => {
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.width = '';
-
-    window.scrollTo(0, scrollY);
-  });
 }, [darkMode]);
 
   useEffect(() => {
