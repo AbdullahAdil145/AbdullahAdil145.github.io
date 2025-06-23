@@ -7,9 +7,16 @@ function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
 useEffect(() => {
-  const savedTheme = localStorage.getItem('darkMode');
-  if (savedTheme !== null) setDarkMode(savedTheme === 'true');
-}, []);
+  const html = document.documentElement;
+  const scrollTop = window.scrollY;
+  const scrollLeft = window.scrollX;
+  const prevScrollBehavior = html.style.scrollBehavior;
+  html.style.scrollBehavior = 'auto';
+  html.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+  window.scrollTo(scrollLeft, scrollTop);
+  html.style.scrollBehavior = prevScrollBehavior;
+  localStorage.setItem('darkMode', darkMode);
+}, [darkMode]);
 
 useEffect(() => {
   document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
@@ -391,7 +398,7 @@ const projects = [
 
 
       <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} Muhammad Abdullah Adil</p><br />
+        <p>&copy; {new Date().getFullYear()} Muhammad Abdullah Adil</p>
         <p>All Rights Reserved</p>
       </footer>
     </div>
