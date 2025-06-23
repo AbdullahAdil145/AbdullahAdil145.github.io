@@ -46,15 +46,15 @@ function App() {
   };
 
   const sections = [
-  'Home',
-  'Experience',
-  'Projects',
-  'Tech Stack',
-  'Github Stats',
-  'Leetcode Stats',
-  'Publications',
-  'Blog',
-  'Contact'
+  '🏠 Home',
+  '💼 Experience',
+  '🚀 Projects',
+  '🛠️ Tech Stack',
+  '📊 Github Stats',
+  '🧠 Leetcode Stats',
+  '🏛️ Publications',
+  '📰 Blog',
+  '📬 Contact'
 ];
 
 const projects = [
