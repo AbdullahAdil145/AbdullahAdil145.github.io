@@ -229,6 +229,11 @@ input:checked + .slider:before {
   display: block;
 }
 
+.dropdown-menu a:hover {
+  background-color: var(--highlight);  
+  color: var(--bg);  
+}
+
 .intro-text {
   max-width: 900px;
   margin: 30px auto 0;
