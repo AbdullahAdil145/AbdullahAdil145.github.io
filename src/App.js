@@ -7,30 +7,13 @@ function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
 useEffect(() => {
-  const scrollTop = window.scrollY;
-  const scrollLeft = window.scrollX;
+  const savedTheme = localStorage.getItem('darkMode');
+  if (savedTheme !== null) setDarkMode(savedTheme === 'true');
+}, []);
 
-  // Lock scroll position
-  document.body.style.position = 'fixed';
-  document.body.style.top = `-${scrollTop}px`;
-  document.body.style.left = '0';
-  document.body.style.right = '0';
-  document.body.style.overflow = 'hidden';
-
-  // Apply theme and save
+useEffect(() => {
   document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
   localStorage.setItem('darkMode', darkMode);
-
-  // Unlock scroll after layout settles
-  setTimeout(() => {
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.left = '';
-    document.body.style.right = '';
-    document.body.style.overflow = '';
-
-    window.scrollTo(scrollLeft, scrollTop);
-  }, 50);
 }, [darkMode]);
 
   useEffect(() => {
@@ -409,7 +392,6 @@ const projects = [
 
       <footer className="footer">
         <p>&copy; {new Date().getFullYear()} Muhammad Abdullah Adil</p>
-        <p>All Rights Reserved</p>
       </footer>
     </div>
   );
