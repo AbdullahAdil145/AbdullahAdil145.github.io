@@ -12,32 +12,26 @@ useEffect(() => {
 }, []);
 
 useEffect(() => {
-  const scrollTop = window.scrollY;
-  const scrollLeft = window.scrollX;
+  const scrollY = window.scrollY;
 
-  // Lock scroll position manually
+  // Lock scroll without layout shift
   document.body.style.position = 'fixed';
-  document.body.style.top = `-${scrollTop}px`;
-  document.body.style.left = `0`;
-  document.body.style.right = `0`;
-  document.body.style.overflow = 'hidden';
+  document.body.style.top = `-${scrollY}px`;
+  document.body.style.width = '100%'; // Prevent content width shift
 
   // Change theme
   document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
   localStorage.setItem('darkMode', darkMode);
 
-  // Restore scroll after layout stabilizes
-  setTimeout(() => {
+  // Restore scroll in next frame
+  requestAnimationFrame(() => {
     document.body.style.position = '';
     document.body.style.top = '';
-    document.body.style.left = '';
-    document.body.style.right = '';
-    document.body.style.overflow = '';
+    document.body.style.width = '';
 
-    window.scrollTo(scrollLeft, scrollTop);
-  }, 50);
+    window.scrollTo(0, scrollY);
+  });
 }, [darkMode]);
-
 
   useEffect(() => {
     fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@abdullahadil145')
