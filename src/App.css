@@ -662,4 +662,10 @@ transform: scale(1.1);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
-
+[data-theme='dark'] .social-icon:hover {
+  transform: scale(1.1);
+  filter: invert(0) brightness(1.2) contrast(1.2); /* Remove dulling */
+  opacity: 1;
+  background-color: var(--card);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.1);
+}
