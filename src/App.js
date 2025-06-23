@@ -12,13 +12,9 @@ useEffect(() => {
 }, []);
 
 useEffect(() => {
-  const scrollY = window.scrollY;
-  requestAnimationFrame(() => { document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
-    window.scrollTo({ top: scrollY });
-  });
-  localStorage.setItem('darkMode', darkMode);
+  document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+  localStorage.setItem('darkMode', darkMode);
 }, [darkMode]);
-
 
   useEffect(() => {
     fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@abdullahadil145')
