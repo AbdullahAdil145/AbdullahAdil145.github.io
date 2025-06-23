@@ -46,15 +46,15 @@ function App() {
   };
 
   const sections = [
-  '🏠 Home',
-  '💼 Experience',
-  '🚀 Projects',
-  '🛠️ Tech Stack',
-  '📊 Github Stats',
-  '🧠 Leetcode Stats',
-  '🏛️ Publications',
-  '📰 Blog',
-  '📬 Contact'
+  '🏠  Home',
+  '💼  Experience',
+  '🚀  Projects',
+  '🛠️  Tech Stack',
+  '📊  Github Stats',
+  '🧠  Leetcode Stats',
+  '🏛️  Publications',
+  '📰  Blog',
+  '📬  Contact'
 ];
 
 const projects = [
@@ -211,7 +211,7 @@ const projects = [
         </div>
       </section>
     
-      <section id="Experience" className="experience-section">
+      <section id="💼  Experience" className="experience-section">
         <h1>💼 Experience</h1>
         <div className="exp-card">
           <h3>ZAPPLY<br />
@@ -227,7 +227,7 @@ const projects = [
         </div>
       </section>
 
-      <section id="Projects" className="projects-section">
+      <section id="🚀  Projects" className="projects-section">
         <h1>🚀 Projects</h1>
         <div className="projects-grid">
           {projects.map((p, i) => (
@@ -244,7 +244,7 @@ const projects = [
         </div>
       </section>
 
-    <section id="Tech Stack" className="stack-section">
+    <section id="🛠️  Tech Stack" className="stack-section">
   <h1>🛠️ Tech Stack</h1>
 
  <div style={{ marginTop: '20px' }}>
@@ -280,7 +280,7 @@ const projects = [
 
 </section>
 
-<section id="Github Stats" className="stats-section">
+<section id="📊  Github Stats" className="stats-section">
   <h1>📊 GitHub Stats</h1>
   <div className="stats-container">
     <img
@@ -296,7 +296,7 @@ const projects = [
   </div>
 </section>
 
-        <section id="Leetcode Stats" className="stats-section">
+        <section id="🧠  Leetcode Stats" className="stats-section">
   <h1>🧠 LeetCode Stats</h1>
   <div className="stats-container">
     <img
@@ -307,7 +307,7 @@ const projects = [
   </div>
 </section>
 
-        <section id="Publications" className="blog-section">
+        <section id="🏛️  Publications" className="blog-section">
   <h1>🏛️ Publications</h1>
   <div className="blog-wrapper">
     <div className="blog-card">
@@ -337,7 +337,7 @@ const projects = [
 </section>
 
 
-      <section id="Blog" className="blog-section">
+      <section id="📰  Blog" className="blog-section">
   <h1>📰 Blog</h1>
   <div className="blog-wrapper">
     {blogs.length > 0 ? blogs.slice(0, 2).map((post, i) => {
@@ -359,7 +359,7 @@ const projects = [
 </section>
 
 
-      <section id="Contact" className="contact-section">
+      <section id="📬  Contact" className="contact-section">
   <h1>📬 Contact Me</h1>
 
   <div className="social-icons">
