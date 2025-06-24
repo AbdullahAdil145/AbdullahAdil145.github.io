@@ -47,7 +47,7 @@ function App() {
 
   const sections = [
   { id: '🏠  Home', label: 'Home', icon: '🏠' },
-  { id: '🎓  Education', label: 'Education', icon: '🎓'}
+  { id: '🎓  Education', label: 'Education', icon: '🎓'},
   { id: '💼  Experience', label: 'Experience', icon: '💼' },
   { id: '🚀  Projects', label: 'Projects', icon: '🚀' },
   { id: '🛠️  Tech Stack', label: 'Tech Stack', icon: '🛠️' },
