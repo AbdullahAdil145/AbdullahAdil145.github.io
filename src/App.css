@@ -673,6 +673,10 @@ section h1 {
   transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
 }
 
+.mobile-only {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .desktop-only {
     display: none !important;
