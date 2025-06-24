@@ -751,4 +751,9 @@ section h1 {
 .carousel-card .blog-content {
   text-align: left;
 }
+
+  .button {
+  color: #fff !important;
+}
+
 }
