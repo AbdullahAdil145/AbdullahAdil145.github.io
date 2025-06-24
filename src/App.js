@@ -347,7 +347,7 @@ const projects = [
         title: "Analysis of Phishing Attacks and Effective Countermeasures",
         date: "22 June 2025",
         desc:
-          "This report analyzes phishing threats—including email, spear phishing, and smishing—by exploring attack tactics, real-world cases, and key indicators. It also evaluates countermeasures like MFA, email filters, employee training, and AI-based detection to strengthen cybersecurity resilience.",
+          "This report analyzes phishing threats, including email, spear phishing, and smishing, by exploring attack tactics, real-world cases, and key indicators. It also evaluates countermeasures like MFA, email filters, employee training, and AI-based detection to strengthen cybersecurity resilience.",
         link: "#",
       },
     ].map((pub, i) => (
@@ -378,7 +378,7 @@ const projects = [
           title: "Analysis of Phishing Attacks and Effective Countermeasures",
           date: "22 June 2025",
           desc:
-            "This report analyzes phishing threats—including email, spear phishing, and smishing—by exploring attack tactics, real-world cases, and key indicators. It also evaluates countermeasures like MFA, email filters, employee training, and AI-based detection to strengthen cybersecurity resilience.",
+            "This report analyzes phishing threats, including email, spear phishing, and smishing, by exploring attack tactics, real-world cases, and key indicators. It also evaluates countermeasures like MFA, email filters, employee training, and AI-based detection to strengthen cybersecurity resilience.",
           link: "#",
         },
       ].map((pub, i) => (
@@ -409,8 +409,8 @@ const projects = [
           <a href={post.link} target="_blank" rel="noreferrer">
             {imageUrl && <img src={imageUrl} alt="thumbnail" className="blog-thumb" />}
             <div className="blog-content">
-              <h3>{post.title}</h3>
-              <p className="blog-date">{new Date(post.pubDate).toLocaleDateString()}</p>
+            <p className="blog-date">{new Date(post.pubDate).toLocaleDateString()}</p>          
+            <h3>{post.title}</h3>    
             </div>
           </a>
         </div>
@@ -429,8 +429,8 @@ const projects = [
             <a href={post.link} target="_blank" rel="noreferrer">
               {imageUrl && <img src={imageUrl} alt="thumbnail" className="blog-thumb" />}
               <div className="blog-content">
-                <h3>{post.title}</h3>
-                <p className="blog-date">{new Date(post.pubDate).toLocaleDateString()}</p>
+              <p className="blog-date">{new Date(post.pubDate).toLocaleDateString()}</p>  
+              <h3>{post.title}</h3>
               </div>
             </a>
           </div>
