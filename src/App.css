@@ -672,3 +672,86 @@ section h1 {
   opacity: 0.8;
   transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
 }
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 1rem 0;
+  }
+
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+    background: var(--card);
+    border-radius: 12px;
+    padding: 20px;
+    min-height: 380px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, filter 0.4s ease;
+    margin-right: 1rem;
+  }
+
+  .carousel-card:not(:last-child)::after {
+    content: "";
+    display: block;
+    width: 1px;
+  }
+
+  .carousel-card {
+    transform: scale(0.95);
+    filter: blur(1.5px);
+    opacity: 0.5;
+  }
+
+  .carousel-card:has(+ .carousel-card:focus-visible),
+  .carousel-card:focus,
+  .carousel-card:active {
+    transform: scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
+
+  .carousel-card:focus-within {
+    transform: scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
+
+  .carousel-card:target {
+    transform: scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
+
+  /* Override hover for touch */
+  .carousel-card:hover {
+    transform: scale(0.95);
+    filter: blur(1.5px);
+    opacity: 0.5;
+  }
+
+  /* First visible card gets full style via JS scroll tracking (optional enhancement) */
+}
