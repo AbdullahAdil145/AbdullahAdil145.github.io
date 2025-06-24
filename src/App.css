@@ -694,8 +694,8 @@ section h1 {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    gap: 0;
-    padding: 0;
+    gap: 1rem;
+    padding: 0 1rem;
   }
 
   .carousel::-webkit-scrollbar {
@@ -703,20 +703,31 @@ section h1 {
   }
 
   .carousel-card {
-    flex: 0 0 100%;
+    flex: 0 0 85%;
     scroll-snap-align: center;
     background: var(--card);
     border-radius: 12px;
     padding: 20px;
-    min-height: 380px;
+    min-height: auto;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     transition: transform 0.4s ease;
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+
+  .carousel-card:focus-within,
+  .carousel-card:active,
+  .carousel-card:focus {
     transform: scale(1);
     opacity: 1;
-    margin: 0 auto;
   }
 
   .carousel-card:hover {
-    transform: scale(1.03);
+    transform: scale(0.95);
+  }
+
+  .carousel-card:has(+ .carousel-card:focus-visible) {
+    transform: scale(0.95);
+    opacity: 0.8;
   }
 }
