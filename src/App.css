@@ -694,8 +694,8 @@ section h1 {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    gap: 1rem;
-    padding: 0 1rem;
+    gap: 0;
+    padding: 0;
   }
 
   .carousel::-webkit-scrollbar {
@@ -703,7 +703,7 @@ section h1 {
   }
 
   .carousel-card {
-    flex: 0 0 85%;
+    flex: 0 0 100%;
     scroll-snap-align: center;
     background: var(--card);
     border-radius: 12px;
@@ -711,9 +711,9 @@ section h1 {
     min-height: 380px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     transition: transform 0.4s ease;
-    margin-right: 1rem;
     transform: scale(1);
     opacity: 1;
+    margin: 0 auto;
   }
 
   .carousel-card:hover {
