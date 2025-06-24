@@ -227,22 +227,42 @@ const projects = [
         </div>
       </section>
 
-      <section id="🚀  Projects" className="projects-section">
-        <h1>🚀 Projects</h1>
-        <div className="projects-grid">
-          {projects.map((p, i) => (
-            <div className="project-card" key={i}>
-              <h3>{p.title}</h3>
-              <p className="summary">{p.summary}</p>
-              <ul>{p.bullets.map((b, j) => <li key={j}>{b}</li>)}</ul>
-              <p><strong>Tech:</strong> {p.tech}</p>
-              <div className="project-buttons">
-                <a href={p.link} target="_blank" rel="noreferrer" className="button github-button">GitHub</a>
-              </div>
-            </div>
-          ))}
+     <section id="🚀  Projects" className="projects-section">
+  <h1>🚀 Projects</h1>
+
+  {/* Desktop View */}
+  <div className="projects-grid desktop-only">
+    {projects.map((p, i) => (
+      <div className="project-card" key={i}>
+        <h3>{p.title}</h3>
+        <p className="summary">{p.summary}</p>
+        <ul>{p.bullets.map((b, j) => <li key={j}>{b}</li>)}</ul>
+        <p><strong>Tech:</strong> {p.tech}</p>
+        <div className="project-buttons">
+          <a href={p.link} target="_blank" rel="noreferrer" className="button github-button">GitHub</a>
         </div>
-      </section>
+      </div>
+    ))}
+  </div>
+
+  {/* Mobile Carousel */}
+  <div className="carousel-wrapper mobile-only">
+    <div className="carousel" id="carousel">
+      {projects.map((p, i) => (
+        <div className="carousel-card" key={i}>
+          <h3>{p.title}</h3>
+          <p className="summary">{p.summary}</p>
+          <ul>{p.bullets.map((b, j) => <li key={j}>{b}</li>)}</ul>
+          <p><strong>Tech:</strong> {p.tech}</p>
+          <div className="project-buttons">
+            <a href={p.link} target="_blank" rel="noreferrer" className="button github-button">GitHub</a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
     <section id="🛠️  Tech Stack" className="stack-section">
   <h1>🛠️ Tech Stack</h1>
