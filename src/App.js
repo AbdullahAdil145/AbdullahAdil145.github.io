@@ -332,38 +332,76 @@ const projects = [
 
         <section id="🏛️  Publications" className="blog-section">
   <h1>🏛️ Publications</h1>
-  <div className="blog-wrapper">
-    <div className="blog-card">
-      <a href="https://www.techrxiv.org/users/932208/articles/1305382-simulation-of-a-basic-cloud-data-centre-using-cloudsim" target="_blank" rel="noreferrer">
-        <div className="blog-content">
-          <h3>Simulation of a Basic Cloud Data Centre Using CloudSim</h3>
-          <p className="blog-date">18 June 2025</p>
-          <p className="blog-desc">
-            This paper presents a foundational simulation of a cloud data center using CloudSim, exploring resource provisioning and VM scheduling to help understand core cloud computing behavior.
-          </p>
-        </div>
-      </a>
-    </div>
 
-    <div className="blog-card">
-      <a href="<!-- Add paper URL here -->" target="_blank" rel="noreferrer">
-        <div className="blog-content">
-          <h3>Analysis of Phishing Attacks and Effective Countermeasures</h3>
-          <p className="blog-date">22 June 2025</p>
-          <p className="blog-desc">
-            This report analyzes phishing threats—including email, spear phishing, and smishing—by exploring attack tactics, real-world cases, and key indicators. It also evaluates countermeasures like MFA, email filters, employee training, and AI-based detection to strengthen cybersecurity resilience.
-          </p>
+  {/* Desktop View */}
+  <div className="blog-wrapper desktop-only">
+    {[
+      {
+        title: "Simulation of a Basic Cloud Data Centre Using CloudSim",
+        date: "18 June 2025",
+        desc:
+          "This paper presents a foundational simulation of a cloud data center using CloudSim, exploring resource provisioning and VM scheduling to help understand core cloud computing behavior.",
+        link: "https://www.techrxiv.org/users/932208/articles/1305382-simulation-of-a-basic-cloud-data-centre-using-cloudsim",
+      },
+      {
+        title: "Analysis of Phishing Attacks and Effective Countermeasures",
+        date: "22 June 2025",
+        desc:
+          "This report analyzes phishing threats—including email, spear phishing, and smishing—by exploring attack tactics, real-world cases, and key indicators. It also evaluates countermeasures like MFA, email filters, employee training, and AI-based detection to strengthen cybersecurity resilience.",
+        link: "#",
+      },
+    ].map((pub, i) => (
+      <div className="blog-card" key={i}>
+        <a href={pub.link} target="_blank" rel="noreferrer">
+          <div className="blog-content">
+            <h3>{pub.title}</h3>
+            <p className="blog-date">{pub.date}</p>
+            <p className="blog-desc">{pub.desc}</p>
+          </div>
+        </a>
+      </div>
+    ))}
+  </div>
+
+  {/* Mobile Carousel View */}
+  <div className="carousel-wrapper mobile-only">
+    <div className="carousel">
+      {[
+        {
+          title: "Simulation of a Basic Cloud Data Centre Using CloudSim",
+          date: "18 June 2025",
+          desc:
+            "This paper presents a foundational simulation of a cloud data center using CloudSim, exploring resource provisioning and VM scheduling to help understand core cloud computing behavior.",
+          link: "https://www.techrxiv.org/users/932208/articles/1305382-simulation-of-a-basic-cloud-data-centre-using-cloudsim",
+        },
+        {
+          title: "Analysis of Phishing Attacks and Effective Countermeasures",
+          date: "22 June 2025",
+          desc:
+            "This report analyzes phishing threats—including email, spear phishing, and smishing—by exploring attack tactics, real-world cases, and key indicators. It also evaluates countermeasures like MFA, email filters, employee training, and AI-based detection to strengthen cybersecurity resilience.",
+          link: "#",
+        },
+      ].map((pub, i) => (
+        <div className="carousel-card" key={i}>
+          <a href={pub.link} target="_blank" rel="noreferrer">
+            <div className="blog-content">
+              <h3>{pub.title}</h3>
+              <p className="blog-date">{pub.date}</p>
+              <p className="blog-desc">{pub.desc}</p>
+            </div>
+          </a>
         </div>
-      </a>
+      ))}
     </div>
   </div>
 </section>
 
-
       <section id="📰  Blog" className="blog-section">
   <h1>📰 Blog</h1>
-  <div className="blog-wrapper">
-    {blogs.length > 0 ? blogs.slice(0, 2).map((post, i) => {
+
+  {/* Desktop View */}
+  <div className="blog-wrapper desktop-only">
+    {blogs.slice(0, 2).map((post, i) => {
       const imgMatch = post.description.match(/<img.*?src="(.*?)"/);
       const imageUrl = imgMatch ? imgMatch[1] : '';
       return (
@@ -377,10 +415,30 @@ const projects = [
           </a>
         </div>
       );
-    }) : <p>No posts found.</p>}
+    })}
+  </div>
+
+  {/* Mobile Carousel View */}
+  <div className="carousel-wrapper mobile-only">
+    <div className="carousel">
+      {blogs.slice(0, 2).map((post, i) => {
+        const imgMatch = post.description.match(/<img.*?src="(.*?)"/);
+        const imageUrl = imgMatch ? imgMatch[1] : '';
+        return (
+          <div className="carousel-card" key={i}>
+            <a href={post.link} target="_blank" rel="noreferrer">
+              {imageUrl && <img src={imageUrl} alt="thumbnail" className="blog-thumb" />}
+              <div className="blog-content">
+                <h3>{post.title}</h3>
+                <p className="blog-date">{new Date(post.pubDate).toLocaleDateString()}</p>
+              </div>
+            </a>
+          </div>
+        );
+      })}
+    </div>
   </div>
 </section>
-
 
       <section id="📬  Contact" className="contact-section">
   <h1>📬 Contact Me</h1>
