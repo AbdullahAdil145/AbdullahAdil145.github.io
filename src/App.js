@@ -46,15 +46,15 @@ function App() {
   };
 
   const sections = [
-  '🏠  Home',
-  '💼  Experience',
-  '🚀  Projects',
-  '🛠️  Tech Stack',
-  '📊  Github Stats',
-  '🧠  Leetcode Stats',
-  '🏛️  Publications',
-  '📰  Blog',
-  '📬  Contact'
+  { id: '🏠  Home', label: 'Home', icon: '🏠' },
+  { id: '💼  Experience', label: 'Experience', icon: '💼' },
+  { id: '🚀  Projects', label: 'Projects', icon: '🚀' },
+  { id: '🛠️  Tech Stack', label: 'Tech Stack', icon: '🛠️' },
+  { id: '📊  Github Stats', label: 'GitHub Stats', icon: '📊' },
+  { id: '🧠  Leetcode Stats', label: 'LeetCode Stats', icon: '🧠' },
+  { id: '🏛️  Publications', label: 'Publications', icon: '🏛️' },
+  { id: '📰  Blog', label: 'Blog', icon: '📰' },
+  { id: '📬  Contact', label: 'Contact', icon: '📬' },
 ];
 
 const projects = [
@@ -121,14 +121,14 @@ const projects = [
     </div>
 
     <div className="nav-links desktop-only">
-      {sections.map((id, index) => (
-        <React.Fragment key={id}>
-          <button onClick={() => scrollToSection(id)}>
-            {id.replace(/^\w/, c => c.toUpperCase())}
-          </button>
-          {index < sections.length - 1 && <span className="nav-divider">|</span>}
-        </React.Fragment>
-      ))}
+      {sections.map((section, index) => (
+  <React.Fragment key={section.id}>
+    <button onClick={() => scrollToSection(section.id)}>
+      {section.label}
+    </button>
+    {index < sections.length - 1 && <span className="nav-divider">|</span>}
+  </React.Fragment>
+))}
     </div>
   </div>
 
@@ -148,9 +148,11 @@ const projects = [
   <div className={`mobile-sidebar ${sidebarOpen ? 'open' : ''}`}>
     <div className="sidebar-content">
       <button className="close-btn" onClick={() => setSidebarOpen(false)}>×</button>
-      {sections.map((id) => (
-        <button key={id} onClick={() => scrollToSection(id)}>{id}</button>
-      ))}
+      {sections.map((section) => (
+  <button key={section.id} onClick={() => scrollToSection(section.id)}>
+    <span style={{ marginRight: '8px' }}>{section.icon}</span> {section.label}
+  </button>
+))}
     </div>
   </div>
 
