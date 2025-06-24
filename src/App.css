@@ -740,4 +740,17 @@ section h1 {
     transform: scale(0.95);
     opacity: 0.8;
   }
+  .carousel-card a {
+  text-decoration: none;
+  color: var(--text);
+  opacity: 1 !important;
+}
+
+.carousel-card a:hover {
+  color: var(--accent);
+}
+
+.carousel-card .blog-content {
+  text-align: left;
+}
 }
