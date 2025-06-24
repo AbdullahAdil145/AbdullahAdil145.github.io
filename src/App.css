@@ -730,9 +730,18 @@ section h1 {
     opacity: 1;
   }
 
+@media (hover: hover) and (pointer: fine) {
   .carousel-card:hover {
     transform: scale(0.95);
   }
+}
+
+  @media (hover: none) and (pointer: coarse) {
+  .carousel-card:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+}
 
   .carousel-card:has(+ .carousel-card:focus-visible) {
     transform: scale(0.95);
