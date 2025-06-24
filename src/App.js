@@ -47,6 +47,7 @@ function App() {
 
   const sections = [
   { id: '🏠  Home', label: 'Home', icon: '🏠' },
+  { id: '🎓  Education', label: 'Education', icon: '🎓'}
   { id: '💼  Experience', label: 'Experience', icon: '💼' },
   { id: '🚀  Projects', label: 'Projects', icon: '🚀' },
   { id: '🛠️  Tech Stack', label: 'Tech Stack', icon: '🛠️' },
@@ -199,7 +200,7 @@ const projects = [
         </p>
       </header>
 
-      <section id="Experience" className="experience-section">
+      <section id="🎓  Education" className="experience-section">
         <h1>🎓 Education</h1>
         <div className="exp-card">
           <h3>Algoma University<br />
