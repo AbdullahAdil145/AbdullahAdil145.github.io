@@ -345,10 +345,10 @@ const projects = [
       },
       {
         title: "Analysis of Phishing Attacks and Effective Countermeasures",
-        date: "22 June 2025",
+        date: "25 June 2025",
         desc:
           "This report analyzes phishing threats, including email, spear phishing, and smishing, by exploring attack tactics, real-world cases, and key indicators. It also evaluates countermeasures like MFA, email filters, employee training, and AI-based detection to strengthen cybersecurity resilience.",
-        link: "#",
+        link: "https://www.techrxiv.org/users/932208/articles/1307002-analysis-of-phishing-attacks-and-effective-countermeasures",
       },
     ].map((pub, i) => (
       <div className="blog-card" key={i}>
@@ -376,10 +376,10 @@ const projects = [
         },
         {
           title: "Analysis of Phishing Attacks and Effective Countermeasures",
-          date: "22 June 2025",
+          date: "25 June 2025",
           desc:
             "This report analyzes phishing threats, including email, spear phishing, and smishing, by exploring attack tactics, real-world cases, and key indicators. It also evaluates countermeasures like MFA, email filters, employee training, and AI-based detection to strengthen cybersecurity resilience.",
-          link: "#",
+          link: "https://www.techrxiv.org/users/932208/articles/1307002-analysis-of-phishing-attacks-and-effective-countermeasures",
         },
       ].map((pub, i) => (
         <div className="carousel-card" key={i}>
