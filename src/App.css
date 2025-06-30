@@ -783,59 +783,41 @@ section h1 {
   100% { transform: rotate(0deg); }
 }
 
-/* Main animated border class */
 .animated-border {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
   z-index: 0;
-}
 
-/* Border animation using ::before */
-.animated-border::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: inherit;
-  z-index: -1;
-
-  /* High contrast animated gradient */
-  background: linear-gradient(
-    90deg,
-    #007bff 0%,
-    #00e5ff 25%,
-    #ffffff 50%,
-    #00e5ff 75%,
-    #007bff 100%
+  /* Snake border simulation */
+  border: 3px solid transparent;
+  border-image: linear-gradient(
+    0deg,
+    #00f,
+    #0ff,
+    #fff,
+    #0ff,
+    #00f
   );
-  background-size: 300% 100%;
-  animation: snake-border 3s linear infinite;
-
-  /* Keep border thickness consistent */
-  padding: 3px;
-  box-sizing: border-box;
-
-  /* Show only border area using masking */
-  mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
+  border-image-slice: 1;
+  animation: border-rotate 4s linear infinite;
 }
 
-/* Keyframes for the animated gradient sweep */
-@keyframes snake-border {
+/* Animation to rotate the border gradient around the box */
+@keyframes border-rotate {
   0% {
-    background-position: 0% 0%;
+    border-image-source: linear-gradient(0deg, #00f, #0ff, #fff, #0ff, #00f);
+  }
+  25% {
+    border-image-source: linear-gradient(90deg, #00f, #0ff, #fff, #0ff, #00f);
+  }
+  50% {
+    border-image-source: linear-gradient(180deg, #00f, #0ff, #fff, #0ff, #00f);
+  }
+  75% {
+    border-image-source: linear-gradient(270deg, #00f, #0ff, #fff, #0ff, #00f);
   }
   100% {
-    background-position: 300% 0%;
+    border-image-source: linear-gradient(360deg, #00f, #0ff, #fff, #0ff, #00f);
   }
 }
-
