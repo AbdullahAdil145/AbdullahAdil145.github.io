@@ -809,7 +809,7 @@ background: conic-gradient(
 content: '';
 position: absolute;
 inset: 4px;
-background: transparent;
+background: #111;
 border-radius: 16px;
 }
 
