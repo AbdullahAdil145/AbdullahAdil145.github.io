@@ -794,8 +794,8 @@ overflow: hidden;
 .animated-border::before {
   content: '';
   position: absolute;
-  width: 150px;
-  height: 140px;
+  width: 600px;
+  height: 200px;
 background: conic-gradient(
     from 0deg,
     var(--accent),
