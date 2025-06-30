@@ -785,59 +785,34 @@ section h1 {
 
 .animated-border {
   position: relative;
-  border-radius: 16px;
-  overflow: hidden;
   z-index: 0;
+  overflow: hidden;
+  border-radius: 16px;
 }
 
-/* Snake border effect */
 .animated-border::before {
   content: '';
   position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 3px;
-  box-sizing: border-box;
   z-index: -1;
-
-  background: linear-gradient(
-    to right,
-    #00f 0%,
-    #0ff 25%,
-    #fff 50%,
-    #0ff 75%,
-    #00f 100%
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: conic-gradient(
+    from 0deg,
+    var(--accent),
+    var(--highlight),
+    var(--accent)
   );
-  background-repeat: no-repeat;
-  background-size: 400% 400%;
-  animation: snake-move 4s linear infinite;
-
-  /* Reveal only the border */
-  mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
+  animation: spin-border 4s linear infinite;
+  border-radius: inherit;
 }
 
-/* Snake moves around the border clockwise */
-@keyframes snake-move {
+@keyframes spin-border {
   0% {
-    background-position: top left;
-  }
-  25% {
-    background-position: top right;
-  }
-  50% {
-    background-position: bottom right;
-  }
-  75% {
-    background-position: bottom left;
+    transform: rotate(0deg);
   }
   100% {
-    background-position: top left;
+    transform: rotate(360deg);
   }
 }
