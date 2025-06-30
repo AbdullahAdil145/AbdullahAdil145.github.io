@@ -788,32 +788,31 @@ section h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  width: 800px;
-  height: 300px;
+  padding: 30px; /* space for the border to show */
 }
 
 .animated-border::before {
   content: '';
   position: absolute;
-  width: 800px;
-  height: 300px;
+  width: 760px; /* 700px card + 60px total border */
+  height: 440px; /* slightly larger than card height */
   background: blue;
+  z-index: 0;
+  animation: spin-border 6s linear infinite;
+
+  /* Create transparent hole using mask */
   mask-image: radial-gradient(
-    ellipse at center,
-    transparent 0,
-    transparent 100px,
-    black 100px,
-    black 100%
+    ellipse 680px 380px at center,
+    transparent 0%,
+    transparent 99px,
+    black 100px
   );
   -webkit-mask-image: radial-gradient(
-    ellipse at center,
-    transparent 0,
-    transparent 100px,
-    black 100px,
-    black 100%
+    ellipse 680px 380px at center,
+    transparent 0%,
+    transparent 99px,
+    black 100px
   );
-  animation: spin-border 4s linear infinite;
 }
 
 .animated-border::after {
