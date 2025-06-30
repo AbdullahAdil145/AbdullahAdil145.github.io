@@ -791,22 +791,21 @@ align-items: center;
 overflow: hidden;
 }
 
-.animated-border :: before {
-content: '';
-position: absolute;
-width: 150px;
-height: 140px;
-background:
-	linear-gradient(#ff00c8);
-animation: animate 3s linear infinite;
+.animated-border::before {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 140px;
+  background: linear-gradient(to right, #ff00c8, #ff77ff);
+  animation: animate 3s linear infinite;
 }
 
-.animate-after :: after {
-content: '';
-position: absolute;
-inset: 4px;
-background: #141414;
-border-radius: 16px;
+.animate-after::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  background: #141414;
+  border-radius: 16px;
 }
 
 @keyframes animate {
