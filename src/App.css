@@ -764,6 +764,7 @@ section h1 {
   .button {
   color: #fff !important;
 }
+}
 
 .wave {
   display: inline-block;
@@ -781,4 +782,4 @@ section h1 {
   60% { transform: rotate(0deg); }
   100% { transform: rotate(0deg); }
 }
-}
+
