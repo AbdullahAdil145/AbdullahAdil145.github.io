@@ -785,11 +785,12 @@ section h1 {
 
 .animated-border {
   position: relative;
+  border-radius: 16px;
   z-index: 0;
   overflow: hidden;
-  border-radius: 16px;
 }
 
+/* Animated spinning border */
 .animated-border::before {
   content: '';
   position: absolute;
@@ -798,16 +799,30 @@ section h1 {
   left: -2px;
   right: -2px;
   bottom: -2px;
+  border-radius: inherit;
   background: conic-gradient(
     from 0deg,
     var(--accent),
     var(--highlight),
     var(--accent)
   );
-  animation: spin-border 4s linear infinite;
-  border-radius: inherit;
+  animation: spin-border 2s linear infinite;
+
+  /* Only show the border via masking */
+  padding: 2px;
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+
+  box-sizing: border-box;
 }
 
+/* Animation */
 @keyframes spin-border {
   0% {
     transform: rotate(0deg);
@@ -816,3 +831,4 @@ section h1 {
     transform: rotate(360deg);
   }
 }
+
