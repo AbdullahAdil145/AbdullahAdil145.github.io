@@ -783,6 +783,7 @@ section h1 {
   100% { transform: rotate(0deg); }
 }
 
+/* Main animated border class */
 .animated-border {
   position: relative;
   border-radius: 16px;
@@ -790,7 +791,7 @@ section h1 {
   z-index: 0;
 }
 
-/* Animated border using ::before */
+/* Border animation using ::before */
 .animated-border::before {
   content: '';
   position: absolute;
@@ -801,15 +802,23 @@ section h1 {
   border-radius: inherit;
   z-index: -1;
 
-  /* Border thickness */
-  padding: 2px;
-
-  /* Animated gradient background */
-  background: linear-gradient(90deg, #007bff, #00e5ff, #007bff);
+  /* High contrast animated gradient */
+  background: linear-gradient(
+    90deg,
+    #007bff 0%,
+    #00e5ff 25%,
+    #ffffff 50%,
+    #00e5ff 75%,
+    #007bff 100%
+  );
   background-size: 300% 100%;
   animation: snake-border 3s linear infinite;
 
-  /* Show only border using masking */
+  /* Keep border thickness consistent */
+  padding: 3px;
+  box-sizing: border-box;
+
+  /* Show only border area using masking */
   mask: 
     linear-gradient(#fff 0 0) content-box, 
     linear-gradient(#fff 0 0);
@@ -818,11 +827,9 @@ section h1 {
     linear-gradient(#fff 0 0) content-box, 
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-
-  box-sizing: border-box;
 }
 
-/* Keyframes for border animation */
+/* Keyframes for the animated gradient sweep */
 @keyframes snake-border {
   0% {
     background-position: 0% 0%;
@@ -831,3 +838,4 @@ section h1 {
     background-position: 300% 0%;
   }
 }
+
