@@ -790,29 +790,29 @@ section h1 {
   z-index: 0;
 }
 
-/* The moving border effect */
+/* Snake border effect */
 .animated-border::before {
   content: '';
   position: absolute;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   border-radius: inherit;
   padding: 3px;
   box-sizing: border-box;
   z-index: -1;
 
-  background: conic-gradient(
-    from 0deg,
+  background: linear-gradient(
+    to right,
     #00f 0%,
     #0ff 25%,
     #fff 50%,
     #0ff 75%,
     #00f 100%
   );
+  background-repeat: no-repeat;
   background-size: 400% 400%;
-  animation: spin-border 4s linear infinite;
+  animation: snake-move 4s linear infinite;
 
-  /* Make only the border visible */
+  /* Reveal only the border */
   mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -823,12 +823,21 @@ section h1 {
   -webkit-mask-composite: xor;
 }
 
-/* Spins the gradient around the element */
-@keyframes spin-border {
+/* Snake moves around the border clockwise */
+@keyframes snake-move {
   0% {
-    transform: rotate(0deg);
+    background-position: top left;
+  }
+  25% {
+    background-position: top right;
+  }
+  50% {
+    background-position: bottom right;
+  }
+  75% {
+    background-position: bottom left;
   }
   100% {
-    transform: rotate(360deg);
+    background-position: top left;
   }
 }
