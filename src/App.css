@@ -796,21 +796,21 @@ overflow: hidden;
   position: absolute;
   width: 150px;
   height: 140px;
-  background: linear-gradient(to right, #ff00c8, #ff77ff);
-  animation: animate 3s linear infinite;
+background: conic-gradient(
+    from 0deg,
+    var(--accent),
+    var(--highlight),
+    var(--accent)
+  );
+  animation: spin-border 4s linear infinite;;
 }
 
-.animate-after::after {
-  content: '';
-  position: absolute;
-  inset: 4px;
-  background: #141414;
-  border-radius: 16px;
-}
-
-@keyframes animate {
-0% {
-	transform: rotate(0deg);
-}
+@keyframes spin-border {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
