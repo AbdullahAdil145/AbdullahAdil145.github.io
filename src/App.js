@@ -204,7 +204,7 @@ const projects = [
 
       <section id="🎓  Education" className="experience-section">
         <h1>🎓 Education</h1>
-        <div className="exp-card">
+        <div className="exp-card animated-border">
           <h3>Algoma University<br />
           Bachelors of Computer Science<br />
           August 2025</h3>
