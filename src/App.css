@@ -788,36 +788,47 @@ section h1 {
   border-radius: 16px;
   overflow: hidden;
   z-index: 0;
-
-  /* Snake border simulation */
-  border: 3px solid transparent;
-  border-image: linear-gradient(
-    0deg,
-    #00f,
-    #0ff,
-    #fff,
-    #0ff,
-    #00f
-  );
-  border-image-slice: 1;
-  animation: border-rotate 4s linear infinite;
 }
 
-/* Animation to rotate the border gradient around the box */
-@keyframes border-rotate {
+/* The moving border effect */
+.animated-border::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  padding: 3px;
+  box-sizing: border-box;
+  z-index: -1;
+
+  background: conic-gradient(
+    from 0deg,
+    #00f 0%,
+    #0ff 25%,
+    #fff 50%,
+    #0ff 75%,
+    #00f 100%
+  );
+  background-size: 400% 400%;
+  animation: spin-border 4s linear infinite;
+
+  /* Make only the border visible */
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+}
+
+/* Spins the gradient around the element */
+@keyframes spin-border {
   0% {
-    border-image-source: linear-gradient(0deg, #00f, #0ff, #fff, #0ff, #00f);
-  }
-  25% {
-    border-image-source: linear-gradient(90deg, #00f, #0ff, #fff, #0ff, #00f);
-  }
-  50% {
-    border-image-source: linear-gradient(180deg, #00f, #0ff, #fff, #0ff, #00f);
-  }
-  75% {
-    border-image-source: linear-gradient(270deg, #00f, #0ff, #fff, #0ff, #00f);
+    transform: rotate(0deg);
   }
   100% {
-    border-image-source: linear-gradient(360deg, #00f, #0ff, #fff, #0ff, #00f);
+    transform: rotate(360deg);
   }
 }
