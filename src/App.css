@@ -784,11 +784,13 @@ section h1 {
 }
 
 .animated-border {
-position: relative;
-display: flex;
-justify-content: center;
-align-items: center;
-overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 800px;
+  height: 300px;
 }
 
 .animated-border::before {
@@ -796,18 +798,33 @@ overflow: hidden;
   position: absolute;
   width: 800px;
   height: 300px;
-background: transparent;
-  animation: spin-border 4s linear infinite;;
+  background: blue;
+  mask-image: radial-gradient(
+    ellipse at center,
+    transparent 0,
+    transparent 100px,
+    black 100px,
+    black 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    transparent 0,
+    transparent 100px,
+    black 100px,
+    black 100%
+  );
+  animation: spin-border 4s linear infinite;
 }
 
 .animated-border::after {
-content: '';
-position: absolute;
-inset: 4px;
-background: transparent;
-border-radius: 16px;
+  content: '';
+  position: absolute;
+  inset: 4px;
+  background: transparent;
+  border-radius: 16px;
 }
 
+/* Optional animation */
 @keyframes spin-border {
   0% {
     transform: rotate(0deg);
@@ -816,3 +833,4 @@ border-radius: 16px;
     transform: rotate(360deg);
   }
 }
+
