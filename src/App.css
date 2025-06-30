@@ -784,34 +784,31 @@ section h1 {
 }
 
 .animated-border {
-position: relative;
-display: flex;
-justify-content: center;
-align-items: center;
-overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  z-index: 0;
+  mask-image: radial-gradient(closest-side, transparent 98%, black 100%);
+  -webkit-mask-image: radial-gradient(closest-side, transparent 98%, black 100%);
 }
 
+/* Rotating animated border */
 .animated-border::before {
   content: '';
   position: absolute;
   width: 800px;
   height: 300px;
-background: conic-gradient(
+  background: conic-gradient(
     from 0deg,
     var(--accent),
     var(--highlight),
     var(--accent)
   );
-  animation: spin-border 4s linear infinite;;
+  animation: spin-border 4s linear infinite;
+  z-index: -1;
 }
 
-.animated-border::after {
-content: '';
-position: absolute;
-inset: 4px;
-background: #111;
-border-radius: 16px;
-}
 
 @keyframes spin-border {
   0% {
