@@ -783,24 +783,25 @@ section h1 {
   100% { transform: rotate(0deg); }
 }
 
+/*
 .animated-border {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px; /* space for the border to show */
+  padding: 30px;
 }
 
 .animated-border::before {
   content: '';
   position: absolute;
-  width: 760px; /* 700px card + 60px total border */
-  height: 440px; /* slightly larger than card height */
+  width: 760px;
+  height: 440px; 
   background: blue;
   z-index: 0;
   animation: spin-border 6s linear infinite;
 
-  /* Create transparent hole using mask */
+
   mask-image: radial-gradient(
     ellipse 680px 380px at center,
     transparent 0%,
@@ -823,7 +824,6 @@ section h1 {
   border-radius: 16px;
 }
 
-/* Optional animation */
 @keyframes spin-border {
   0% {
     transform: rotate(0deg);
@@ -832,4 +832,4 @@ section h1 {
     transform: rotate(360deg);
   }
 }
-
+*/
