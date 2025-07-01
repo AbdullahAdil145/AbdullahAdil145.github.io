@@ -784,9 +784,10 @@ section h1 {
 }
 
 .update-bar {
+  position: relative;
   display: flex;
   align-items: center;
-  background: #e0e0e0; /* Light mode footer color */
+  background: #e0e0e0;
   color: #555;
   font-size: 0.875rem;
   height: 2rem;
@@ -795,22 +796,36 @@ section h1 {
 }
 
 [data-theme='dark'] .update-bar {
-  background: var(--card); /* Same as footer in dark mode */
+  background: var(--card);
   color: #aaa;
 }
 
 .update-label {
   font-weight: 400;
-  white-space: nowrap;
   margin-right: 0.5rem;
-}
-
-.update-text {
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
+.update-ticker-wrapper {
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+}
+
+.update-ticker-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker-scroll 20s linear infinite;
+}
+
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 
 /*
