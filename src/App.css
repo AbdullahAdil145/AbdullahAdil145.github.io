@@ -835,7 +835,7 @@ section h1 {
 .update-ticker-text {
   display: inline-block;
   white-space: nowrap;
-  animation: ticker-scroll 20s linear infinite;
+  animation: ticker-scroll 15s linear infinite;
 }
 
   @keyframes ticker-scroll {
