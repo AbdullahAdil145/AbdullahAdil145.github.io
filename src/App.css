@@ -820,7 +820,7 @@ section h1 {
 
 @keyframes ticker-scroll {
   0% {
-    transform: translateX(150%);
+    transform: translateX(280%);
   }
   100% {
     transform: translateX(-280%);
