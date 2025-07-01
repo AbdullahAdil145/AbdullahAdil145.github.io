@@ -120,21 +120,6 @@ const projects = [
     <div className="mobile-menu-icon" onClick={() => setSidebarOpen(true)}>
       &#9776;
     </div>
-
-{/* Running Headline */}
-<div className="flex items-center bg-gray-800 text-white text-sm overflow-hidden whitespace-nowrap h-8">
-  {/* Left-anchored label */}
-  <span className="pl-4 pr-2 font-semibold shrink-0">Updates:</span>
-
-  {/* Scrolling text */}
-  <div className="relative w-full overflow-hidden">
-    <div className="absolute animate-marquee">
-      <span className="px-4">
-        We're currently updating the dashboard UI, fixing bugs in the report module, and optimizing performance for large datasets.
-      </span>
-    </div>
-  </div>
-</div>
       
     <div className="nav-links desktop-only">
       {sections.map((section, index) => (
@@ -175,6 +160,21 @@ const projects = [
   {sidebarOpen && <div className="overlay-blur" onClick={() => setSidebarOpen(false)}></div>}
 </nav>
 
+{/* Running Headline */}
+<div className="flex items-center bg-gray-800 text-white text-sm overflow-hidden whitespace-nowrap h-8">
+  {/* Left-anchored label */}
+  <span className="pl-4 pr-2 font-semibold shrink-0">Updates:</span>
+
+  {/* Scrolling text */}
+  <div className="relative w-full overflow-hidden">
+    <div className="absolute animate-marquee">
+      <span className="px-4">
+        We're currently updating the dashboard UI, fixing bugs in the report module, and optimizing performance for large datasets.
+      </span>
+    </div>
+  </div>
+</div>
+    
       <header className="hero">
         <h1 className="name-heading">
         Hi <span className="wave">👋</span>, I'm <span className="highlight">Muhammad Abdullah Adil</span>
