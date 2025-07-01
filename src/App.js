@@ -156,23 +156,14 @@ const projects = [
 ))}
     </div>
   </div>
-
   {sidebarOpen && <div className="overlay-blur" onClick={() => setSidebarOpen(false)}></div>}
 </nav>
 
-{/* Running Headline */}
-<div className="flex items-center bg-gray-800 text-white text-sm overflow-hidden whitespace-nowrap h-8">
-  {/* Left-anchored label */}
-  <span className="pl-4 pr-2 font-semibold shrink-0">Updates:</span>
-
-  {/* Scrolling text */}
-  <div className="relative w-full overflow-hidden">
-    <div className="absolute animate-marquee">
-      <span className="px-4">
-        We're currently updating the dashboard UI, fixing bugs in the report module, and optimizing performance for large datasets.
-      </span>
-    </div>
-  </div>
+<div className="update-bar">
+  <span className="update-label"><strong>Updates:</strong></span>
+  <span className="update-text">
+    We're currently updating the dashboard UI, fixing bugs in the report module, and optimizing performance for large datasets.
+  </span>
 </div>
     
       <header className="hero">
