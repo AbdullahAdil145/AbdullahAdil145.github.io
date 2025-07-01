@@ -855,11 +855,11 @@ body::before {
   left: 0;
   width: 100vw; 
   height: 100vh;
-  background: linear-gradient(270deg, #4a90e2, #3366cc, #80dfff, #4a90e2);
-  background-size: 600% 600%;
-  animation: backgroundShift 20s ease infinite;
+  background: linear-gradient(270deg, #4a90e2, #3366cc, #80dfff, #4a90e2, #3366cc);
+  background-size: 1200% 1200%;
+  animation: backgroundShift 10s linear infinite;
   z-index: -1;
-  opacity: 0.15; /* Make it subtle so content is readable */
+  opacity: 0.25;  /* You can increase this if you want it more visible */
 }
 
 @keyframes backgroundShift {
@@ -868,9 +868,6 @@ body::before {
   100% { background-position: 0% 50%; }
 }
 
-[data-theme='dark'] body::before {
-  background: linear-gradient(270deg, #121212, #333, #1e1e1e, #121212);
-}
 
 
 
