@@ -160,7 +160,7 @@ const projects = [
 </nav>
 
 <div className="update-bar">
-  <span className="update-label">Updates:</span>
+  <span className="update-label"><strong>Updates:</strong></span>
   <div className="update-ticker-wrapper">
     <span className="update-ticker-text">
       We're currently updating the dashboard UI, fixing bugs in the report module, and optimizing performance for large datasets.
