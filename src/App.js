@@ -164,7 +164,7 @@ const projects = [
   <span className="update-label"><strong>Updates:</strong></span>
   <div className="update-ticker-wrapper">
     <span className="update-ticker-text">
-      Currently working on adding animated borders to cards.
+      Currently working on adding animated borders to cards  ●  Adding a dynamic animation background.
     </span>
   </div>
 </div>
