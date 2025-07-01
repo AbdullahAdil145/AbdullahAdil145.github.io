@@ -786,7 +786,7 @@ section h1 {
 .update-bar {
   display: flex;
   align-items: center;
- background: #e0e0e0;
+  background: #e0e0e0; /* Light mode footer color */
   color: #555;
   font-size: 0.875rem;
   height: 2rem;
@@ -794,10 +794,15 @@ section h1 {
   overflow: hidden;
 }
 
+[data-theme='dark'] .update-bar {
+  background: var(--card); /* Same as footer in dark mode */
+  color: #aaa;
+}
+
 .update-label {
-  font-weight: 600;
-  margin-right: 0.5rem;
+  font-weight: 400;
   white-space: nowrap;
+  margin-right: 0.5rem;
 }
 
 .update-text {
@@ -805,6 +810,7 @@ section h1 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 
 
 /*
