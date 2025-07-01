@@ -159,7 +159,7 @@ const projects = [
   {sidebarOpen && <div className="overlay-blur" onClick={() => setSidebarOpen(false)}></div>}
 </nav>
 
- //Updates Bar   
+{/* Update Bar */}   
 <div className="update-bar">
   <span className="update-label"><strong>Updates:</strong></span>
   <div className="update-ticker-wrapper">
