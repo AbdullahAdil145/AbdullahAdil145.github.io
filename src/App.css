@@ -503,9 +503,13 @@ section h1 {
 
 .nav-divider {
   margin: 0 10px;
-  color: var(--text-color);
   opacity: 0.5;
+  font-size: 1rem; /* Match nav link font size */
+  display: inline-block;
+  vertical-align: middle; /* Align vertically with button text */
+  line-height: 1; /* Prevent weird spacing */
 }
+
 
 .mobile-menu-icon {
   display: none;
