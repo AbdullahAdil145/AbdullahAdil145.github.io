@@ -861,7 +861,8 @@ section h1 {
   position: absolute;
   width: 760px;
   height: 440px; 
-  background: blue;
+ background: var(--accent);
+  color: #fff;
   z-index: 0;
   animation: spin-border 6s linear infinite;
 
