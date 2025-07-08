@@ -848,9 +848,10 @@ section h1 {
 }
 }
 
+/*
 .animated-border {
   position: relative;
-  padding: 4px; /* Border thickness */
+  padding: 4px; /* Border thickness *
   border-radius: 16px;
   background: conic-gradient(
     from 0deg,
@@ -877,7 +878,7 @@ section h1 {
   100% {
     transform: rotate(360deg);
   }
-}
+} */
 
 .exp-card {
   position: relative;
