@@ -865,19 +865,6 @@ section h1 {
   z-index: 0;
   animation: spin-border 6s linear infinite;
 
-
-  mask-image: radial-gradient(
-    ellipse 680px 380px at center,
-    transparent 0%,
-    transparent 99px,
-    black 100px
-  );
-  -webkit-mask-image: radial-gradient(
-    ellipse 680px 380px at center,
-    transparent 0%,
-    transparent 99px,
-    black 100px
-  );
 }
 
 .animated-border::after {
