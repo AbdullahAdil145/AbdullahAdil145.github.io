@@ -212,7 +212,8 @@ const projects = [
 
       <section id="🎓  Education" className="experience-section">
         <h1>🎓 Education</h1>
-        <div className="exp-card animated-border">
+        <div className="exp-card">
+           <div className="inner">
           <h3>Algoma University<br />
           Bachelors of Computer Science<br />
           August 2025</h3>
@@ -222,6 +223,7 @@ const projects = [
             <li><strong>Related Coursework:</strong> Data Structures & Algorithms, Objects & Design, Computer Organization & Programming, Computer Networks, Artificial Intelligence, Object-Oriented Programming, Software Engineering, Sys Analysis.</li>
           </ul>
         </div>
+  </div>
       </section>
     
       <section id="💼  Experience" className="experience-section">
