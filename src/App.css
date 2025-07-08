@@ -889,10 +889,10 @@ section h1 {
 .exp-card::before {
   content: '';
   position: absolute;
-  top: -3px;
+  top: -9px;
   left: -9px;
   right: -9px;
-  bottom: -3px;
+  bottom: -9px;
   background: conic-gradient(var(--accent), var(--highlight), var(--accent), var(--highlight));
   z-index: -2;
   border-radius: 16px;
