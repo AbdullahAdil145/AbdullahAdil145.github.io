@@ -886,29 +886,30 @@ section h1 {
   z-index: 1;
 }
 
+
 .exp-card::before {
   content: '';
   position: absolute;
-  top: -5px;
-  left: -500%;
-  right: -500%;
-  height: calc(100% + 10px); /* cover top and bottom only */
-  background: conic-gradient(var(--accent), var(--highlight), var(--accent));
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: conic-gradient(var(--accent), var(--highlight), var(--accent), var(--highlight));
+  animation: spin-border 4s linear infinite;
   z-index: -2;
-  animation: spin-border 6s linear infinite;
+  border-radius: 16px;
 }
 
 .exp-card::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
   background: var(--card);
-  z-index: -1;
-  margin-top: 4px;   /* controls top line thickness */
-  margin-bottom: 4px;/* controls bottom line thickness */
   border-radius: 12px;
+  z-index: -1;
 }
+
 
