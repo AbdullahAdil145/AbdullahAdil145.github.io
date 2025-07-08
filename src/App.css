@@ -895,7 +895,7 @@ section h1 {
   bottom: -9px;
   background: conic-gradient(var(--accent), var(--highlight), var(--accent), var(--highlight));
   z-index: -2;
-  border-radius: 16px;
+  border-radius: 30px;
   animation: spin-border 4s linear infinite;
 }
 
