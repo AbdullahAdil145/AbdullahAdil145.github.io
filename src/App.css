@@ -903,8 +903,8 @@ section h1 {
     hsla(197, 100%, 64%, 1) 0%,
     hsla(339, 100%, 55%, 1) 100%
   );
-  height: 100%px;
-  width: 100%px;
+  height: 500px;
+  width: 500px;
   position: absolute;
   animation: rotate 8s linear infinite;
   z-index: 0;
