@@ -158,8 +158,7 @@ const projects = [
   </div>
   {sidebarOpen && <div className="overlay-blur" onClick={() => setSidebarOpen(false)}></div>}
 </nav>
-
-{/* Update Bar */}   
+   
 <div className="update-bar">
   <span className="update-label"><strong>Updates:</strong></span>
   <div className="update-ticker-wrapper">
@@ -479,6 +478,9 @@ const projects = [
     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
     <button type="submit" className="button primary-button">Send Message</button>
       
+    </p>
+<h1 align="center">Or</h1>
+<p align="center">
       
 <a
   href="https://calendly.com/abdullahadil143/60min"
