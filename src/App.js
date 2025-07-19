@@ -477,7 +477,7 @@ const projects = [
     <input type="email" name="email" placeholder="Your Email" required />
     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
     <button type="submit" className="button primary-button">Send Message</button>
-    <div style={{ textAlign: 'center', margin: '10px 0', fontWeight: 'bold' }}>
+    <div style={{ textAlign: 'center', margin: '5px 0', fontWeight: 'bold' }}>
         Or
     </div>
 
