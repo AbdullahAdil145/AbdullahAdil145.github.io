@@ -477,12 +477,13 @@ const projects = [
     <input type="text" name="name" placeholder="Your Name" required />
     <input type="email" name="email" placeholder="Your Email" required />
     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit" className="button">Send Message</button>
-  </form>
+    <button type="submit" className="button primary-button">Send Message</button>
+      </form>
+      
+<a href="https://calendly.com/abdullahadil143/60min" target="_blank" rel="noopener noreferrer">
+  <button type="button" className="button primary-button">Book a Meeting</button>
+</a>
 
-  <a href="https://calendly.com/abdullahadil143/60min" target="_blank" rel="noopener noreferrer">
-    <button type="submit" className="button" style={{ marginTop: '10px' }}>Book a Meeting</button>
-  </a>
 
 </section>
 
