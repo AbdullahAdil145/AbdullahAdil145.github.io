@@ -916,6 +916,12 @@ section h1 {
   color: white;
 }
 
+[data-theme='dark'] input::placeholder,
+[data-theme='dark'] textarea::placeholder {
+  color: white;
+}
+
+
 
 
 
