@@ -481,9 +481,7 @@ const projects = [
   </form>
 
   <a href="https://calendly.com/abdullahadil143/60min" target="_blank" rel="noopener noreferrer">
-    <button type="button" className="button" style={{ marginTop: '10px' }}>
-      Book a Meeting
-    </button>
+    <button type="button" className="button">Book a Meeting</button>
   </a>
 
 </section>
