@@ -485,7 +485,6 @@ const projects = [
       Book a Meeting
     </button>
   </a>
-</form>
 
 </section>
 
