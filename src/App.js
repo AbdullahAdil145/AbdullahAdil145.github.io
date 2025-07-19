@@ -477,7 +477,7 @@ const projects = [
     <input type="email" name="email" placeholder="Your Email" required />
     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
     <button type="submit" className="button primary-button">Send Message</button>
-    <div style="text-align: center; margin: 10px 0; font-weight: bold;">
+    <div style={{ textAlign: 'center', margin: '10px 0', fontWeight: 'bold' }}>
         Or
     </div>
 
@@ -486,11 +486,12 @@ const projects = [
         target="_blank"
         rel="noopener noreferrer"
         className="button primary-button"
-        style="margin-top: 5px; display: inline-block;"
+        style={{ marginTop: '5px', display: 'inline-block' }}
     >
         Book a Meeting
     </a>
 </form>
+
 
 
 </section>
