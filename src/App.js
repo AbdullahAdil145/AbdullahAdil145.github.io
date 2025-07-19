@@ -479,6 +479,21 @@ const projects = [
     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
     <button type="submit" className="button">Send Message</button>
   </form>
+
+  <form action="https://formspree.io/f/xqabbqbw" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  <button type="submit" className="button">Send Message</button>
+
+  {/* Book a Meeting Button */}
+  <a href="https://calendly.com/abdullahadil145/meeting" target="_blank" rel="noopener noreferrer">
+    <button type="button" className="button" style={{ marginTop: '10px' }}>
+      Book a Meeting
+    </button>
+  </a>
+</form>
+
 </section>
 
       <footer className="footer">
