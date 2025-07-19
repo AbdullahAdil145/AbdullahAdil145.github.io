@@ -911,7 +911,9 @@ section h1 {
   z-index: 0;
 }
 
-
+[data-theme='dark'] input,
+[data-theme='dark'] textarea {
+  color: white;
 
 
 
