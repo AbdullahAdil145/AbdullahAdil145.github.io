@@ -478,9 +478,9 @@ const projects = [
     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
     <button type="submit" className="button primary-button">Send Message</button>
       
-    </p>
-<h1 align="center">Or</h1>
-<p align="center">
+    <div style="text-align: center; margin: 10px 0; font-weight: bold;">
+        Or
+    </div>
       
 <a
   href="https://calendly.com/abdullahadil143/60min"
