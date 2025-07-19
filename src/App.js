@@ -198,15 +198,15 @@ const projects = [
   </div>
 </div>
 
-
         <p className="intro-text">
-          I am a versatile and motivated Full Stack Developer with a strong academic foundation in Computer Science and practical experience developing scalable, web-based applications. My work spans front-end design with modern frameworks like React to back-end development using Node.js and database management with MySQL and MongoDB.
+          I’m an adaptable and motivated Full Stack Developer with a knack for building things that make life simpler, and sometimes faster. Whether it’s a Chrome extension that auto applies to jobs or a hotel management system running behind the scenes, I have been crafting solutions that quietly do the heavy lifting. My work spans front-end design with modern frameworks, to back-end development, database management with SQL, and version control using Git.
           <br /><br />
-          I've contributed to impactful projects, including Chrome extensions that streamline job applications and a full-stack hotel management system with authentication and role-based access. I thrive in collaborative environments, bringing a balance of technical skill, creative problem-solving, and attention to user experience.
+          By degree, I’m a Computer Science graduate, with two published papers, university awards, and leadership roles in student societies. By nature, I’m curious and hands on, I thrive when turning ideas into smooth, working products. I've contributed to impactful projects, including extensions, web scrapers, web dashboards, and more. Collaborative environments are where I prosper, bringing a balance of technical skill, creative problem solving, and a strong focus on user experience.
+          My technical experience includes Java, Python, C++, JavaScript, SQL, Node.js, React, Express.js, FastAPI, Git, MongoDB, MariaDB, Postman, and more.
           <br /><br />
-          My technical stack includes JavaScript, Java, Python, C++, and many more, alongside tools like Git, Postman, Jira, and others. I'm passionate about continuous learning and applying a user-centered approach to real-world development challenges.
+          Beyond code, you’ll often find me on a tennis court, in the pool, or on a target shooting range. I’m also someone who enjoys exploring new places, whether that’s hidden spots around the city or peaceful lakeside escapes. I also occasionally blog when inspiration hits, usually about tech or life as a developer. These interests keep me grounded, competitive, and constantly learning, both inside and outside the world of code.
           <br /><br />
-          Currently seeking opportunities to contribute to dynamic development teams, where I can build, learn, and deliver value through technology.
+          I’m currently seeking opportunities to contribute to dynamic development teams where I can build, learn, and help turn complex challenges into solutions, by delivering value through technology.
         </p>
       </header>
 
@@ -473,7 +473,6 @@ const projects = [
   </a>
 </div>
 
-
   <form action="https://formspree.io/f/xqabbqbw" method="POST">
     <input type="text" name="name" placeholder="Your Name" required />
     <input type="email" name="email" placeholder="Your Email" required />
@@ -481,7 +480,6 @@ const projects = [
     <button type="submit" className="button">Send Message</button>
   </form>
 </section>
-
 
       <footer className="footer">
         <p>&copy; {new Date().getFullYear()} Muhammad Abdullah Adil</p>
