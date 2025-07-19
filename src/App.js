@@ -210,20 +210,25 @@ const projects = [
       </header>
 
       <section id="🎓  Education" className="experience-section">
-        <h1>🎓 Education</h1>
-        <div className="exp-card">
-           <div className="inner">
-          <h3>Algoma University<br />
-          Bachelors of Computer Science<br />
-          August 2025</h3>
-          <ul>
-            <li><strong>Concentrations:</strong> Full Stack Development, Web Development, Database Programming, Computer Networks.</li>
-            <li><strong>Honors and Awards:</strong> Student Success Scholarship, Algoma University High Achievement Award.</li>
-            <li><strong>Related Coursework:</strong> Data Structures & Algorithms, Objects & Design, Computer Organization & Programming, Computer Networks, Artificial Intelligence, Object-Oriented Programming, Software Engineering, Sys Analysis.</li>
-          </ul>
-        </div>
+  <h1>🎓 Education</h1>
+  
+  <div className="animated-border">
+    <div className="exp-card">
+      <div className="inner">
+        <h3>Algoma University<br />
+        Bachelors of Computer Science<br />
+        August 2025</h3>
+        <ul>
+          <li><strong>Concentrations:</strong> Full Stack Development, Web Development, Database Programming, Computer Networks.</li>
+          <li><strong>Honors and Awards:</strong> Student Success Scholarship, Algoma University High Achievement Award.</li>
+          <li><strong>Related Coursework:</strong> Data Structures & Algorithms, Objects & Design, Computer Organization & Programming, Computer Networks, Artificial Intelligence, Object-Oriented Programming, Software Engineering, Sys Analysis.</li>
+        </ul>
+      </div>
+    </div>
   </div>
-      </section>
+
+</section>
+
     
       <section id="💼  Experience" className="experience-section">
         <h1>💼 Experience</h1>
