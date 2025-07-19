@@ -480,9 +480,16 @@ const projects = [
     <button type="submit" className="button primary-button">Send Message</button>
       
       
-<a href="https://calendly.com/abdullahadil143/60min" target="_blank" rel="noopener noreferrer">
-  <button type="button" className="button primary-button"  style={{ marginTop: '5px' }}>Book a Meeting</button>
+<a
+  href="https://calendly.com/abdullahadil143/60min"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="button primary-button"
+  style={{ marginTop: '5px' }}
+>
+  Book a Meeting
 </a>
+
     </form>
 
 </section>
