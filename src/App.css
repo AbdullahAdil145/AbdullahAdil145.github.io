@@ -870,31 +870,48 @@ section h1 {
   display: inline-block;
   border-radius: 16px;
   padding: 3px; /* Border thickness */
+  background: transparent;
+}
+
+.animated-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+  padding: 3px;
   background: conic-gradient(
     from 0deg,
     var(--accent),
     var(--highlight),
     var(--accent)
   );
-  animation: spin-border 3s linear infinite;
-}
-
-@keyframes spin-border {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  animation: spin-border 2s linear infinite;
+  z-index: 0;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
 }
 
 .animated-border .exp-card {
+  position: relative;
   background: var(--card);
   border-radius: 12px;
   padding: 20px;
   width: 100%;
+  z-index: 1;
 }
-
-
+  
+@keyframes spin-border {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
 
