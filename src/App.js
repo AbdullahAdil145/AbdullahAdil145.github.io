@@ -476,8 +476,17 @@ const projects = [
     <input type="text" name="name" placeholder="Your Name" required />
     <input type="email" name="email" placeholder="Your Email" required />
     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit" className="button primary-button">Send Message</button>
-    <div style={{ textAlign: 'center', margin: '5px 0', fontWeight: 'bold' }}>
+    
+    <button type="submit" className="button primary-button">
+        Send Message
+    </button>
+
+    <div style={{ 
+        textAlign: 'center', 
+        margin: '2px 0', 
+        fontWeight: 'bold', 
+        fontSize: '18px' 
+    }}>
         Or
     </div>
 
@@ -491,8 +500,6 @@ const projects = [
         Book a Meeting
     </a>
 </form>
-
-
 
 </section>
 
