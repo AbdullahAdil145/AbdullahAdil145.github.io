@@ -815,7 +815,7 @@ section h1 {
 .update-ticker-text {
   display: inline-block;
   white-space: nowrap;
-  animation: ticker-scroll 15s linear infinite;
+  animation: ticker-scroll 10s linear infinite;
 }
 
 @keyframes ticker-scroll {
@@ -853,6 +853,59 @@ section h1 {
 [data-theme='dark'] textarea::placeholder {
   color: white;
 }
+
+@media (max-width: 768px) {
+
+  .project-card,
+  .carousel-card,
+  .stats-image {
+    transition: none !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .carousel {
+    scroll-snap-type: none !important;
+  }
+}
+
+.project-card,
+.carousel-card,
+.stats-image {
+  will-change: transform;
+}
+
+html, body {
+  overscroll-behavior: none;
+  touch-action: manipulation;
+}
+
+html, body {
+  overflow-x: hidden !important;
+}
+
+.carousel-wrapper {
+  overflow-x: hidden !important; 
+}
+
+.carousel {
+  overflow-x: auto !important; 
+  -webkit-overflow-scrolling: touch; 
+}
+
+.mobile-sidebar {
+  max-width: 100vw;
+  overflow-x: hidden !important;
+  will-change: transform;
+}
+
+.blog-wrapper {
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+
+
+
+
 
 
 
@@ -907,65 +960,5 @@ section h1 {
 @keyframes spin-border {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-}
-
-/* 🚀 Mobile Scroll Performance Improvements */
-
-@media (max-width: 768px) {
-
-  /* Disable transitions on heavy cards to prevent repaint during scroll */
-  .project-card,
-  .carousel-card,
-  .stats-image {
-    transition: none !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-  }
-
-  /* Disable scroll snapping if causing scroll interruptions */
-  .carousel {
-    scroll-snap-type: none !important;
-  }
-}
-
-/* Hint GPU for transform animations where still needed */
-.project-card,
-.carousel-card,
-.stats-image {
-  will-change: transform;
-}
-
-/* Ensure smooth passive scrolling for JS scroll events */
-html, body {
-  overscroll-behavior: none;
-  touch-action: manipulation;
-}
-
-/* ✅ Prevent horizontal scroll site-wide */
-html, body {
-  overflow-x: hidden !important;
-}
-
-/* ✅ Ensure carousel doesn't overflow horizontally */
-.carousel-wrapper {
-  overflow-x: hidden !important; /* Keep wrapper clean */
-}
-
-.carousel {
-  overflow-x: auto !important; /* Allow horizontal scrolling */
-  -webkit-overflow-scrolling: touch; /* Smooth scroll on mobile */
-}
-
-
-/* ✅ Prevent sidebar from triggering overflow during transitions */
-.mobile-sidebar {
-  max-width: 100vw;
-  overflow-x: hidden !important;
-  will-change: transform;
-}
-
-/* ✅ Prevent blog-wrapper from expanding width */
-.blog-wrapper {
-  max-width: 100%;
-  overflow-x: hidden !important;
 }
 
