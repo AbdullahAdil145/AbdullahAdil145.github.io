@@ -912,13 +912,13 @@ html, body {
 
 
 
-
+/*
 
 .animated-border {
   position: relative;
   display: inline-block;
   border-radius: 16px;
-  padding: 3px; /* Border thickness */
+  padding: 3px; /* Border thickness
   background: transparent;
 }
 
@@ -963,3 +963,4 @@ html, body {
   100% { transform: rotate(360deg); }
 }
 
+*/
