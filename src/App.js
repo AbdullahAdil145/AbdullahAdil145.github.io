@@ -76,7 +76,7 @@ const projects = [
       'Built a full-stack MERN application to help users track and manage job applications with seamless CRUD functionality.',
       'Designed a modular architecture with reusable components and scalable services for maintainability.'
     ],
-    tech: 'React, MUI, Node.js, Chrome API',
+    tech: 'React, MUI, Node.js, Chrome API, MongoDB',
     link: 'https://github.com/AbdullahAdil145/Job-Application-Tracker'
   },
   {
@@ -106,7 +106,7 @@ const projects = [
       'Developed a responsive frontend with user registration and session management.',
       'Implemented secure authentication with password hashing, lockout protection, and modular, scalable components.'
     ],
-    tech: 'HTML, PHP, JavaScript, CSS',
+    tech: 'HTML, PHP, JavaScript, CSS, MariaDB',
     link: 'https://github.com/AbdullahAdil145/MVC-Web-Dashboard'
   },
    {
