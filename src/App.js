@@ -32,7 +32,7 @@ function App() {
       const bar = document.getElementById("scroll-bar");
       if (bar) bar.style.width = scrolled + "%";
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
