@@ -89,6 +89,16 @@ const projects = [
     tech: 'React, MUI, MongoDB, FastAPI, Python',
     link: 'https://github.com/AbdullahAdil145/Web-Scraper'
   },
+   {
+    title: 'Web Store',
+    summary: 'A web-based platform to browse, search, and purchase computer products, with role-based admin rights',
+    bullets: [
+      'Users can browse products, search/filter by category, add to cart, place orders, and view their order history.',
+      'Admins can manage products, view all orders placed, and view all registered users.'
+    ],
+    tech: 'PHP, MySQl, XAMPP, HTML, CSS, JavaScript, phpMyAdmin',
+    link: 'https://github.com/AbdullahAdil145/Web-Store'
+  },
   {
     title: 'MVC Web Dashboard Manager',
     summary: 'A web dashboard built using MVC architecture.',
