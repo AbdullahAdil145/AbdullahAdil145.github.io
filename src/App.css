@@ -946,10 +946,15 @@ html, body {
 }
 
 /* ✅ Ensure carousel doesn't overflow horizontally */
-.carousel-wrapper,
-.carousel {
-  overflow-x: hidden !important;
+.carousel-wrapper {
+  overflow-x: hidden !important; /* Keep wrapper clean */
 }
+
+.carousel {
+  overflow-x: auto !important; /* Allow horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scroll on mobile */
+}
+
 
 /* ✅ Prevent sidebar from triggering overflow during transitions */
 .mobile-sidebar {
@@ -962,12 +967,5 @@ html, body {
 .blog-wrapper {
   max-width: 100%;
   overflow-x: hidden !important;
-}
-
-/* ✅ Optional: Ensure images don't exceed viewport width */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
 }
 
