@@ -294,11 +294,6 @@ section {
   margin-top: 20px;
 }
 
-.projects-grid > .project-card:nth-last-child(1):nth-child(odd) {
-  grid-column: 1 / -1;
-  justify-self: center;
-}
-
 .project-card {
   background: var(--card);
   padding: 20px;
