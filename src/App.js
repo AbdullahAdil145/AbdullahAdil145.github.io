@@ -109,6 +109,16 @@ const projects = [
     tech: 'HTML, PHP, JavaScript, CSS',
     link: 'https://github.com/AbdullahAdil145/MVC-Web-Dashboard'
   },
+   {
+    title: 'Personal Website',
+    summary: 'A personal website built using React.',
+    bullets: [
+      'Built a fully responsive personal portfolio website, showcasing work, projects, publications and blogs.',
+      'Used CSS to style card layouts for different components, added a contact form, and a booking link.'
+    ],
+    tech: 'React + MUI, HTML, JavaScript, CSS',
+    link: 'https://github.com/AbdullahAdil145/AbdullahAdil145.github.io'
+  },
   {
     title: 'Task Manager',
     summary: 'A lightweight and responsive task management app.',
