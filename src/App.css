@@ -909,4 +909,34 @@ section h1 {
   100% { transform: rotate(360deg); }
 }
 
+/* 🚀 Mobile Scroll Performance Improvements */
+
+@media (max-width: 768px) {
+
+  /* Disable transitions on heavy cards to prevent repaint during scroll */
+  .project-card,
+  .carousel-card,
+  .stats-image {
+    transition: none !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  /* Disable scroll snapping if causing scroll interruptions */
+  .carousel {
+    scroll-snap-type: none !important;
+  }
+}
+
+/* Hint GPU for transform animations where still needed */
+.project-card,
+.carousel-card,
+.stats-image {
+  will-change: transform;
+}
+
+/* Ensure smooth passive scrolling for JS scroll events */
+html, body {
+  overscroll-behavior: none;
+  touch-action: manipulation;
+}
 
