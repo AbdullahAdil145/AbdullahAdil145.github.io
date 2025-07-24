@@ -59,6 +59,16 @@ function App() {
 ];
 
 const projects = [
+    {
+    title: 'Web Scraper',
+    summary: 'Developed a web scraper that uses crawlers to extract information from websites.',
+    bullets: [
+      'Used Python, FastAPI, and MongoDB to extract and persist data from dynamic websites.',
+      'Built a clean React + MUI frontend that displays scraped data in responsive cards.'
+    ],
+    tech: 'React, MUI, MongoDB, FastAPI, Python',
+    link: 'https://github.com/AbdullahAdil145/Web-Scraper'
+  },
   {
     title: 'Hotel Management System',
     summary: 'Multi-user hotel management system with role-based access privileges.',
@@ -79,16 +89,6 @@ const projects = [
     tech: 'React, MUI, Node.js, Chrome API, MongoDB',
     link: 'https://github.com/AbdullahAdil145/Job-Application-Tracker'
   },
-  {
-    title: 'Web Scraper',
-    summary: 'Developed a web scraper that uses crawlers to extract information from websites.',
-    bullets: [
-      'Used Python, FastAPI, and MongoDB to extract and persist data from dynamic websites.',
-      'Built a clean React + MUI frontend that displays scraped data in responsive cards.'
-    ],
-    tech: 'React, MUI, MongoDB, FastAPI, Python',
-    link: 'https://github.com/AbdullahAdil145/Web-Scraper'
-  },
    {
     title: 'Web Store',
     summary: 'A web-based platform to browse, search, and purchase computer products, with role-based admin rights',
@@ -98,16 +98,6 @@ const projects = [
     ],
     tech: 'PHP, MySQl, XAMPP, HTML, CSS, JavaScript, phpMyAdmin',
     link: 'https://github.com/AbdullahAdil145/Web-Store'
-  },
-  {
-    title: 'MVC Web Dashboard Manager',
-    summary: 'A web dashboard built using MVC architecture.',
-    bullets: [
-      'Developed a responsive frontend with user registration and session management.',
-      'Implemented secure authentication with password hashing, lockout protection, and modular, scalable components.'
-    ],
-    tech: 'HTML, PHP, JavaScript, CSS, MariaDB',
-    link: 'https://github.com/AbdullahAdil145/MVC-Web-Dashboard'
   },
    {
     title: 'Personal Website',
@@ -128,6 +118,16 @@ const projects = [
     ],
     tech: 'HTML, CSS, JavaScript',
     link: 'https://github.com/AbdullahAdil145/TaskManager'
+  },
+    {
+    title: 'MVC Web Dashboard Manager',
+    summary: 'A web dashboard built using MVC architecture.',
+    bullets: [
+      'Developed a responsive frontend with user registration and session management.',
+      'Implemented secure authentication with password hashing, lockout protection, and modular, scalable components.'
+    ],
+    tech: 'HTML, PHP, JavaScript, CSS, MariaDB',
+    link: 'https://github.com/AbdullahAdil145/MVC-Web-Dashboard'
   }
 ];
 
