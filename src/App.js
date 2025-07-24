@@ -90,7 +90,7 @@ const projects = [
     link: 'https://github.com/AbdullahAdil145/Job-Application-Tracker'
   },
    {
-    title: 'Web Store',
+    title: 'Online Store',
     summary: 'A web-based platform to browse, search, and purchase computer products, with role-based admin rights',
     bullets: [
       'Users can browse products, search/filter by category, add to cart, place orders, and view their order history.',
@@ -120,7 +120,7 @@ const projects = [
     link: 'https://github.com/AbdullahAdil145/TaskManager'
   },
     {
-    title: 'MVC Web Dashboard Manager',
+    title: 'MVC Dashboard Manager',
     summary: 'A web dashboard built using MVC architecture.',
     bullets: [
       'Developed a responsive frontend with user registration and session management.',
