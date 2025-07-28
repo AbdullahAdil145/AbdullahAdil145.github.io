@@ -120,7 +120,7 @@ const projects = [
     link: 'https://github.com/AbdullahAdil145/TaskManager'
   },
     {
-    title: 'MVC Dashboard Manager',
+    title: 'MVC Web Dashboard',
     summary: 'A web dashboard built using MVC architecture.',
     bullets: [
       'Developed a responsive frontend with user registration and session management.',
