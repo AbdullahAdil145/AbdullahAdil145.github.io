@@ -80,6 +80,16 @@ const projects = [
     link: 'https://github.com/AbdullahAdil145/Hotel-Managment-System'
   },
   {
+    title: 'Cinemax',
+    summary: 'A movie searching website using AI generated views',
+    bullets: [
+      'Built a website that allows users to search for movies using the Omdb API and allows then to rate movies, storing the rating in a database.',
+      'Used Google Gemini to generate AI reviews for movies and also added manual review as failsafe.'
+    ],
+    tech: 'PHP, REST API, Java Script, CSS, SQL, MariaDB',
+    link: 'https://github.com/AbdullahAdil145/Cinemax'
+  },
+  {
     title: 'Job Application Tracker',
     summary: 'A Chrome extension that captures and stores job applications.',
     bullets: [
