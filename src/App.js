@@ -203,7 +203,7 @@ const projects = [
         Hi <span className="wave">👋</span>, I'm <span className="highlight">Muhammad Abdullah Adil</span>
         </h1>
         <h2>Full Stack Developer | Web Developer</h2>
-        <img className="hero-img" src="https://media.licdn.com/dms/image/v2/D5603AQH7RJddeYN8aw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720547752909?e=1758758400&v=beta&t=DEDYZPSRKBz2ICxSwcTVIpobz7XeDBdONkp7JMXaFY0" alt="profile" />
+        <img className="hero-img" src="https://avatars.githubusercontent.com/u/189928452?v=4" alt="profile" />
 
         <div className="hero-buttons">
   {[
