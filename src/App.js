@@ -265,7 +265,7 @@ const projects = [
         <div className="exp-card">
           <h3>ZAPPLY<br />
           Junior Software Developer<br />
-          May 2025 – Present</h3>
+          Jan 2025 – Aug 2025</h3>
           <ul>
             <li>Designed and developed a full-stack job automation platform to streamline job application workflows across multiple websites, reducing manual effort by 80%.</li>
             <li>Collaborated on a Chrome extension that auto-fills job applications, leveraging the APIs and intelligent DOM parsing to support multiple job boards.</li>
