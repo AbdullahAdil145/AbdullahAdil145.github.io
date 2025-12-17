@@ -51,8 +51,8 @@ function App() {
   { id: '💼  Experience', label: 'Experience', icon: '💼' },
   { id: '🚀  Projects', label: 'Projects', icon: '🚀' },
   { id: '🛠️  Tech Stack', label: 'Tech Stack', icon: '🛠️' },
-/*  { id: '📊  Github Stats', label: 'GitHub Stats', icon: '📊' },
-  { id: '🧠  Leetcode Stats', label: 'LeetCode Stats', icon: '🧠' },*/
+//  { id: '📊  Github Stats', label: 'GitHub Stats', icon: '📊' },
+//  { id: '🧠  Leetcode Stats', label: 'LeetCode Stats', icon: '🧠' },
   { id: '🏛️  Publications', label: 'Publications', icon: '🏛️' },
   { id: '📰  Blog', label: 'Blog', icon: '📰' },
   { id: '📬  Contact', label: 'Contact', icon: '📬' },
@@ -348,7 +348,7 @@ const projects = [
 </div>
 
 </section>
-/*
+{/*
 <section id="📊  Github Stats" className="stats-section">
   <h1>📊 GitHub Stats</h1>
   <div className="stats-container">
@@ -375,7 +375,7 @@ const projects = [
     />
   </div>
 </section>
-*/
+*/}
         <section id="🏛️  Publications" className="blog-section">
   <h1>🏛️ Publications</h1>
 
