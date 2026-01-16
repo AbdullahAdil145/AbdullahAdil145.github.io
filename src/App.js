@@ -221,22 +221,19 @@ const projects = [
   <div className="dropdown">
     <button className="button dropdown-toggle" style={{ width: '130px' }}>Resume</button>
     <div className="dropdown-menu">
-      <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">View</a>
-      <a href="/Resume.pdf" download>Download</a>
+      <a href="/Muhammad Abdullah Adil.pdf" target="_blank" rel="noopener noreferrer">View</a>
+      <a href="/Muhammad Abdullah Adil.pdf" download>Download</a>
     </div>
   </div>
 </div>
 
         <p className="intro-text">
-          I’m an adaptable and motivated Full Stack Developer with a knack for building things that make life simpler, and sometimes faster. Whether it’s a Chrome extension that auto applies to jobs or a hotel management system running behind the scenes, I have been crafting solutions that quietly do the heavy lifting. My work spans front-end design with modern frameworks, to back-end development, database management with SQL, and version control using Git.
+          I am Full Stack Software Developer experienced in building end-to-end solutions and delivering exceptional user experiences. Proficient in server-side programming languages such as Java and Node.js, with expertise in RESTful API development and modern frontend frameworks like Angular and React. Well-versed in version control systems, agile methodologies, and DevOps practices.
           <br /><br />
-          By degree, I’m a Computer Science graduate, with two published papers, university awards, and leadership roles in student societies. By nature, I’m curious and hands on, I thrive when turning ideas into smooth, working products. I've contributed to impactful projects, including extensions, web scrapers, web dashboards, and more. Collaborative environments are where I prosper, bringing a balance of technical skill, creative problem solving, and a strong focus on user experience.
-          My technical experience includes Java, Python, C++, JavaScript, SQL, Node.js, React, Express.js, FastAPI, Git, MongoDB, MariaDB, Postman, and more.
+          By degree, I’m a Computer Science graduate, by nature, I’m curious and hands on, I thrive when turning ideas into smooth, working products. I've contributed to impactful projects, including backend servers, pipelines, extensions, scrapers, dashboards, and more.
           <br /><br />
-          Beyond code, you’ll often find me on a tennis court, in the pool, or on a target shooting range. I’m also someone who enjoys exploring new places, whether that’s hidden spots around the city or peaceful lakeside escapes. I occasionally blog when inspiration hits, usually about tech or life as a developer. These interests keep me grounded, competitive, and constantly learning, both inside and outside the world of code.
-          <br /><br />
-          I’m currently seeking opportunities to contribute to dynamic development teams where I can build, learn, and help turn complex challenges into solutions, by delivering value through technology.
-        </p>
+          Beyond code, you’ll can find me on a tennis court, in the pool, or working out with a podcast on. I also enjoy exploring new places, and occasionally blog when inspiration hits, usually about tech or life as a developer.
+          </p>
       </header>
 
       <section id="🎓  Education" className="experience-section">
