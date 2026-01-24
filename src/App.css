@@ -875,12 +875,10 @@ section h1 {
 }
 
 html, body {
-  overscroll-behavior: none;
-}
-
-html, body {
   overflow-x: hidden !important;
   overflow-y: auto !important;
+  overscroll-behavior-y: auto;
+  touch-action: pan-y;
 }
 
 .carousel-wrapper {
